@@ -1,0 +1,16 @@
+# Virtual environment directories
+venv/
+.venv/
+IntraScanAdmin/  # <-- ¡Importante! Asegúrate de que esta línea esté aquí si tu venv se llama igual que la carpeta del proyecto.
+
+# Byte-code files
+*.pyc
+__pycache__/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Editor specific files
+.vscode/
+*.sublime-workspace
