@@ -5,7 +5,7 @@ import platform
 import ipaddress
 
 
-# Funcion de ping enviamos un solo ping con un segundo de tiempo de espera
+# Funcion de ping enviamos un solo ping con 0.3 segundos de tiempo de espera
 def ping_host (ip_address, count =1, timeout =0.3):
     # verificar plataforma de ejecucion
     param_n = "-n" if platform.system().lower() == "windows" else "-c"
