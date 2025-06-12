@@ -100,35 +100,44 @@ def manage_inventory_menu(hosts):
 
 def main_app():
     """Bucle principal de la aplicación CLI."""
-    hosts_inventory = inventory_manager.load_hosts() # Carga los hosts al inicio
+    hosts_inventory = inventory_manager.load_hosts() 
 
     while True:
         display_menu()
         choice = input("Elige una opción: ").strip()
 
+      
+
+
         if choice == '1':
             # Escanear red
             print("\n--- Escanear Red ---")
             network_range = input("Introduce el rango de red a escanear (ej. 192.168.1.0/24): ").strip()
-            
-            # Validación del rango de red
+                
             try:
-                ipaddress.ip_network(network_range, strict=False) # Valida el formato CIDR
+                ipaddress.ip_network(network_range, strict=False)
             except ValueError:
                 print("Error: El rango de red introducido no es un formato CIDR válido (ej. 192.168.1.0/24).")
-                continue # Vuelve al menú principal
+                continue
 
             if network_range:
-                online_hosts = scanner.scan_network(network_range)
+                
+                scanned_results = scanner.scan_network(network_range) 
+                    
                 print("\n--- Resumen del Escaneo ---")
-                if online_hosts:
-                    print("Se encontraron los siguientes hosts en línea:")
-                    for host in online_hosts:
-                        print(f"- {host}")
+                if scanned_results:
+                    print("Se encontraron los siguientes hosts:") 
+                    for host_data in scanned_results: 
+                       
+                        print(f"- IP: {host_data['ip_address']} (Estado: {host_data['status']})")
+                        if host_data['services']: 
+                            print(f"  Servicios Abiertos: {', '.join(host_data['services'])}")
+                        else: 
+                            print("  Ningún servicio común abierto detectado.")
                 else:
-                    print("No se encontraron hosts en línea en el rango especificado.")
+                    print("No se encontraron hosts en el rango especificado.")
             else:
-                print("Rango de red no válido. Por favor, inténtalo de nuevo.")
+                    print("Rango de red no válido. Por favor, inténtalo de nuevo.")
 
         elif choice == '2':
             # Encender equipo (Wake-on-LAN)
@@ -164,12 +173,9 @@ def main_app():
                     username = selected_host.get('username')
                     password = selected_host.get('password')
 
-                    # Validar que todos los campos necesarios existan
                     if not (ip_address and username and password):
                         print(f"Error: El host '{selected_host.get('name', 'N/A')}' no tiene IP, usuario o contraseña completos para esta operación.")
                         continue
-                    
-                    # Validación básica de IP antes de intentar apagar
                     try:
                         ipaddress.ip_address(ip_address)
                     except ValueError:
