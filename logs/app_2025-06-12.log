@@ -44,3 +44,1417 @@
 2025-06-12 16:16:06,066 - IntraScanAdmin - INFO - Escaneo de red completado. Se mostraron 6 hosts.
 2025-06-12 16:16:19,621 - IntraScanAdmin - INFO - Opción de menú seleccionada: 4
 2025-06-12 16:16:19,621 - IntraScanAdmin - INFO - Accediendo al menú de gestión de inventario.
+2025-06-12 16:20:16,288 - IntraScanAdmin - INFO - Volviendo al menú principal desde gestión de inventario.
+2025-06-12 16:20:18,276 - IntraScanAdmin - INFO - Opción de menú seleccionada: 5
+2025-06-12 16:20:18,276 - IntraScanAdmin - INFO - Saliendo de IntraScan & Admin. ¡Hasta pronto!
+2025-06-12 16:22:37,167 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:24:04,982 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:24:05,024 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 16:24:05,047 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'. 0 hosts encontrados.
+2025-06-12 16:24:05,049 - IntraScanAdmin - INFO - Inventario cargado al inicio: 0 hosts.
+2025-06-12 16:24:59,460 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:24:59,514 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 16:24:59,520 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'. 0 hosts encontrados.
+2025-06-12 16:24:59,522 - IntraScanAdmin - INFO - Inventario cargado al inicio: 0 hosts.
+2025-06-12 16:25:12,531 - IntraScanAdmin - INFO - GUI: Solicitando escaneo de red para 138.100.110.1/29
+2025-06-12 16:25:12,531 - IntraScanAdmin - INFO - Comienzo de escaneo de subred 138.100.110.1/29
+2025-06-12 16:25:12,641 - IntraScanAdmin - INFO - Host 138.100.110.1 en línea (Ping).
+2025-06-12 16:25:12,641 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.1...
+2025-06-12 16:25:13,558 - IntraScanAdmin - INFO - Host 138.100.110.2 fuera de línea (Ping).
+2025-06-12 16:25:13,558 - IntraScanAdmin - INFO - Host 138.100.110.3 en línea (Ping).
+2025-06-12 16:25:13,558 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.3...
+2025-06-12 16:25:14,028 - IntraScanAdmin - INFO - Host 138.100.110.4 en línea (Ping).
+2025-06-12 16:25:14,028 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.4...
+2025-06-12 16:25:14,271 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.4.
+2025-06-12 16:25:14,549 - IntraScanAdmin - INFO - Host 138.100.110.5 fuera de línea (Ping).
+2025-06-12 16:25:15,057 - IntraScanAdmin - INFO - Host 138.100.110.6 fuera de línea (Ping).
+2025-06-12 16:25:15,057 - IntraScanAdmin - INFO - Escaneo de subred 138.100.110.1/29 completado. Se procesaron 6 hosts.
+2025-06-12 16:25:15,057 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.1, Estado: online, Servicios: Ninguno
+2025-06-12 16:25:15,057 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.2, Estado: offline, Servicios: Ninguno
+2025-06-12 16:25:15,057 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.3, Estado: online, Servicios: Ninguno
+2025-06-12 16:25:15,057 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.4, Estado: online, Servicios: HTTP (80)
+2025-06-12 16:25:15,068 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.5, Estado: offline, Servicios: Ninguno
+2025-06-12 16:25:15,069 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.6, Estado: offline, Servicios: Ninguno
+2025-06-12 16:25:31,522 - IntraScanAdmin - INFO - GUI: Solicitando escaneo de red para 138.100.110.1/24
+2025-06-12 16:25:31,522 - IntraScanAdmin - INFO - Comienzo de escaneo de subred 138.100.110.1/24
+2025-06-12 16:25:31,538 - IntraScanAdmin - INFO - Host 138.100.110.1 en línea (Ping).
+2025-06-12 16:25:31,538 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.1...
+2025-06-12 16:25:32,065 - IntraScanAdmin - INFO - Host 138.100.110.2 fuera de línea (Ping).
+2025-06-12 16:25:32,080 - IntraScanAdmin - INFO - Host 138.100.110.3 en línea (Ping).
+2025-06-12 16:25:32,080 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.3...
+2025-06-12 16:25:32,530 - IntraScanAdmin - INFO - Host 138.100.110.4 en línea (Ping).
+2025-06-12 16:25:32,530 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.4...
+2025-06-12 16:25:32,754 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.4.
+2025-06-12 16:25:33,056 - IntraScanAdmin - INFO - Host 138.100.110.5 fuera de línea (Ping).
+2025-06-12 16:25:33,560 - IntraScanAdmin - INFO - Host 138.100.110.6 fuera de línea (Ping).
+2025-06-12 16:25:34,067 - IntraScanAdmin - INFO - Host 138.100.110.7 fuera de línea (Ping).
+2025-06-12 16:25:34,563 - IntraScanAdmin - INFO - Host 138.100.110.8 fuera de línea (Ping).
+2025-06-12 16:25:35,059 - IntraScanAdmin - INFO - Host 138.100.110.9 fuera de línea (Ping).
+2025-06-12 16:25:35,558 - IntraScanAdmin - INFO - Host 138.100.110.10 fuera de línea (Ping).
+2025-06-12 16:25:36,058 - IntraScanAdmin - INFO - Host 138.100.110.11 fuera de línea (Ping).
+2025-06-12 16:25:36,561 - IntraScanAdmin - INFO - Host 138.100.110.12 fuera de línea (Ping).
+2025-06-12 16:25:37,058 - IntraScanAdmin - INFO - Host 138.100.110.13 fuera de línea (Ping).
+2025-06-12 16:25:37,562 - IntraScanAdmin - INFO - Host 138.100.110.14 fuera de línea (Ping).
+2025-06-12 16:25:37,573 - IntraScanAdmin - INFO - Host 138.100.110.15 en línea (Ping).
+2025-06-12 16:25:37,573 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.15...
+2025-06-12 16:25:38,060 - IntraScanAdmin - INFO - Host 138.100.110.16 fuera de línea (Ping).
+2025-06-12 16:25:38,560 - IntraScanAdmin - INFO - Host 138.100.110.17 fuera de línea (Ping).
+2025-06-12 16:25:39,065 - IntraScanAdmin - INFO - Host 138.100.110.18 fuera de línea (Ping).
+2025-06-12 16:25:39,559 - IntraScanAdmin - INFO - Host 138.100.110.19 fuera de línea (Ping).
+2025-06-12 16:25:39,582 - IntraScanAdmin - INFO - Host 138.100.110.20 en línea (Ping).
+2025-06-12 16:25:39,582 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.20...
+2025-06-12 16:25:39,804 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.20.
+2025-06-12 16:25:39,804 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.20.
+2025-06-12 16:25:40,053 - IntraScanAdmin - INFO - Host 138.100.110.21 fuera de línea (Ping).
+2025-06-12 16:25:40,561 - IntraScanAdmin - INFO - Host 138.100.110.22 fuera de línea (Ping).
+2025-06-12 16:25:41,064 - IntraScanAdmin - INFO - Host 138.100.110.23 fuera de línea (Ping).
+2025-06-12 16:25:41,560 - IntraScanAdmin - INFO - Host 138.100.110.24 fuera de línea (Ping).
+2025-06-12 16:25:42,057 - IntraScanAdmin - INFO - Host 138.100.110.25 fuera de línea (Ping).
+2025-06-12 16:25:42,561 - IntraScanAdmin - INFO - Host 138.100.110.26 fuera de línea (Ping).
+2025-06-12 16:25:43,058 - IntraScanAdmin - INFO - Host 138.100.110.27 fuera de línea (Ping).
+2025-06-12 16:25:43,560 - IntraScanAdmin - INFO - Host 138.100.110.28 fuera de línea (Ping).
+2025-06-12 16:25:44,059 - IntraScanAdmin - INFO - Host 138.100.110.29 fuera de línea (Ping).
+2025-06-12 16:25:44,562 - IntraScanAdmin - INFO - Host 138.100.110.30 fuera de línea (Ping).
+2025-06-12 16:25:45,058 - IntraScanAdmin - INFO - Host 138.100.110.31 fuera de línea (Ping).
+2025-06-12 16:25:45,561 - IntraScanAdmin - INFO - Host 138.100.110.32 fuera de línea (Ping).
+2025-06-12 16:25:46,060 - IntraScanAdmin - INFO - Host 138.100.110.33 fuera de línea (Ping).
+2025-06-12 16:25:46,077 - IntraScanAdmin - INFO - Host 138.100.110.34 en línea (Ping).
+2025-06-12 16:25:46,078 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.34...
+2025-06-12 16:25:46,548 - IntraScanAdmin - INFO - Host 138.100.110.35 en línea (Ping).
+2025-06-12 16:25:46,548 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.35...
+2025-06-12 16:25:47,062 - IntraScanAdmin - INFO - Host 138.100.110.36 fuera de línea (Ping).
+2025-06-12 16:25:47,565 - IntraScanAdmin - INFO - Host 138.100.110.37 fuera de línea (Ping).
+2025-06-12 16:25:48,060 - IntraScanAdmin - INFO - Host 138.100.110.38 fuera de línea (Ping).
+2025-06-12 16:25:48,565 - IntraScanAdmin - INFO - Host 138.100.110.39 fuera de línea (Ping).
+2025-06-12 16:25:49,058 - IntraScanAdmin - INFO - Host 138.100.110.40 fuera de línea (Ping).
+2025-06-12 16:25:49,565 - IntraScanAdmin - INFO - Host 138.100.110.41 fuera de línea (Ping).
+2025-06-12 16:25:50,060 - IntraScanAdmin - INFO - Host 138.100.110.42 fuera de línea (Ping).
+2025-06-12 16:25:50,559 - IntraScanAdmin - INFO - Host 138.100.110.43 fuera de línea (Ping).
+2025-06-12 16:25:51,064 - IntraScanAdmin - INFO - Host 138.100.110.44 fuera de línea (Ping).
+2025-06-12 16:25:51,559 - IntraScanAdmin - INFO - Host 138.100.110.45 fuera de línea (Ping).
+2025-06-12 16:25:51,583 - IntraScanAdmin - INFO - Host 138.100.110.46 en línea (Ping).
+2025-06-12 16:25:51,583 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.46...
+2025-06-12 16:25:52,061 - IntraScanAdmin - INFO - Host 138.100.110.47 fuera de línea (Ping).
+2025-06-12 16:25:52,560 - IntraScanAdmin - INFO - Host 138.100.110.48 fuera de línea (Ping).
+2025-06-12 16:25:53,059 - IntraScanAdmin - INFO - Host 138.100.110.49 fuera de línea (Ping).
+2025-06-12 16:25:53,560 - IntraScanAdmin - INFO - Host 138.100.110.50 fuera de línea (Ping).
+2025-06-12 16:25:54,058 - IntraScanAdmin - INFO - Host 138.100.110.51 fuera de línea (Ping).
+2025-06-12 16:25:54,563 - IntraScanAdmin - INFO - Host 138.100.110.52 fuera de línea (Ping).
+2025-06-12 16:25:55,060 - IntraScanAdmin - INFO - Host 138.100.110.53 fuera de línea (Ping).
+2025-06-12 16:25:55,562 - IntraScanAdmin - INFO - Host 138.100.110.54 fuera de línea (Ping).
+2025-06-12 16:25:56,059 - IntraScanAdmin - INFO - Host 138.100.110.55 fuera de línea (Ping).
+2025-06-12 16:25:56,559 - IntraScanAdmin - INFO - Host 138.100.110.56 fuera de línea (Ping).
+2025-06-12 16:25:57,058 - IntraScanAdmin - INFO - Host 138.100.110.57 fuera de línea (Ping).
+2025-06-12 16:25:57,562 - IntraScanAdmin - INFO - Host 138.100.110.58 fuera de línea (Ping).
+2025-06-12 16:25:58,061 - IntraScanAdmin - INFO - Host 138.100.110.59 fuera de línea (Ping).
+2025-06-12 16:25:58,077 - IntraScanAdmin - INFO - Host 138.100.110.60 en línea (Ping).
+2025-06-12 16:25:58,077 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.60...
+2025-06-12 16:25:58,386 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.60.
+2025-06-12 16:25:58,388 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.60.
+2025-06-12 16:25:58,408 - IntraScanAdmin - INFO - Host 138.100.110.61 en línea (Ping).
+2025-06-12 16:25:58,408 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.61...
+2025-06-12 16:25:58,638 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.61.
+2025-06-12 16:25:58,654 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.61.
+2025-06-12 16:25:59,049 - IntraScanAdmin - INFO - Host 138.100.110.62 fuera de línea (Ping).
+2025-06-12 16:25:59,560 - IntraScanAdmin - INFO - Host 138.100.110.63 fuera de línea (Ping).
+2025-06-12 16:26:00,064 - IntraScanAdmin - INFO - Host 138.100.110.64 fuera de línea (Ping).
+2025-06-12 16:26:00,559 - IntraScanAdmin - INFO - Host 138.100.110.65 fuera de línea (Ping).
+2025-06-12 16:26:00,579 - IntraScanAdmin - INFO - Host 138.100.110.66 en línea (Ping).
+2025-06-12 16:26:00,580 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.66...
+2025-06-12 16:26:01,045 - IntraScanAdmin - INFO - Host 138.100.110.67 en línea (Ping).
+2025-06-12 16:26:01,045 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.67...
+2025-06-12 16:26:01,561 - IntraScanAdmin - INFO - Host 138.100.110.68 fuera de línea (Ping).
+2025-06-12 16:26:02,063 - IntraScanAdmin - INFO - Host 138.100.110.69 fuera de línea (Ping).
+2025-06-12 16:26:02,560 - IntraScanAdmin - INFO - Host 138.100.110.70 fuera de línea (Ping).
+2025-06-12 16:26:03,063 - IntraScanAdmin - INFO - Host 138.100.110.71 fuera de línea (Ping).
+2025-06-12 16:26:03,557 - IntraScanAdmin - INFO - Host 138.100.110.72 fuera de línea (Ping).
+2025-06-12 16:26:04,058 - IntraScanAdmin - INFO - Host 138.100.110.73 fuera de línea (Ping).
+2025-06-12 16:26:04,086 - IntraScanAdmin - INFO - Host 138.100.110.74 en línea (Ping).
+2025-06-12 16:26:04,086 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.74...
+2025-06-12 16:26:04,561 - IntraScanAdmin - INFO - Host 138.100.110.75 fuera de línea (Ping).
+2025-06-12 16:26:05,064 - IntraScanAdmin - INFO - Host 138.100.110.76 fuera de línea (Ping).
+2025-06-12 16:26:05,561 - IntraScanAdmin - INFO - Host 138.100.110.77 fuera de línea (Ping).
+2025-06-12 16:26:06,059 - IntraScanAdmin - INFO - Host 138.100.110.78 fuera de línea (Ping).
+2025-06-12 16:26:06,559 - IntraScanAdmin - INFO - Host 138.100.110.79 fuera de línea (Ping).
+2025-06-12 16:26:07,059 - IntraScanAdmin - INFO - Host 138.100.110.80 fuera de línea (Ping).
+2025-06-12 16:26:07,560 - IntraScanAdmin - INFO - Host 138.100.110.81 fuera de línea (Ping).
+2025-06-12 16:26:07,588 - IntraScanAdmin - INFO - Host 138.100.110.82 en línea (Ping).
+2025-06-12 16:26:07,588 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.82...
+2025-06-12 16:26:07,707 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.82.
+2025-06-12 16:26:08,048 - IntraScanAdmin - INFO - Host 138.100.110.83 fuera de línea (Ping).
+2025-06-12 16:26:08,559 - IntraScanAdmin - INFO - Host 138.100.110.84 fuera de línea (Ping).
+2025-06-12 16:26:09,062 - IntraScanAdmin - INFO - Host 138.100.110.85 fuera de línea (Ping).
+2025-06-12 16:26:09,564 - IntraScanAdmin - INFO - Host 138.100.110.86 fuera de línea (Ping).
+2025-06-12 16:26:10,060 - IntraScanAdmin - INFO - Host 138.100.110.87 fuera de línea (Ping).
+2025-06-12 16:26:10,556 - IntraScanAdmin - INFO - Host 138.100.110.88 fuera de línea (Ping).
+2025-06-12 16:26:11,061 - IntraScanAdmin - INFO - Host 138.100.110.89 fuera de línea (Ping).
+2025-06-12 16:26:11,558 - IntraScanAdmin - INFO - Host 138.100.110.90 fuera de línea (Ping).
+2025-06-12 16:26:12,059 - IntraScanAdmin - INFO - Host 138.100.110.91 fuera de línea (Ping).
+2025-06-12 16:26:12,560 - IntraScanAdmin - INFO - Host 138.100.110.92 fuera de línea (Ping).
+2025-06-12 16:26:13,060 - IntraScanAdmin - INFO - Host 138.100.110.93 fuera de línea (Ping).
+2025-06-12 16:26:13,559 - IntraScanAdmin - INFO - Host 138.100.110.94 fuera de línea (Ping).
+2025-06-12 16:26:14,060 - IntraScanAdmin - INFO - Host 138.100.110.95 fuera de línea (Ping).
+2025-06-12 16:26:14,076 - IntraScanAdmin - INFO - Host 138.100.110.96 en línea (Ping).
+2025-06-12 16:26:14,077 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.96...
+2025-06-12 16:26:14,563 - IntraScanAdmin - INFO - Host 138.100.110.97 fuera de línea (Ping).
+2025-06-12 16:26:15,061 - IntraScanAdmin - INFO - Host 138.100.110.98 fuera de línea (Ping).
+2025-06-12 16:26:15,084 - IntraScanAdmin - INFO - Host 138.100.110.99 en línea (Ping).
+2025-06-12 16:26:15,084 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.99...
+2025-06-12 16:26:15,319 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.99.
+2025-06-12 16:26:15,335 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.99.
+2025-06-12 16:26:15,555 - IntraScanAdmin - INFO - Host 138.100.110.100 fuera de línea (Ping).
+2025-06-12 16:26:16,062 - IntraScanAdmin - INFO - Host 138.100.110.101 fuera de línea (Ping).
+2025-06-12 16:26:16,559 - IntraScanAdmin - INFO - Host 138.100.110.102 fuera de línea (Ping).
+2025-06-12 16:26:17,062 - IntraScanAdmin - INFO - Host 138.100.110.103 fuera de línea (Ping).
+2025-06-12 16:26:17,564 - IntraScanAdmin - INFO - Host 138.100.110.104 fuera de línea (Ping).
+2025-06-12 16:26:18,058 - IntraScanAdmin - INFO - Host 138.100.110.105 fuera de línea (Ping).
+2025-06-12 16:26:18,558 - IntraScanAdmin - INFO - Host 138.100.110.106 fuera de línea (Ping).
+2025-06-12 16:26:19,055 - IntraScanAdmin - INFO - Host 138.100.110.107 fuera de línea (Ping).
+2025-06-12 16:26:19,556 - IntraScanAdmin - INFO - Host 138.100.110.108 fuera de línea (Ping).
+2025-06-12 16:26:20,056 - IntraScanAdmin - INFO - Host 138.100.110.109 fuera de línea (Ping).
+2025-06-12 16:26:20,079 - IntraScanAdmin - INFO - Host 138.100.110.110 en línea (Ping).
+2025-06-12 16:26:20,081 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.110...
+2025-06-12 16:26:20,206 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.110.
+2025-06-12 16:26:20,224 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.110.
+2025-06-12 16:26:20,553 - IntraScanAdmin - INFO - Host 138.100.110.111 fuera de línea (Ping).
+2025-06-12 16:26:21,057 - IntraScanAdmin - INFO - Host 138.100.110.112 fuera de línea (Ping).
+2025-06-12 16:26:21,554 - IntraScanAdmin - INFO - Host 138.100.110.113 fuera de línea (Ping).
+2025-06-12 16:26:22,056 - IntraScanAdmin - INFO - Host 138.100.110.114 fuera de línea (Ping).
+2025-06-12 16:26:22,558 - IntraScanAdmin - INFO - Host 138.100.110.115 fuera de línea (Ping).
+2025-06-12 16:26:23,056 - IntraScanAdmin - INFO - Host 138.100.110.116 fuera de línea (Ping).
+2025-06-12 16:26:23,078 - IntraScanAdmin - INFO - Host 138.100.110.117 en línea (Ping).
+2025-06-12 16:26:23,079 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.117...
+2025-06-12 16:26:23,565 - IntraScanAdmin - INFO - Host 138.100.110.118 fuera de línea (Ping).
+2025-06-12 16:26:24,062 - IntraScanAdmin - INFO - Host 138.100.110.119 fuera de línea (Ping).
+2025-06-12 16:26:24,085 - IntraScanAdmin - INFO - Host 138.100.110.120 en línea (Ping).
+2025-06-12 16:26:24,085 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.120...
+2025-06-12 16:26:24,558 - IntraScanAdmin - INFO - Host 138.100.110.121 fuera de línea (Ping).
+2025-06-12 16:26:24,576 - IntraScanAdmin - INFO - Host 138.100.110.122 en línea (Ping).
+2025-06-12 16:26:24,577 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.122...
+2025-06-12 16:26:25,053 - IntraScanAdmin - INFO - Host 138.100.110.123 fuera de línea (Ping).
+2025-06-12 16:26:25,552 - IntraScanAdmin - INFO - Host 138.100.110.124 fuera de línea (Ping).
+2025-06-12 16:26:26,048 - IntraScanAdmin - INFO - Host 138.100.110.125 fuera de línea (Ping).
+2025-06-12 16:26:26,550 - IntraScanAdmin - INFO - Host 138.100.110.126 fuera de línea (Ping).
+2025-06-12 16:26:27,051 - IntraScanAdmin - INFO - Host 138.100.110.127 fuera de línea (Ping).
+2025-06-12 16:26:27,550 - IntraScanAdmin - INFO - Host 138.100.110.128 fuera de línea (Ping).
+2025-06-12 16:26:28,052 - IntraScanAdmin - INFO - Host 138.100.110.129 fuera de línea (Ping).
+2025-06-12 16:26:28,556 - IntraScanAdmin - INFO - Host 138.100.110.130 fuera de línea (Ping).
+2025-06-12 16:26:29,056 - IntraScanAdmin - INFO - Host 138.100.110.131 fuera de línea (Ping).
+2025-06-12 16:26:29,075 - IntraScanAdmin - INFO - Host 138.100.110.132 en línea (Ping).
+2025-06-12 16:26:29,075 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.132...
+2025-06-12 16:26:29,305 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.132.
+2025-06-12 16:26:29,321 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.132.
+2025-06-12 16:26:29,340 - IntraScanAdmin - INFO - Host 138.100.110.133 en línea (Ping).
+2025-06-12 16:26:29,341 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.133...
+2025-06-12 16:26:29,573 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.133.
+2025-06-12 16:26:29,591 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.133.
+2025-06-12 16:26:30,049 - IntraScanAdmin - INFO - Host 138.100.110.134 fuera de línea (Ping).
+2025-06-12 16:26:30,558 - IntraScanAdmin - INFO - Host 138.100.110.135 fuera de línea (Ping).
+2025-06-12 16:26:31,058 - IntraScanAdmin - INFO - Host 138.100.110.136 fuera de línea (Ping).
+2025-06-12 16:26:31,072 - IntraScanAdmin - INFO - Host 138.100.110.137 en línea (Ping).
+2025-06-12 16:26:31,072 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.137...
+2025-06-12 16:26:31,506 - IntraScanAdmin - INFO - Host 138.100.110.138 en línea (Ping).
+2025-06-12 16:26:31,507 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.138...
+2025-06-12 16:26:32,054 - IntraScanAdmin - INFO - Host 138.100.110.139 fuera de línea (Ping).
+2025-06-12 16:26:32,071 - IntraScanAdmin - INFO - Host 138.100.110.140 en línea (Ping).
+2025-06-12 16:26:32,072 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.140...
+2025-06-12 16:26:32,319 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.140.
+2025-06-12 16:26:32,335 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.140.
+2025-06-12 16:26:32,558 - IntraScanAdmin - INFO - Host 138.100.110.141 fuera de línea (Ping).
+2025-06-12 16:26:32,576 - IntraScanAdmin - INFO - Host 138.100.110.142 en línea (Ping).
+2025-06-12 16:26:32,577 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.142...
+2025-06-12 16:26:33,057 - IntraScanAdmin - INFO - Host 138.100.110.143 fuera de línea (Ping).
+2025-06-12 16:26:33,069 - IntraScanAdmin - INFO - Host 138.100.110.144 en línea (Ping).
+2025-06-12 16:26:33,069 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.144...
+2025-06-12 16:26:33,086 - IntraScanAdmin - INFO -     Puerto 3389 (RDP) ABIERTO en 138.100.110.144.
+2025-06-12 16:26:33,551 - IntraScanAdmin - INFO - Host 138.100.110.145 fuera de línea (Ping).
+2025-06-12 16:26:34,062 - IntraScanAdmin - INFO - Host 138.100.110.146 fuera de línea (Ping).
+2025-06-12 16:26:34,558 - IntraScanAdmin - INFO - Host 138.100.110.147 fuera de línea (Ping).
+2025-06-12 16:26:35,055 - IntraScanAdmin - INFO - Host 138.100.110.148 fuera de línea (Ping).
+2025-06-12 16:26:35,553 - IntraScanAdmin - INFO - Host 138.100.110.149 fuera de línea (Ping).
+2025-06-12 16:26:36,059 - IntraScanAdmin - INFO - Host 138.100.110.150 fuera de línea (Ping).
+2025-06-12 16:26:36,557 - IntraScanAdmin - INFO - Host 138.100.110.151 fuera de línea (Ping).
+2025-06-12 16:26:36,579 - IntraScanAdmin - INFO - Host 138.100.110.152 en línea (Ping).
+2025-06-12 16:26:36,579 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.152...
+2025-06-12 16:26:36,804 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.152.
+2025-06-12 16:26:36,804 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.152.
+2025-06-12 16:26:37,053 - IntraScanAdmin - INFO - Host 138.100.110.153 fuera de línea (Ping).
+2025-06-12 16:26:37,053 - IntraScanAdmin - INFO - Host 138.100.110.154 en línea (Ping).
+2025-06-12 16:26:37,053 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.154...
+2025-06-12 16:26:37,303 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.154.
+2025-06-12 16:26:37,558 - IntraScanAdmin - INFO - Host 138.100.110.155 fuera de línea (Ping).
+2025-06-12 16:26:38,057 - IntraScanAdmin - INFO - Host 138.100.110.156 fuera de línea (Ping).
+2025-06-12 16:26:38,558 - IntraScanAdmin - INFO - Host 138.100.110.157 fuera de línea (Ping).
+2025-06-12 16:26:39,058 - IntraScanAdmin - INFO - Host 138.100.110.158 fuera de línea (Ping).
+2025-06-12 16:26:39,564 - IntraScanAdmin - INFO - Host 138.100.110.159 fuera de línea (Ping).
+2025-06-12 16:26:40,063 - IntraScanAdmin - INFO - Host 138.100.110.160 fuera de línea (Ping).
+2025-06-12 16:26:40,558 - IntraScanAdmin - INFO - Host 138.100.110.161 fuera de línea (Ping).
+2025-06-12 16:26:41,058 - IntraScanAdmin - INFO - Host 138.100.110.162 fuera de línea (Ping).
+2025-06-12 16:26:41,559 - IntraScanAdmin - INFO - Host 138.100.110.163 fuera de línea (Ping).
+2025-06-12 16:26:42,056 - IntraScanAdmin - INFO - Host 138.100.110.164 fuera de línea (Ping).
+2025-06-12 16:26:42,561 - IntraScanAdmin - INFO - Host 138.100.110.165 fuera de línea (Ping).
+2025-06-12 16:26:43,050 - IntraScanAdmin - INFO - Host 138.100.110.166 fuera de línea (Ping).
+2025-06-12 16:26:43,558 - IntraScanAdmin - INFO - Host 138.100.110.167 fuera de línea (Ping).
+2025-06-12 16:26:44,061 - IntraScanAdmin - INFO - Host 138.100.110.168 fuera de línea (Ping).
+2025-06-12 16:26:44,557 - IntraScanAdmin - INFO - Host 138.100.110.169 fuera de línea (Ping).
+2025-06-12 16:26:45,055 - IntraScanAdmin - INFO - Host 138.100.110.170 fuera de línea (Ping).
+2025-06-12 16:26:45,077 - IntraScanAdmin - INFO - Host 138.100.110.171 en línea (Ping).
+2025-06-12 16:26:45,077 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.171...
+2025-06-12 16:26:45,304 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.171.
+2025-06-12 16:26:45,324 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.171.
+2025-06-12 16:26:45,559 - IntraScanAdmin - INFO - Host 138.100.110.172 fuera de línea (Ping).
+2025-06-12 16:26:45,563 - IntraScanAdmin - INFO - Host 138.100.110.173 en línea (Ping).
+2025-06-12 16:26:45,563 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.173...
+2025-06-12 16:26:45,802 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.173.
+2025-06-12 16:26:45,818 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.173.
+2025-06-12 16:26:46,055 - IntraScanAdmin - INFO - Host 138.100.110.174 fuera de línea (Ping).
+2025-06-12 16:26:46,563 - IntraScanAdmin - INFO - Host 138.100.110.175 fuera de línea (Ping).
+2025-06-12 16:26:47,065 - IntraScanAdmin - INFO - Host 138.100.110.176 fuera de línea (Ping).
+2025-06-12 16:26:47,559 - IntraScanAdmin - INFO - Host 138.100.110.177 fuera de línea (Ping).
+2025-06-12 16:26:48,057 - IntraScanAdmin - INFO - Host 138.100.110.178 fuera de línea (Ping).
+2025-06-12 16:26:48,556 - IntraScanAdmin - INFO - Host 138.100.110.179 fuera de línea (Ping).
+2025-06-12 16:26:49,053 - IntraScanAdmin - INFO - Host 138.100.110.180 fuera de línea (Ping).
+2025-06-12 16:26:49,563 - IntraScanAdmin - INFO - Host 138.100.110.181 fuera de línea (Ping).
+2025-06-12 16:26:50,054 - IntraScanAdmin - INFO - Host 138.100.110.182 fuera de línea (Ping).
+2025-06-12 16:26:50,553 - IntraScanAdmin - INFO - Host 138.100.110.183 fuera de línea (Ping).
+2025-06-12 16:26:51,063 - IntraScanAdmin - INFO - Host 138.100.110.184 fuera de línea (Ping).
+2025-06-12 16:26:51,559 - IntraScanAdmin - INFO - Host 138.100.110.185 fuera de línea (Ping).
+2025-06-12 16:26:52,052 - IntraScanAdmin - INFO - Host 138.100.110.186 fuera de línea (Ping).
+2025-06-12 16:26:52,554 - IntraScanAdmin - INFO - Host 138.100.110.187 fuera de línea (Ping).
+2025-06-12 16:26:52,554 - IntraScanAdmin - INFO - Host 138.100.110.188 en línea (Ping).
+2025-06-12 16:26:52,570 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.188...
+2025-06-12 16:26:53,057 - IntraScanAdmin - INFO - Host 138.100.110.189 fuera de línea (Ping).
+2025-06-12 16:26:53,556 - IntraScanAdmin - INFO - Host 138.100.110.190 fuera de línea (Ping).
+2025-06-12 16:26:54,058 - IntraScanAdmin - INFO - Host 138.100.110.191 fuera de línea (Ping).
+2025-06-12 16:26:54,558 - IntraScanAdmin - INFO - Host 138.100.110.192 fuera de línea (Ping).
+2025-06-12 16:26:55,058 - IntraScanAdmin - INFO - Host 138.100.110.193 fuera de línea (Ping).
+2025-06-12 16:26:55,558 - IntraScanAdmin - INFO - Host 138.100.110.194 fuera de línea (Ping).
+2025-06-12 16:26:56,058 - IntraScanAdmin - INFO - Host 138.100.110.195 fuera de línea (Ping).
+2025-06-12 16:26:56,558 - IntraScanAdmin - INFO - Host 138.100.110.196 fuera de línea (Ping).
+2025-06-12 16:26:57,058 - IntraScanAdmin - INFO - Host 138.100.110.197 fuera de línea (Ping).
+2025-06-12 16:26:57,558 - IntraScanAdmin - INFO - Host 138.100.110.198 fuera de línea (Ping).
+2025-06-12 16:26:58,058 - IntraScanAdmin - INFO - Host 138.100.110.199 fuera de línea (Ping).
+2025-06-12 16:26:58,551 - IntraScanAdmin - INFO - Host 138.100.110.200 fuera de línea (Ping).
+2025-06-12 16:26:59,058 - IntraScanAdmin - INFO - Host 138.100.110.201 fuera de línea (Ping).
+2025-06-12 16:26:59,557 - IntraScanAdmin - INFO - Host 138.100.110.202 fuera de línea (Ping).
+2025-06-12 16:27:00,051 - IntraScanAdmin - INFO - Host 138.100.110.203 fuera de línea (Ping).
+2025-06-12 16:27:00,558 - IntraScanAdmin - INFO - Host 138.100.110.204 fuera de línea (Ping).
+2025-06-12 16:27:01,059 - IntraScanAdmin - INFO - Host 138.100.110.205 fuera de línea (Ping).
+2025-06-12 16:27:01,558 - IntraScanAdmin - INFO - Host 138.100.110.206 fuera de línea (Ping).
+2025-06-12 16:27:02,059 - IntraScanAdmin - INFO - Host 138.100.110.207 fuera de línea (Ping).
+2025-06-12 16:27:02,558 - IntraScanAdmin - INFO - Host 138.100.110.208 fuera de línea (Ping).
+2025-06-12 16:27:02,558 - IntraScanAdmin - INFO - Host 138.100.110.209 en línea (Ping).
+2025-06-12 16:27:02,558 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.209...
+2025-06-12 16:27:02,686 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.209.
+2025-06-12 16:27:02,688 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.209.
+2025-06-12 16:27:02,690 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.209.
+2025-06-12 16:27:02,701 - IntraScanAdmin - INFO - Host 138.100.110.210 en línea (Ping).
+2025-06-12 16:27:02,702 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.210...
+2025-06-12 16:27:03,558 - IntraScanAdmin - INFO - Host 138.100.110.211 fuera de línea (Ping).
+2025-06-12 16:27:04,058 - IntraScanAdmin - INFO - Host 138.100.110.212 fuera de línea (Ping).
+2025-06-12 16:27:04,058 - IntraScanAdmin - INFO - Host 138.100.110.213 en línea (Ping).
+2025-06-12 16:27:04,058 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.213...
+2025-06-12 16:27:04,291 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.213.
+2025-06-12 16:27:04,292 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.213.
+2025-06-12 16:27:04,559 - IntraScanAdmin - INFO - Host 138.100.110.214 fuera de línea (Ping).
+2025-06-12 16:27:05,058 - IntraScanAdmin - INFO - Host 138.100.110.215 fuera de línea (Ping).
+2025-06-12 16:27:05,558 - IntraScanAdmin - INFO - Host 138.100.110.216 fuera de línea (Ping).
+2025-06-12 16:27:06,058 - IntraScanAdmin - INFO - Host 138.100.110.217 fuera de línea (Ping).
+2025-06-12 16:27:06,075 - IntraScanAdmin - INFO - Host 138.100.110.218 en línea (Ping).
+2025-06-12 16:27:06,076 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.218...
+2025-06-12 16:27:06,178 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.218.
+2025-06-12 16:27:06,560 - IntraScanAdmin - INFO - Host 138.100.110.219 fuera de línea (Ping).
+2025-06-12 16:27:06,575 - IntraScanAdmin - INFO - Host 138.100.110.220 en línea (Ping).
+2025-06-12 16:27:06,575 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.220...
+2025-06-12 16:27:06,818 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.220.
+2025-06-12 16:27:06,834 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.220.
+2025-06-12 16:27:07,053 - IntraScanAdmin - INFO - Host 138.100.110.221 fuera de línea (Ping).
+2025-06-12 16:27:07,124 - IntraScanAdmin - INFO - Host 138.100.110.222 en línea (Ping).
+2025-06-12 16:27:07,124 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.222...
+2025-06-12 16:27:07,570 - IntraScanAdmin - INFO - Host 138.100.110.223 en línea (Ping).
+2025-06-12 16:27:07,580 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.223...
+2025-06-12 16:27:08,062 - IntraScanAdmin - INFO - Host 138.100.110.224 fuera de línea (Ping).
+2025-06-12 16:27:08,562 - IntraScanAdmin - INFO - Host 138.100.110.225 fuera de línea (Ping).
+2025-06-12 16:27:09,063 - IntraScanAdmin - INFO - Host 138.100.110.226 fuera de línea (Ping).
+2025-06-12 16:27:09,551 - IntraScanAdmin - INFO - Host 138.100.110.227 fuera de línea (Ping).
+2025-06-12 16:27:10,058 - IntraScanAdmin - INFO - Host 138.100.110.228 fuera de línea (Ping).
+2025-06-12 16:27:10,559 - IntraScanAdmin - INFO - Host 138.100.110.229 fuera de línea (Ping).
+2025-06-12 16:27:11,059 - IntraScanAdmin - INFO - Host 138.100.110.230 fuera de línea (Ping).
+2025-06-12 16:27:11,560 - IntraScanAdmin - INFO - Host 138.100.110.231 fuera de línea (Ping).
+2025-06-12 16:27:12,062 - IntraScanAdmin - INFO - Host 138.100.110.232 fuera de línea (Ping).
+2025-06-12 16:27:12,566 - IntraScanAdmin - INFO - Host 138.100.110.233 fuera de línea (Ping).
+2025-06-12 16:27:12,583 - IntraScanAdmin - INFO - Host 138.100.110.234 en línea (Ping).
+2025-06-12 16:27:12,583 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.234...
+2025-06-12 16:27:12,819 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.234.
+2025-06-12 16:27:12,836 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.234.
+2025-06-12 16:27:13,055 - IntraScanAdmin - INFO - Host 138.100.110.235 fuera de línea (Ping).
+2025-06-12 16:27:13,559 - IntraScanAdmin - INFO - Host 138.100.110.236 fuera de línea (Ping).
+2025-06-12 16:27:14,065 - IntraScanAdmin - INFO - Host 138.100.110.237 fuera de línea (Ping).
+2025-06-12 16:27:14,561 - IntraScanAdmin - INFO - Host 138.100.110.238 fuera de línea (Ping).
+2025-06-12 16:27:15,063 - IntraScanAdmin - INFO - Host 138.100.110.239 fuera de línea (Ping).
+2025-06-12 16:27:15,080 - IntraScanAdmin - INFO - Host 138.100.110.240 en línea (Ping).
+2025-06-12 16:27:15,080 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.240...
+2025-06-12 16:27:15,561 - IntraScanAdmin - INFO - Host 138.100.110.241 fuera de línea (Ping).
+2025-06-12 16:27:16,058 - IntraScanAdmin - INFO - Host 138.100.110.242 fuera de línea (Ping).
+2025-06-12 16:27:16,560 - IntraScanAdmin - INFO - Host 138.100.110.243 fuera de línea (Ping).
+2025-06-12 16:27:17,061 - IntraScanAdmin - INFO - Host 138.100.110.244 fuera de línea (Ping).
+2025-06-12 16:27:17,559 - IntraScanAdmin - INFO - Host 138.100.110.245 fuera de línea (Ping).
+2025-06-12 16:27:18,058 - IntraScanAdmin - INFO - Host 138.100.110.246 fuera de línea (Ping).
+2025-06-12 16:27:18,558 - IntraScanAdmin - INFO - Host 138.100.110.247 fuera de línea (Ping).
+2025-06-12 16:27:19,060 - IntraScanAdmin - INFO - Host 138.100.110.248 fuera de línea (Ping).
+2025-06-12 16:27:19,558 - IntraScanAdmin - INFO - Host 138.100.110.249 fuera de línea (Ping).
+2025-06-12 16:27:20,059 - IntraScanAdmin - INFO - Host 138.100.110.250 fuera de línea (Ping).
+2025-06-12 16:27:20,080 - IntraScanAdmin - INFO - Host 138.100.110.251 en línea (Ping).
+2025-06-12 16:27:20,081 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.251...
+2025-06-12 16:27:20,319 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.251.
+2025-06-12 16:27:20,335 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.251.
+2025-06-12 16:27:20,555 - IntraScanAdmin - INFO - Host 138.100.110.252 fuera de línea (Ping).
+2025-06-12 16:27:20,578 - IntraScanAdmin - INFO - Host 138.100.110.253 en línea (Ping).
+2025-06-12 16:27:20,578 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.253...
+2025-06-12 16:27:20,801 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.253.
+2025-06-12 16:27:20,816 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.253.
+2025-06-12 16:27:21,057 - IntraScanAdmin - INFO - Host 138.100.110.254 fuera de línea (Ping).
+2025-06-12 16:27:21,057 - IntraScanAdmin - INFO - Escaneo de subred 138.100.110.1/24 completado. Se procesaron 254 hosts.
+2025-06-12 16:27:21,057 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.1, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,057 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.2, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,057 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.3, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,068 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.4, Estado: online, Servicios: HTTP (80)
+2025-06-12 16:27:21,070 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.5, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,071 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.6, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,072 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.7, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,073 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.8, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,074 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.9, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,075 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.10, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,075 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.11, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,076 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.12, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,076 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.13, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,076 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.14, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,077 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.15, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,077 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.16, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,077 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.17, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,078 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.18, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,078 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.19, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.20, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.21, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.22, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.23, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.24, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.25, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.26, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.27, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.28, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.29, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.30, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.31, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.32, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.33, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,079 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.34, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,085 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.35, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,085 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.36, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,085 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.37, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,086 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.38, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,086 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.39, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,086 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.40, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,087 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.41, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,087 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.42, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,087 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.43, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,088 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.44, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,088 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.45, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,088 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.46, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,088 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.47, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,089 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.48, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,089 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.49, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,090 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.50, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,090 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.51, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,090 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.52, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,091 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.53, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,092 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.54, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,092 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.55, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,092 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.56, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,092 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.57, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,092 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.58, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,092 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.59, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,092 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.60, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,092 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.61, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,095 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.62, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,096 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.63, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,096 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.64, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,096 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.65, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,097 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.66, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,097 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.67, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,097 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.68, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,098 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.69, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,098 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.70, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,099 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.71, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,099 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.72, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,100 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.73, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,100 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.74, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,100 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.75, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.76, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.77, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.78, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.79, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.80, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.81, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.82, Estado: online, Servicios: SSH (22)
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.83, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.84, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.85, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.86, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.87, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,101 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.88, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,105 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.89, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,105 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.90, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,105 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.91, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,107 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.92, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,107 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.93, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,107 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.94, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,108 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.95, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,108 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.96, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,109 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.97, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,109 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.98, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.99, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.100, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.101, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.102, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.103, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.104, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.105, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.106, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.107, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.108, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,110 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.109, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,114 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.110, Estado: online, Servicios: SSH (22), HTTP (80)
+2025-06-12 16:27:21,114 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.111, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,116 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.112, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,116 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.113, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,116 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.114, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,117 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.115, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,117 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.116, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,118 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.117, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,118 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.118, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,118 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.119, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,118 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.120, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.121, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.122, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.123, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.124, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.125, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.126, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.127, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.128, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.129, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.130, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.131, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.132, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,119 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.133, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,124 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.134, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,124 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.135, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,125 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.136, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,126 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.137, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,126 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.138, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,127 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.139, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,127 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.140, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,128 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.141, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,128 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.142, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,129 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.143, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,129 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.144, Estado: online, Servicios: RDP (3389)
+2025-06-12 16:27:21,130 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.145, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,130 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.146, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,130 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.147, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,131 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.148, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,131 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.149, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,131 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.150, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,131 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.151, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,131 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.152, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,131 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.153, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,131 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.154, Estado: online, Servicios: HTTP (80)
+2025-06-12 16:27:21,131 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.155, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,131 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.156, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,135 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.157, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,135 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.158, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,136 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.159, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,136 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.160, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,136 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.161, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,136 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.162, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,137 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.163, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,137 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.164, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,137 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.165, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,138 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.166, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,138 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.167, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,138 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.168, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,139 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.169, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,139 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.170, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,139 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.171, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,139 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.172, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,139 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.173, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,141 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.174, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,142 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.175, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,142 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.176, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,142 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.177, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,142 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.178, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,142 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.179, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,142 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.180, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,145 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.181, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,145 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.182, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,146 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.183, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,146 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.184, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,146 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.185, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,146 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.186, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,147 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.187, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,147 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.188, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,147 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.189, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,148 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.190, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,148 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.191, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,148 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.192, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,149 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.193, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,149 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.194, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,150 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.195, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,151 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.196, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,151 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.197, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,151 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.198, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,152 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.199, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,152 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.200, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,152 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.201, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,153 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.202, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,153 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.203, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,153 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.204, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,153 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.205, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,154 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.206, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,154 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.207, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,154 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.208, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,155 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.209, Estado: online, Servicios: SSH (22), HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,155 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.210, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,155 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.211, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,155 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.212, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,155 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.213, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,155 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.214, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,157 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.215, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,158 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.216, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,158 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.217, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,158 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.218, Estado: online, Servicios: SSH (22)
+2025-06-12 16:27:21,158 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.219, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,158 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.220, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,161 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.221, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,161 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.222, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,162 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.223, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,162 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.224, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,162 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.225, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,163 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.226, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,163 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.227, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,164 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.228, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,164 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.229, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,165 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.230, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,165 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.231, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,166 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.232, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,166 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.233, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,166 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.234, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,167 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.235, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,167 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.236, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,167 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.237, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,167 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.238, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,167 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.239, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,167 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.240, Estado: online, Servicios: Ninguno
+2025-06-12 16:27:21,167 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.241, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,167 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.242, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,167 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.243, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,167 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.244, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,171 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.245, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,171 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.246, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,171 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.247, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,172 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.248, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,172 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.249, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,172 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.250, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,173 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.251, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,173 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.252, Estado: offline, Servicios: Ninguno
+2025-06-12 16:27:21,173 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.253, Estado: online, Servicios: HTTP (80), HTTPS (443)
+2025-06-12 16:27:21,173 - IntraScanAdmin - INFO - GUI: Host escaneado - IP: 138.100.110.254, Estado: offline, Servicios: Ninguno
+2025-06-12 16:36:38,601 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:36:47,152 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:37:59,467 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:40:14,474 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:40:43,751 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:41:14,612 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:42:15,680 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:43:24,338 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:44:43,365 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:49:28,336 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:49:28,390 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada para depuración.
+2025-06-12 16:49:28,394 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'. 0 hosts encontrados.
+2025-06-12 16:49:28,397 - IntraScanAdmin - INFO - Inventario cargado (0 hosts).
+2025-06-12 16:52:11,901 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:52:11,959 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 16:52:11,959 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'. 0 hosts encontrados.
+2025-06-12 16:52:11,966 - IntraScanAdmin - INFO - Inventario cargado al inicio: 0 hosts.
+2025-06-12 16:52:24,260 - IntraScanAdmin - INFO - GUI: Solicitando escaneo de red para 138.100.110.1/24
+2025-06-12 16:52:24,260 - IntraScanAdmin - INFO - Comienzo de escaneo de subred 138.100.110.1/24
+2025-06-12 16:52:24,377 - IntraScanAdmin - INFO - Host 138.100.110.1 en línea (Ping).
+2025-06-12 16:52:24,377 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.1...
+2025-06-12 16:52:25,048 - IntraScanAdmin - INFO - Host 138.100.110.2 fuera de línea (Ping).
+2025-06-12 16:52:25,064 - IntraScanAdmin - INFO - Host 138.100.110.3 en línea (Ping).
+2025-06-12 16:52:25,075 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.3...
+2025-06-12 16:52:25,521 - IntraScanAdmin - INFO - Host 138.100.110.4 en línea (Ping).
+2025-06-12 16:52:25,530 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.4...
+2025-06-12 16:52:25,770 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.4.
+2025-06-12 16:52:26,061 - IntraScanAdmin - INFO - Host 138.100.110.5 fuera de línea (Ping).
+2025-06-12 16:52:26,554 - IntraScanAdmin - INFO - Host 138.100.110.6 fuera de línea (Ping).
+2025-06-12 16:52:27,052 - IntraScanAdmin - INFO - Host 138.100.110.7 fuera de línea (Ping).
+2025-06-12 16:52:27,549 - IntraScanAdmin - INFO - Host 138.100.110.8 fuera de línea (Ping).
+2025-06-12 16:52:28,059 - IntraScanAdmin - INFO - Host 138.100.110.9 fuera de línea (Ping).
+2025-06-12 16:52:28,558 - IntraScanAdmin - INFO - Host 138.100.110.10 fuera de línea (Ping).
+2025-06-12 16:52:29,056 - IntraScanAdmin - INFO - Host 138.100.110.11 fuera de línea (Ping).
+2025-06-12 16:52:29,554 - IntraScanAdmin - INFO - Host 138.100.110.12 fuera de línea (Ping).
+2025-06-12 16:52:30,060 - IntraScanAdmin - INFO - Host 138.100.110.13 fuera de línea (Ping).
+2025-06-12 16:52:30,554 - IntraScanAdmin - INFO - Host 138.100.110.14 fuera de línea (Ping).
+2025-06-12 16:52:30,567 - IntraScanAdmin - INFO - Host 138.100.110.15 en línea (Ping).
+2025-06-12 16:52:30,567 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.15...
+2025-06-12 16:52:31,047 - IntraScanAdmin - INFO - Host 138.100.110.16 fuera de línea (Ping).
+2025-06-12 16:52:31,560 - IntraScanAdmin - INFO - Host 138.100.110.17 fuera de línea (Ping).
+2025-06-12 16:52:32,064 - IntraScanAdmin - INFO - Host 138.100.110.18 fuera de línea (Ping).
+2025-06-12 16:52:32,557 - IntraScanAdmin - INFO - Host 138.100.110.19 fuera de línea (Ping).
+2025-06-12 16:52:32,582 - IntraScanAdmin - INFO - Host 138.100.110.20 en línea (Ping).
+2025-06-12 16:52:32,582 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.20...
+2025-06-12 16:52:32,812 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.20.
+2025-06-12 16:52:32,816 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.20.
+2025-06-12 16:52:33,051 - IntraScanAdmin - INFO - Host 138.100.110.21 fuera de línea (Ping).
+2025-06-12 16:52:33,553 - IntraScanAdmin - INFO - Host 138.100.110.22 fuera de línea (Ping).
+2025-06-12 16:52:34,064 - IntraScanAdmin - INFO - Host 138.100.110.23 fuera de línea (Ping).
+2025-06-12 16:52:34,559 - IntraScanAdmin - INFO - Host 138.100.110.24 fuera de línea (Ping).
+2025-06-12 16:52:35,060 - IntraScanAdmin - INFO - Host 138.100.110.25 fuera de línea (Ping).
+2025-06-12 16:52:35,559 - IntraScanAdmin - INFO - Host 138.100.110.26 fuera de línea (Ping).
+2025-06-12 16:52:36,057 - IntraScanAdmin - INFO - Host 138.100.110.27 fuera de línea (Ping).
+2025-06-12 16:52:36,552 - IntraScanAdmin - INFO - Host 138.100.110.28 fuera de línea (Ping).
+2025-06-12 16:52:37,061 - IntraScanAdmin - INFO - Host 138.100.110.29 fuera de línea (Ping).
+2025-06-12 16:52:37,557 - IntraScanAdmin - INFO - Host 138.100.110.30 fuera de línea (Ping).
+2025-06-12 16:52:38,060 - IntraScanAdmin - INFO - Host 138.100.110.31 fuera de línea (Ping).
+2025-06-12 16:52:38,553 - IntraScanAdmin - INFO - Host 138.100.110.32 fuera de línea (Ping).
+2025-06-12 16:52:39,052 - IntraScanAdmin - INFO - Host 138.100.110.33 fuera de línea (Ping).
+2025-06-12 16:52:39,068 - IntraScanAdmin - INFO - Host 138.100.110.34 en línea (Ping).
+2025-06-12 16:52:39,068 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.34...
+2025-06-12 16:52:39,523 - IntraScanAdmin - INFO - Host 138.100.110.35 en línea (Ping).
+2025-06-12 16:52:39,532 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.35...
+2025-06-12 16:52:40,063 - IntraScanAdmin - INFO - Host 138.100.110.36 fuera de línea (Ping).
+2025-06-12 16:52:40,563 - IntraScanAdmin - INFO - Host 138.100.110.37 fuera de línea (Ping).
+2025-06-12 16:52:41,056 - IntraScanAdmin - INFO - Host 138.100.110.38 fuera de línea (Ping).
+2025-06-12 16:52:41,555 - IntraScanAdmin - INFO - Host 138.100.110.39 fuera de línea (Ping).
+2025-06-12 16:52:42,052 - IntraScanAdmin - INFO - Host 138.100.110.40 fuera de línea (Ping).
+2025-06-12 16:52:42,548 - IntraScanAdmin - INFO - Host 138.100.110.41 fuera de línea (Ping).
+2025-06-12 16:52:43,061 - IntraScanAdmin - INFO - Host 138.100.110.42 fuera de línea (Ping).
+2025-06-12 16:52:43,559 - IntraScanAdmin - INFO - Host 138.100.110.43 fuera de línea (Ping).
+2025-06-12 16:52:44,056 - IntraScanAdmin - INFO - Host 138.100.110.44 fuera de línea (Ping).
+2025-06-12 16:52:44,552 - IntraScanAdmin - INFO - Host 138.100.110.45 fuera de línea (Ping).
+2025-06-12 16:52:44,575 - IntraScanAdmin - INFO - Host 138.100.110.46 en línea (Ping).
+2025-06-12 16:52:44,575 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.46...
+2025-06-12 16:52:45,567 - IntraScanAdmin - INFO - Host 138.100.110.47 fuera de línea (Ping).
+2025-06-12 16:52:46,060 - IntraScanAdmin - INFO - Host 138.100.110.48 fuera de línea (Ping).
+2025-06-12 16:52:46,557 - IntraScanAdmin - INFO - Host 138.100.110.49 fuera de línea (Ping).
+2025-06-12 16:52:47,058 - IntraScanAdmin - INFO - Host 138.100.110.50 fuera de línea (Ping).
+2025-06-12 16:52:47,550 - IntraScanAdmin - INFO - Host 138.100.110.51 fuera de línea (Ping).
+2025-06-12 16:52:48,049 - IntraScanAdmin - INFO - Host 138.100.110.52 fuera de línea (Ping).
+2025-06-12 16:52:48,554 - IntraScanAdmin - INFO - Host 138.100.110.53 fuera de línea (Ping).
+2025-06-12 16:52:49,063 - IntraScanAdmin - INFO - Host 138.100.110.54 fuera de línea (Ping).
+2025-06-12 16:52:49,560 - IntraScanAdmin - INFO - Host 138.100.110.55 fuera de línea (Ping).
+2025-06-12 16:52:50,058 - IntraScanAdmin - INFO - Host 138.100.110.56 fuera de línea (Ping).
+2025-06-12 16:52:50,555 - IntraScanAdmin - INFO - Host 138.100.110.57 fuera de línea (Ping).
+2025-06-12 16:52:51,052 - IntraScanAdmin - INFO - Host 138.100.110.58 fuera de línea (Ping).
+2025-06-12 16:52:51,550 - IntraScanAdmin - INFO - Host 138.100.110.59 fuera de línea (Ping).
+2025-06-12 16:52:51,564 - IntraScanAdmin - INFO - Host 138.100.110.60 en línea (Ping).
+2025-06-12 16:52:51,571 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.60...
+2025-06-12 16:52:51,871 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.60.
+2025-06-12 16:52:51,878 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.60.
+2025-06-12 16:52:51,887 - IntraScanAdmin - INFO - Host 138.100.110.61 en línea (Ping).
+2025-06-12 16:52:51,887 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.61...
+2025-06-12 16:52:52,126 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.61.
+2025-06-12 16:52:52,142 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.61.
+2025-06-12 16:52:52,560 - IntraScanAdmin - INFO - Host 138.100.110.62 fuera de línea (Ping).
+2025-06-12 16:52:53,059 - IntraScanAdmin - INFO - Host 138.100.110.63 fuera de línea (Ping).
+2025-06-12 16:52:53,555 - IntraScanAdmin - INFO - Host 138.100.110.64 fuera de línea (Ping).
+2025-06-12 16:52:54,052 - IntraScanAdmin - INFO - Host 138.100.110.65 fuera de línea (Ping).
+2025-06-12 16:52:54,068 - IntraScanAdmin - INFO - Host 138.100.110.66 en línea (Ping).
+2025-06-12 16:52:54,068 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.66...
+2025-06-12 16:52:54,525 - IntraScanAdmin - INFO - Host 138.100.110.67 en línea (Ping).
+2025-06-12 16:52:54,531 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.67...
+2025-06-12 16:52:55,061 - IntraScanAdmin - INFO - Host 138.100.110.68 fuera de línea (Ping).
+2025-06-12 16:52:55,559 - IntraScanAdmin - INFO - Host 138.100.110.69 fuera de línea (Ping).
+2025-06-12 16:52:56,058 - IntraScanAdmin - INFO - Host 138.100.110.70 fuera de línea (Ping).
+2025-06-12 16:52:56,555 - IntraScanAdmin - INFO - Host 138.100.110.71 fuera de línea (Ping).
+2025-06-12 16:52:57,052 - IntraScanAdmin - INFO - Host 138.100.110.72 fuera de línea (Ping).
+2025-06-12 16:52:57,549 - IntraScanAdmin - INFO - Host 138.100.110.73 fuera de línea (Ping).
+2025-06-12 16:52:57,564 - IntraScanAdmin - INFO - Host 138.100.110.74 en línea (Ping).
+2025-06-12 16:52:57,564 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.74...
+2025-06-12 16:52:58,063 - IntraScanAdmin - INFO - Host 138.100.110.75 fuera de línea (Ping).
+2025-06-12 16:52:58,563 - IntraScanAdmin - INFO - Host 138.100.110.76 fuera de línea (Ping).
+2025-06-12 16:52:59,056 - IntraScanAdmin - INFO - Host 138.100.110.77 fuera de línea (Ping).
+2025-06-12 16:52:59,553 - IntraScanAdmin - INFO - Host 138.100.110.78 fuera de línea (Ping).
+2025-06-12 16:53:00,052 - IntraScanAdmin - INFO - Host 138.100.110.79 fuera de línea (Ping).
+2025-06-12 16:53:00,553 - IntraScanAdmin - INFO - Host 138.100.110.80 fuera de línea (Ping).
+2025-06-12 16:53:01,060 - IntraScanAdmin - INFO - Host 138.100.110.81 fuera de línea (Ping).
+2025-06-12 16:53:01,076 - IntraScanAdmin - INFO - Host 138.100.110.82 en línea (Ping).
+2025-06-12 16:53:01,076 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.82...
+2025-06-12 16:53:01,203 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.82.
+2025-06-12 16:53:01,557 - IntraScanAdmin - INFO - Host 138.100.110.83 fuera de línea (Ping).
+2025-06-12 16:53:02,055 - IntraScanAdmin - INFO - Host 138.100.110.84 fuera de línea (Ping).
+2025-06-12 16:53:02,551 - IntraScanAdmin - INFO - Host 138.100.110.85 fuera de línea (Ping).
+2025-06-12 16:53:03,048 - IntraScanAdmin - INFO - Host 138.100.110.86 fuera de línea (Ping).
+2025-06-12 16:53:03,560 - IntraScanAdmin - INFO - Host 138.100.110.87 fuera de línea (Ping).
+2025-06-12 16:53:04,057 - IntraScanAdmin - INFO - Host 138.100.110.88 fuera de línea (Ping).
+2025-06-12 16:53:04,553 - IntraScanAdmin - INFO - Host 138.100.110.89 fuera de línea (Ping).
+2025-06-12 16:53:05,052 - IntraScanAdmin - INFO - Host 138.100.110.90 fuera de línea (Ping).
+2025-06-12 16:53:05,551 - IntraScanAdmin - INFO - Host 138.100.110.91 fuera de línea (Ping).
+2025-06-12 16:53:06,062 - IntraScanAdmin - INFO - Host 138.100.110.92 fuera de línea (Ping).
+2025-06-12 16:53:06,561 - IntraScanAdmin - INFO - Host 138.100.110.93 fuera de línea (Ping).
+2025-06-12 16:53:07,060 - IntraScanAdmin - INFO - Host 138.100.110.94 fuera de línea (Ping).
+2025-06-12 16:53:07,561 - IntraScanAdmin - INFO - Host 138.100.110.95 fuera de línea (Ping).
+2025-06-12 16:53:07,575 - IntraScanAdmin - INFO - Host 138.100.110.96 en línea (Ping).
+2025-06-12 16:53:07,575 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.96...
+2025-06-12 16:53:07,959 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.96.
+2025-06-12 16:53:08,054 - IntraScanAdmin - INFO - Host 138.100.110.97 fuera de línea (Ping).
+2025-06-12 16:53:08,550 - IntraScanAdmin - INFO - Host 138.100.110.98 fuera de línea (Ping).
+2025-06-12 16:53:08,566 - IntraScanAdmin - INFO - Host 138.100.110.99 en línea (Ping).
+2025-06-12 16:53:08,566 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.99...
+2025-06-12 16:53:08,804 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.99.
+2025-06-12 16:53:08,837 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.99.
+2025-06-12 16:53:09,060 - IntraScanAdmin - INFO - Host 138.100.110.100 fuera de línea (Ping).
+2025-06-12 16:53:09,556 - IntraScanAdmin - INFO - Host 138.100.110.101 fuera de línea (Ping).
+2025-06-12 16:53:10,053 - IntraScanAdmin - INFO - Host 138.100.110.102 fuera de línea (Ping).
+2025-06-12 16:53:10,552 - IntraScanAdmin - INFO - Host 138.100.110.103 fuera de línea (Ping).
+2025-06-12 16:53:11,047 - IntraScanAdmin - INFO - Host 138.100.110.104 fuera de línea (Ping).
+2025-06-12 16:53:11,565 - IntraScanAdmin - INFO - Host 138.100.110.105 fuera de línea (Ping).
+2025-06-12 16:53:12,054 - IntraScanAdmin - INFO - Host 138.100.110.106 fuera de línea (Ping).
+2025-06-12 16:53:12,562 - IntraScanAdmin - INFO - Host 138.100.110.107 fuera de línea (Ping).
+2025-06-12 16:53:13,057 - IntraScanAdmin - INFO - Host 138.100.110.108 fuera de línea (Ping).
+2025-06-12 16:53:13,554 - IntraScanAdmin - INFO - Host 138.100.110.109 fuera de línea (Ping).
+2025-06-12 16:53:13,559 - IntraScanAdmin - INFO - Host 138.100.110.110 en línea (Ping).
+2025-06-12 16:53:13,570 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.110...
+2025-06-12 16:53:13,697 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.110.
+2025-06-12 16:53:13,705 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.110.
+2025-06-12 16:53:14,062 - IntraScanAdmin - INFO - Host 138.100.110.111 fuera de línea (Ping).
+2025-06-12 16:53:14,560 - IntraScanAdmin - INFO - Host 138.100.110.112 fuera de línea (Ping).
+2025-06-12 16:53:15,061 - IntraScanAdmin - INFO - Host 138.100.110.113 fuera de línea (Ping).
+2025-06-12 16:53:15,556 - IntraScanAdmin - INFO - Host 138.100.110.114 fuera de línea (Ping).
+2025-06-12 16:53:16,051 - IntraScanAdmin - INFO - Host 138.100.110.115 fuera de línea (Ping).
+2025-06-12 16:53:16,550 - IntraScanAdmin - INFO - Host 138.100.110.116 fuera de línea (Ping).
+2025-06-12 16:53:16,571 - IntraScanAdmin - INFO - Host 138.100.110.117 en línea (Ping).
+2025-06-12 16:53:16,571 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.117...
+2025-06-12 16:53:17,062 - IntraScanAdmin - INFO - Host 138.100.110.118 fuera de línea (Ping).
+2025-06-12 16:53:17,563 - IntraScanAdmin - INFO - Host 138.100.110.119 fuera de línea (Ping).
+2025-06-12 16:53:17,576 - IntraScanAdmin - INFO - Host 138.100.110.120 en línea (Ping).
+2025-06-12 16:53:17,576 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.120...
+2025-06-12 16:53:18,055 - IntraScanAdmin - INFO - Host 138.100.110.121 fuera de línea (Ping).
+2025-06-12 16:53:18,071 - IntraScanAdmin - INFO - Host 138.100.110.122 en línea (Ping).
+2025-06-12 16:53:18,071 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.122...
+2025-06-12 16:53:18,554 - IntraScanAdmin - INFO - Host 138.100.110.123 fuera de línea (Ping).
+2025-06-12 16:53:19,052 - IntraScanAdmin - INFO - Host 138.100.110.124 fuera de línea (Ping).
+2025-06-12 16:53:19,550 - IntraScanAdmin - INFO - Host 138.100.110.125 fuera de línea (Ping).
+2025-06-12 16:53:20,048 - IntraScanAdmin - INFO - Host 138.100.110.126 fuera de línea (Ping).
+2025-06-12 16:53:20,564 - IntraScanAdmin - INFO - Host 138.100.110.127 fuera de línea (Ping).
+2025-06-12 16:53:21,065 - IntraScanAdmin - INFO - Host 138.100.110.128 fuera de línea (Ping).
+2025-06-12 16:53:21,557 - IntraScanAdmin - INFO - Host 138.100.110.129 fuera de línea (Ping).
+2025-06-12 16:53:22,054 - IntraScanAdmin - INFO - Host 138.100.110.130 fuera de línea (Ping).
+2025-06-12 16:53:22,552 - IntraScanAdmin - INFO - Host 138.100.110.131 fuera de línea (Ping).
+2025-06-12 16:53:22,567 - IntraScanAdmin - INFO - Host 138.100.110.132 en línea (Ping).
+2025-06-12 16:53:22,567 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.132...
+2025-06-12 16:53:22,808 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.132.
+2025-06-12 16:53:22,817 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.132.
+2025-06-12 16:53:22,824 - IntraScanAdmin - INFO - Host 138.100.110.133 en línea (Ping).
+2025-06-12 16:53:22,836 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.133...
+2025-06-12 16:53:23,080 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.133.
+2025-06-12 16:53:23,097 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.133.
+2025-06-12 16:53:23,547 - IntraScanAdmin - INFO - Host 138.100.110.134 fuera de línea (Ping).
+2025-06-12 16:53:24,059 - IntraScanAdmin - INFO - Host 138.100.110.135 fuera de línea (Ping).
+2025-06-12 16:53:24,558 - IntraScanAdmin - INFO - Host 138.100.110.136 fuera de línea (Ping).
+2025-06-12 16:53:24,571 - IntraScanAdmin - INFO - Host 138.100.110.137 en línea (Ping).
+2025-06-12 16:53:24,571 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.137...
+2025-06-12 16:53:25,035 - IntraScanAdmin - INFO - Host 138.100.110.138 en línea (Ping).
+2025-06-12 16:53:25,035 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.138...
+2025-06-12 16:53:25,550 - IntraScanAdmin - INFO - Host 138.100.110.139 fuera de línea (Ping).
+2025-06-12 16:53:26,051 - IntraScanAdmin - INFO - Host 138.100.110.140 fuera de línea (Ping).
+2025-06-12 16:53:26,562 - IntraScanAdmin - INFO - Host 138.100.110.141 fuera de línea (Ping).
+2025-06-12 16:53:26,577 - IntraScanAdmin - INFO - Host 138.100.110.142 en línea (Ping).
+2025-06-12 16:53:26,577 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.142...
+2025-06-12 16:53:27,057 - IntraScanAdmin - INFO - Host 138.100.110.143 fuera de línea (Ping).
+2025-06-12 16:53:27,073 - IntraScanAdmin - INFO - Host 138.100.110.144 en línea (Ping).
+2025-06-12 16:53:27,075 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.144...
+2025-06-12 16:53:27,089 - IntraScanAdmin - INFO -     Puerto 3389 (RDP) ABIERTO en 138.100.110.144.
+2025-06-12 16:53:27,553 - IntraScanAdmin - INFO - Host 138.100.110.145 fuera de línea (Ping).
+2025-06-12 16:53:28,049 - IntraScanAdmin - INFO - Host 138.100.110.146 fuera de línea (Ping).
+2025-06-12 16:53:28,562 - IntraScanAdmin - INFO - Host 138.100.110.147 fuera de línea (Ping).
+2025-06-12 16:53:29,064 - IntraScanAdmin - INFO - Host 138.100.110.148 fuera de línea (Ping).
+2025-06-12 16:53:29,557 - IntraScanAdmin - INFO - Host 138.100.110.149 fuera de línea (Ping).
+2025-06-12 16:53:30,061 - IntraScanAdmin - INFO - Host 138.100.110.150 fuera de línea (Ping).
+2025-06-12 16:53:30,553 - IntraScanAdmin - INFO - Host 138.100.110.151 fuera de línea (Ping).
+2025-06-12 16:53:30,573 - IntraScanAdmin - INFO - Host 138.100.110.152 en línea (Ping).
+2025-06-12 16:53:30,573 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.152...
+2025-06-12 16:53:30,809 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.152.
+2025-06-12 16:53:30,825 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.152.
+2025-06-12 16:53:31,052 - IntraScanAdmin - INFO - Host 138.100.110.153 fuera de línea (Ping).
+2025-06-12 16:53:31,070 - IntraScanAdmin - INFO - Host 138.100.110.154 en línea (Ping).
+2025-06-12 16:53:31,074 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.154...
+2025-06-12 16:53:31,323 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.154.
+2025-06-12 16:53:31,552 - IntraScanAdmin - INFO - Host 138.100.110.155 fuera de línea (Ping).
+2025-06-12 16:53:32,062 - IntraScanAdmin - INFO - Host 138.100.110.156 fuera de línea (Ping).
+2025-06-12 16:53:32,557 - IntraScanAdmin - INFO - Host 138.100.110.157 fuera de línea (Ping).
+2025-06-12 16:53:33,055 - IntraScanAdmin - INFO - Host 138.100.110.158 fuera de línea (Ping).
+2025-06-12 16:53:33,557 - IntraScanAdmin - INFO - Host 138.100.110.159 fuera de línea (Ping).
+2025-06-12 16:53:34,051 - IntraScanAdmin - INFO - Host 138.100.110.160 fuera de línea (Ping).
+2025-06-12 16:53:34,565 - IntraScanAdmin - INFO - Host 138.100.110.161 fuera de línea (Ping).
+2025-06-12 16:53:35,062 - IntraScanAdmin - INFO - Host 138.100.110.162 fuera de línea (Ping).
+2025-06-12 16:53:35,557 - IntraScanAdmin - INFO - Host 138.100.110.163 fuera de línea (Ping).
+2025-06-12 16:53:36,055 - IntraScanAdmin - INFO - Host 138.100.110.164 fuera de línea (Ping).
+2025-06-12 16:53:36,550 - IntraScanAdmin - INFO - Host 138.100.110.165 fuera de línea (Ping).
+2025-06-12 16:53:37,051 - IntraScanAdmin - INFO - Host 138.100.110.166 fuera de línea (Ping).
+2025-06-12 16:53:37,550 - IntraScanAdmin - INFO - Host 138.100.110.167 fuera de línea (Ping).
+2025-06-12 16:53:38,048 - IntraScanAdmin - INFO - Host 138.100.110.168 fuera de línea (Ping).
+2025-06-12 16:53:38,564 - IntraScanAdmin - INFO - Host 138.100.110.169 fuera de línea (Ping).
+2025-06-12 16:53:39,064 - IntraScanAdmin - INFO - Host 138.100.110.170 fuera de línea (Ping).
+2025-06-12 16:53:39,076 - IntraScanAdmin - INFO - Host 138.100.110.171 en línea (Ping).
+2025-06-12 16:53:39,076 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.171...
+2025-06-12 16:53:39,317 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.171.
+2025-06-12 16:53:39,333 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.171.
+2025-06-12 16:53:39,557 - IntraScanAdmin - INFO - Host 138.100.110.172 fuera de línea (Ping).
+2025-06-12 16:53:39,573 - IntraScanAdmin - INFO - Host 138.100.110.173 en línea (Ping).
+2025-06-12 16:53:39,573 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.173...
+2025-06-12 16:53:39,797 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.173.
+2025-06-12 16:53:39,828 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.173.
+2025-06-12 16:53:40,052 - IntraScanAdmin - INFO - Host 138.100.110.174 fuera de línea (Ping).
+2025-06-12 16:53:40,549 - IntraScanAdmin - INFO - Host 138.100.110.175 fuera de línea (Ping).
+2025-06-12 16:53:41,061 - IntraScanAdmin - INFO - Host 138.100.110.176 fuera de línea (Ping).
+2025-06-12 16:53:41,561 - IntraScanAdmin - INFO - Host 138.100.110.177 fuera de línea (Ping).
+2025-06-12 16:53:42,061 - IntraScanAdmin - INFO - Host 138.100.110.178 fuera de línea (Ping).
+2025-06-12 16:53:42,553 - IntraScanAdmin - INFO - Host 138.100.110.179 fuera de línea (Ping).
+2025-06-12 16:53:43,051 - IntraScanAdmin - INFO - Host 138.100.110.180 fuera de línea (Ping).
+2025-06-12 16:53:43,562 - IntraScanAdmin - INFO - Host 138.100.110.181 fuera de línea (Ping).
+2025-06-12 16:53:44,059 - IntraScanAdmin - INFO - Host 138.100.110.182 fuera de línea (Ping).
+2025-06-12 16:53:44,559 - IntraScanAdmin - INFO - Host 138.100.110.183 fuera de línea (Ping).
+2025-06-12 16:53:45,056 - IntraScanAdmin - INFO - Host 138.100.110.184 fuera de línea (Ping).
+2025-06-12 16:53:45,554 - IntraScanAdmin - INFO - Host 138.100.110.185 fuera de línea (Ping).
+2025-06-12 16:53:46,052 - IntraScanAdmin - INFO - Host 138.100.110.186 fuera de línea (Ping).
+2025-06-12 16:53:46,551 - IntraScanAdmin - INFO - Host 138.100.110.187 fuera de línea (Ping).
+2025-06-12 16:53:46,567 - IntraScanAdmin - INFO - Host 138.100.110.188 en línea (Ping).
+2025-06-12 16:53:46,567 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.188...
+2025-06-12 16:53:47,048 - IntraScanAdmin - INFO - Host 138.100.110.189 fuera de línea (Ping).
+2025-06-12 16:53:47,562 - IntraScanAdmin - INFO - Host 138.100.110.190 fuera de línea (Ping).
+2025-06-12 16:53:48,057 - IntraScanAdmin - INFO - Host 138.100.110.191 fuera de línea (Ping).
+2025-06-12 16:53:48,558 - IntraScanAdmin - INFO - Host 138.100.110.192 fuera de línea (Ping).
+2025-06-12 16:53:49,054 - IntraScanAdmin - INFO - Host 138.100.110.193 fuera de línea (Ping).
+2025-06-12 16:53:49,551 - IntraScanAdmin - INFO - Host 138.100.110.194 fuera de línea (Ping).
+2025-06-12 16:53:50,048 - IntraScanAdmin - INFO - Host 138.100.110.195 fuera de línea (Ping).
+2025-06-12 16:53:50,565 - IntraScanAdmin - INFO - Host 138.100.110.196 fuera de línea (Ping).
+2025-06-12 16:53:51,065 - IntraScanAdmin - INFO - Host 138.100.110.197 fuera de línea (Ping).
+2025-06-12 16:53:51,556 - IntraScanAdmin - INFO - Host 138.100.110.198 fuera de línea (Ping).
+2025-06-12 16:53:52,053 - IntraScanAdmin - INFO - Host 138.100.110.199 fuera de línea (Ping).
+2025-06-12 16:53:52,550 - IntraScanAdmin - INFO - Host 138.100.110.200 fuera de línea (Ping).
+2025-06-12 16:53:53,048 - IntraScanAdmin - INFO - Host 138.100.110.201 fuera de línea (Ping).
+2025-06-12 16:53:53,564 - IntraScanAdmin - INFO - Host 138.100.110.202 fuera de línea (Ping).
+2025-06-12 16:53:54,056 - IntraScanAdmin - INFO - Host 138.100.110.203 fuera de línea (Ping).
+2025-06-12 16:53:54,554 - IntraScanAdmin - INFO - Host 138.100.110.204 fuera de línea (Ping).
+2025-06-12 16:53:55,052 - IntraScanAdmin - INFO - Host 138.100.110.205 fuera de línea (Ping).
+2025-06-12 16:53:55,551 - IntraScanAdmin - INFO - Host 138.100.110.206 fuera de línea (Ping).
+2025-06-12 16:53:56,050 - IntraScanAdmin - INFO - Host 138.100.110.207 fuera de línea (Ping).
+2025-06-12 16:53:56,547 - IntraScanAdmin - INFO - Host 138.100.110.208 fuera de línea (Ping).
+2025-06-12 16:53:56,567 - IntraScanAdmin - INFO - Host 138.100.110.209 en línea (Ping).
+2025-06-12 16:53:56,567 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.209...
+2025-06-12 16:53:56,690 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.209.
+2025-06-12 16:53:56,706 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.209.
+2025-06-12 16:53:56,722 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.209.
+2025-06-12 16:53:56,738 - IntraScanAdmin - INFO - Host 138.100.110.210 en línea (Ping).
+2025-06-12 16:53:56,738 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.210...
+2025-06-12 16:53:57,559 - IntraScanAdmin - INFO - Host 138.100.110.211 fuera de línea (Ping).
+2025-06-12 16:53:58,055 - IntraScanAdmin - INFO - Host 138.100.110.212 fuera de línea (Ping).
+2025-06-12 16:53:58,071 - IntraScanAdmin - INFO - Host 138.100.110.213 en línea (Ping).
+2025-06-12 16:53:58,075 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.213...
+2025-06-12 16:53:58,553 - IntraScanAdmin - INFO - Host 138.100.110.214 fuera de línea (Ping).
+2025-06-12 16:53:59,051 - IntraScanAdmin - INFO - Host 138.100.110.215 fuera de línea (Ping).
+2025-06-12 16:53:59,550 - IntraScanAdmin - INFO - Host 138.100.110.216 fuera de línea (Ping).
+2025-06-12 16:54:00,049 - IntraScanAdmin - INFO - Host 138.100.110.217 fuera de línea (Ping).
+2025-06-12 16:54:00,064 - IntraScanAdmin - INFO - Host 138.100.110.218 en línea (Ping).
+2025-06-12 16:54:00,068 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.218...
+2025-06-12 16:54:00,191 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.218.
+2025-06-12 16:54:00,560 - IntraScanAdmin - INFO - Host 138.100.110.219 fuera de línea (Ping).
+2025-06-12 16:54:00,575 - IntraScanAdmin - INFO - Host 138.100.110.220 en línea (Ping).
+2025-06-12 16:54:00,575 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.220...
+2025-06-12 16:54:00,800 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.220.
+2025-06-12 16:54:00,816 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.220.
+2025-06-12 16:54:01,055 - IntraScanAdmin - INFO - Host 138.100.110.221 fuera de línea (Ping).
+2025-06-12 16:54:01,121 - IntraScanAdmin - INFO - Host 138.100.110.222 en línea (Ping).
+2025-06-12 16:54:01,121 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.222...
+2025-06-12 16:54:01,585 - IntraScanAdmin - INFO - Host 138.100.110.223 en línea (Ping).
+2025-06-12 16:54:01,585 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.223...
+2025-06-12 16:54:02,048 - IntraScanAdmin - INFO - Host 138.100.110.224 fuera de línea (Ping).
+2025-06-12 16:54:02,566 - IntraScanAdmin - INFO - Host 138.100.110.225 fuera de línea (Ping).
+2025-06-12 16:54:03,059 - IntraScanAdmin - INFO - Host 138.100.110.226 fuera de línea (Ping).
+2025-06-12 16:54:03,562 - IntraScanAdmin - INFO - Host 138.100.110.227 fuera de línea (Ping).
+2025-06-12 16:54:04,055 - IntraScanAdmin - INFO - Host 138.100.110.228 fuera de línea (Ping).
+2025-06-12 16:54:04,551 - IntraScanAdmin - INFO - Host 138.100.110.229 fuera de línea (Ping).
+2025-06-12 16:54:05,054 - IntraScanAdmin - INFO - Host 138.100.110.230 fuera de línea (Ping).
+2025-06-12 16:54:05,565 - IntraScanAdmin - INFO - Host 138.100.110.231 fuera de línea (Ping).
+2025-06-12 16:54:06,060 - IntraScanAdmin - INFO - Host 138.100.110.232 fuera de línea (Ping).
+2025-06-12 16:54:06,557 - IntraScanAdmin - INFO - Host 138.100.110.233 fuera de línea (Ping).
+2025-06-12 16:54:06,573 - IntraScanAdmin - INFO - Host 138.100.110.234 en línea (Ping).
+2025-06-12 16:54:06,573 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.234...
+2025-06-12 16:54:06,813 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.234.
+2025-06-12 16:54:06,829 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.234.
+2025-06-12 16:54:07,053 - IntraScanAdmin - INFO - Host 138.100.110.235 fuera de línea (Ping).
+2025-06-12 16:54:07,550 - IntraScanAdmin - INFO - Host 138.100.110.236 fuera de línea (Ping).
+2025-06-12 16:54:08,048 - IntraScanAdmin - INFO - Host 138.100.110.237 fuera de línea (Ping).
+2025-06-12 16:54:08,566 - IntraScanAdmin - INFO - Host 138.100.110.238 fuera de línea (Ping).
+2025-06-12 16:54:09,058 - IntraScanAdmin - INFO - Host 138.100.110.239 fuera de línea (Ping).
+2025-06-12 16:54:09,062 - IntraScanAdmin - INFO - Host 138.100.110.240 en línea (Ping).
+2025-06-12 16:54:09,072 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.240...
+2025-06-12 16:54:09,551 - IntraScanAdmin - INFO - Host 138.100.110.241 fuera de línea (Ping).
+2025-06-12 16:54:10,048 - IntraScanAdmin - INFO - Host 138.100.110.242 fuera de línea (Ping).
+2025-06-12 16:54:10,567 - IntraScanAdmin - INFO - Host 138.100.110.243 fuera de línea (Ping).
+2025-06-12 16:54:11,063 - IntraScanAdmin - INFO - Host 138.100.110.244 fuera de línea (Ping).
+2025-06-12 16:54:11,559 - IntraScanAdmin - INFO - Host 138.100.110.245 fuera de línea (Ping).
+2025-06-12 16:54:12,058 - IntraScanAdmin - INFO - Host 138.100.110.246 fuera de línea (Ping).
+2025-06-12 16:54:12,553 - IntraScanAdmin - INFO - Host 138.100.110.247 fuera de línea (Ping).
+2025-06-12 16:54:13,052 - IntraScanAdmin - INFO - Host 138.100.110.248 fuera de línea (Ping).
+2025-06-12 16:54:13,562 - IntraScanAdmin - INFO - Host 138.100.110.249 fuera de línea (Ping).
+2025-06-12 16:54:14,059 - IntraScanAdmin - INFO - Host 138.100.110.250 fuera de línea (Ping).
+2025-06-12 16:54:14,075 - IntraScanAdmin - INFO - Host 138.100.110.251 en línea (Ping).
+2025-06-12 16:54:14,075 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.251...
+2025-06-12 16:54:14,299 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.251.
+2025-06-12 16:54:14,314 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.251.
+2025-06-12 16:54:14,554 - IntraScanAdmin - INFO - Host 138.100.110.252 fuera de línea (Ping).
+2025-06-12 16:54:15,051 - IntraScanAdmin - INFO - Host 138.100.110.253 fuera de línea (Ping).
+2025-06-12 16:54:15,549 - IntraScanAdmin - INFO - Host 138.100.110.254 fuera de línea (Ping).
+2025-06-12 16:54:15,549 - IntraScanAdmin - INFO - Escaneo de subred 138.100.110.1/24 completado. Se procesaron 254 hosts.
+2025-06-12 16:54:15,660 - IntraScanAdmin - INFO - GUI: Escaneo de red finalizado.
+2025-06-12 16:58:57,476 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:58:57,523 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 16:58:57,523 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'. 0 hosts encontrados.
+2025-06-12 16:58:57,523 - IntraScanAdmin - INFO - Inventario cargado al inicio: 0 hosts.
+2025-06-12 16:59:10,017 - IntraScanAdmin - INFO - GUI: Solicitando escaneo de red para 138.100.110.100/24
+2025-06-12 16:59:10,020 - IntraScanAdmin - INFO - Comienzo de escaneo de subred 138.100.110.100/24
+2025-06-12 16:59:10,132 - IntraScanAdmin - INFO - Host 138.100.110.1 en línea (Ping).
+2025-06-12 16:59:10,132 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.1...
+2025-06-12 16:59:11,063 - IntraScanAdmin - INFO - Host 138.100.110.2 fuera de línea (Ping).
+2025-06-12 16:59:11,078 - IntraScanAdmin - INFO - Host 138.100.110.3 en línea (Ping).
+2025-06-12 16:59:11,088 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.3...
+2025-06-12 16:59:11,543 - IntraScanAdmin - INFO - Host 138.100.110.4 en línea (Ping).
+2025-06-12 16:59:11,543 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.4...
+2025-06-12 16:59:11,783 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.4.
+2025-06-12 16:59:12,056 - IntraScanAdmin - INFO - Host 138.100.110.5 fuera de línea (Ping).
+2025-06-12 16:59:12,557 - IntraScanAdmin - INFO - Host 138.100.110.6 fuera de línea (Ping).
+2025-06-12 16:59:13,056 - IntraScanAdmin - INFO - Host 138.100.110.7 fuera de línea (Ping).
+2025-06-12 16:59:13,550 - IntraScanAdmin - INFO - Host 138.100.110.8 fuera de línea (Ping).
+2025-06-12 16:59:14,067 - IntraScanAdmin - INFO - Host 138.100.110.9 fuera de línea (Ping).
+2025-06-12 16:59:14,560 - IntraScanAdmin - INFO - Host 138.100.110.10 fuera de línea (Ping).
+2025-06-12 16:59:15,055 - IntraScanAdmin - INFO - Host 138.100.110.11 fuera de línea (Ping).
+2025-06-12 16:59:15,554 - IntraScanAdmin - INFO - Host 138.100.110.12 fuera de línea (Ping).
+2025-06-12 16:59:16,054 - IntraScanAdmin - INFO - Host 138.100.110.13 fuera de línea (Ping).
+2025-06-12 16:59:16,549 - IntraScanAdmin - INFO - Host 138.100.110.14 fuera de línea (Ping).
+2025-06-12 16:59:16,565 - IntraScanAdmin - INFO - Host 138.100.110.15 en línea (Ping).
+2025-06-12 16:59:16,565 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.15...
+2025-06-12 16:59:17,061 - IntraScanAdmin - INFO - Host 138.100.110.16 fuera de línea (Ping).
+2025-06-12 16:59:17,558 - IntraScanAdmin - INFO - Host 138.100.110.17 fuera de línea (Ping).
+2025-06-12 16:59:18,055 - IntraScanAdmin - INFO - Host 138.100.110.18 fuera de línea (Ping).
+2025-06-12 16:59:18,554 - IntraScanAdmin - INFO - Host 138.100.110.19 fuera de línea (Ping).
+2025-06-12 16:59:18,569 - IntraScanAdmin - INFO - Host 138.100.110.20 en línea (Ping).
+2025-06-12 16:59:18,569 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.20...
+2025-06-12 16:59:18,825 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.20.
+2025-06-12 16:59:18,856 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.20.
+2025-06-12 16:59:19,063 - IntraScanAdmin - INFO - Host 138.100.110.21 fuera de línea (Ping).
+2025-06-12 16:59:19,563 - IntraScanAdmin - INFO - Host 138.100.110.22 fuera de línea (Ping).
+2025-06-12 16:59:20,060 - IntraScanAdmin - INFO - Host 138.100.110.23 fuera de línea (Ping).
+2025-06-12 16:59:20,561 - IntraScanAdmin - INFO - Host 138.100.110.24 fuera de línea (Ping).
+2025-06-12 16:59:21,052 - IntraScanAdmin - INFO - Host 138.100.110.25 fuera de línea (Ping).
+2025-06-12 16:59:21,554 - IntraScanAdmin - INFO - Host 138.100.110.26 fuera de línea (Ping).
+2025-06-12 16:59:22,067 - IntraScanAdmin - INFO - Host 138.100.110.27 fuera de línea (Ping).
+2025-06-12 16:59:22,565 - IntraScanAdmin - INFO - Host 138.100.110.28 fuera de línea (Ping).
+2025-06-12 16:59:23,058 - IntraScanAdmin - INFO - Host 138.100.110.29 fuera de línea (Ping).
+2025-06-12 16:59:23,553 - IntraScanAdmin - INFO - Host 138.100.110.30 fuera de línea (Ping).
+2025-06-12 16:59:24,052 - IntraScanAdmin - INFO - Host 138.100.110.31 fuera de línea (Ping).
+2025-06-12 16:59:24,560 - IntraScanAdmin - INFO - Host 138.100.110.32 fuera de línea (Ping).
+2025-06-12 16:59:25,056 - IntraScanAdmin - INFO - Host 138.100.110.33 fuera de línea (Ping).
+2025-06-12 16:59:25,072 - IntraScanAdmin - INFO - Host 138.100.110.34 en línea (Ping).
+2025-06-12 16:59:25,072 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.34...
+2025-06-12 16:59:25,535 - IntraScanAdmin - INFO - Host 138.100.110.35 en línea (Ping).
+2025-06-12 16:59:25,535 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.35...
+2025-06-12 16:59:26,066 - IntraScanAdmin - INFO - Host 138.100.110.36 fuera de línea (Ping).
+2025-06-12 16:59:26,561 - IntraScanAdmin - INFO - Host 138.100.110.37 fuera de línea (Ping).
+2025-06-12 16:59:27,059 - IntraScanAdmin - INFO - Host 138.100.110.38 fuera de línea (Ping).
+2025-06-12 16:59:27,558 - IntraScanAdmin - INFO - Host 138.100.110.39 fuera de línea (Ping).
+2025-06-12 16:59:28,050 - IntraScanAdmin - INFO - Host 138.100.110.40 fuera de línea (Ping).
+2025-06-12 16:59:28,562 - IntraScanAdmin - INFO - Host 138.100.110.41 fuera de línea (Ping).
+2025-06-12 16:59:29,060 - IntraScanAdmin - INFO - Host 138.100.110.42 fuera de línea (Ping).
+2025-06-12 16:59:29,559 - IntraScanAdmin - INFO - Host 138.100.110.43 fuera de línea (Ping).
+2025-06-12 16:59:30,055 - IntraScanAdmin - INFO - Host 138.100.110.44 fuera de línea (Ping).
+2025-06-12 16:59:30,551 - IntraScanAdmin - INFO - Host 138.100.110.45 fuera de línea (Ping).
+2025-06-12 16:59:30,575 - IntraScanAdmin - INFO - Host 138.100.110.46 en línea (Ping).
+2025-06-12 16:59:30,575 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.46...
+2025-06-12 16:59:31,565 - IntraScanAdmin - INFO - Host 138.100.110.47 fuera de línea (Ping).
+2025-06-12 16:59:32,059 - IntraScanAdmin - INFO - Host 138.100.110.48 fuera de línea (Ping).
+2025-06-12 16:59:32,558 - IntraScanAdmin - INFO - Host 138.100.110.49 fuera de línea (Ping).
+2025-06-12 16:59:33,056 - IntraScanAdmin - INFO - Host 138.100.110.50 fuera de línea (Ping).
+2025-06-12 16:59:33,552 - IntraScanAdmin - INFO - Host 138.100.110.51 fuera de línea (Ping).
+2025-06-12 16:59:34,062 - IntraScanAdmin - INFO - Host 138.100.110.52 fuera de línea (Ping).
+2025-06-12 16:59:34,558 - IntraScanAdmin - INFO - Host 138.100.110.53 fuera de línea (Ping).
+2025-06-12 16:59:35,054 - IntraScanAdmin - INFO - Host 138.100.110.54 fuera de línea (Ping).
+2025-06-12 16:59:35,563 - IntraScanAdmin - INFO - Host 138.100.110.55 fuera de línea (Ping).
+2025-06-12 16:59:36,059 - IntraScanAdmin - INFO - Host 138.100.110.56 fuera de línea (Ping).
+2025-06-12 16:59:36,557 - IntraScanAdmin - INFO - Host 138.100.110.57 fuera de línea (Ping).
+2025-06-12 16:59:37,052 - IntraScanAdmin - INFO - Host 138.100.110.58 fuera de línea (Ping).
+2025-06-12 16:59:37,550 - IntraScanAdmin - INFO - Host 138.100.110.59 fuera de línea (Ping).
+2025-06-12 16:59:37,566 - IntraScanAdmin - INFO - Host 138.100.110.60 en línea (Ping).
+2025-06-12 16:59:37,566 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.60...
+2025-06-12 16:59:37,870 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.60.
+2025-06-12 16:59:37,886 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.60.
+2025-06-12 16:59:37,891 - IntraScanAdmin - INFO - Host 138.100.110.61 en línea (Ping).
+2025-06-12 16:59:37,902 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.61...
+2025-06-12 16:59:38,126 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.61.
+2025-06-12 16:59:38,126 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.61.
+2025-06-12 16:59:38,557 - IntraScanAdmin - INFO - Host 138.100.110.62 fuera de línea (Ping).
+2025-06-12 16:59:39,053 - IntraScanAdmin - INFO - Host 138.100.110.63 fuera de línea (Ping).
+2025-06-12 16:59:39,550 - IntraScanAdmin - INFO - Host 138.100.110.64 fuera de línea (Ping).
+2025-06-12 16:59:40,068 - IntraScanAdmin - INFO - Host 138.100.110.65 fuera de línea (Ping).
+2025-06-12 16:59:40,078 - IntraScanAdmin - INFO - Host 138.100.110.66 en línea (Ping).
+2025-06-12 16:59:40,078 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.66...
+2025-06-12 16:59:40,538 - IntraScanAdmin - INFO - Host 138.100.110.67 en línea (Ping).
+2025-06-12 16:59:40,543 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.67...
+2025-06-12 16:59:41,057 - IntraScanAdmin - INFO - Host 138.100.110.68 fuera de línea (Ping).
+2025-06-12 16:59:41,555 - IntraScanAdmin - INFO - Host 138.100.110.69 fuera de línea (Ping).
+2025-06-12 16:59:42,053 - IntraScanAdmin - INFO - Host 138.100.110.70 fuera de línea (Ping).
+2025-06-12 16:59:42,551 - IntraScanAdmin - INFO - Host 138.100.110.71 fuera de línea (Ping).
+2025-06-12 16:59:43,049 - IntraScanAdmin - INFO - Host 138.100.110.72 fuera de línea (Ping).
+2025-06-12 16:59:43,563 - IntraScanAdmin - INFO - Host 138.100.110.73 fuera de línea (Ping).
+2025-06-12 16:59:43,579 - IntraScanAdmin - INFO - Host 138.100.110.74 en línea (Ping).
+2025-06-12 16:59:43,579 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.74...
+2025-06-12 16:59:44,059 - IntraScanAdmin - INFO - Host 138.100.110.75 fuera de línea (Ping).
+2025-06-12 16:59:44,561 - IntraScanAdmin - INFO - Host 138.100.110.76 fuera de línea (Ping).
+2025-06-12 16:59:45,057 - IntraScanAdmin - INFO - Host 138.100.110.77 fuera de línea (Ping).
+2025-06-12 16:59:45,554 - IntraScanAdmin - INFO - Host 138.100.110.78 fuera de línea (Ping).
+2025-06-12 16:59:46,056 - IntraScanAdmin - INFO - Host 138.100.110.79 fuera de línea (Ping).
+2025-06-12 16:59:46,553 - IntraScanAdmin - INFO - Host 138.100.110.80 fuera de línea (Ping).
+2025-06-12 16:59:47,059 - IntraScanAdmin - INFO - Host 138.100.110.81 fuera de línea (Ping).
+2025-06-12 16:59:47,075 - IntraScanAdmin - INFO - Host 138.100.110.82 en línea (Ping).
+2025-06-12 16:59:47,075 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.82...
+2025-06-12 16:59:47,187 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.82.
+2025-06-12 16:59:47,561 - IntraScanAdmin - INFO - Host 138.100.110.83 fuera de línea (Ping).
+2025-06-12 16:59:48,054 - IntraScanAdmin - INFO - Host 138.100.110.84 fuera de línea (Ping).
+2025-06-12 16:59:48,552 - IntraScanAdmin - INFO - Host 138.100.110.85 fuera de línea (Ping).
+2025-06-12 16:59:49,048 - IntraScanAdmin - INFO - Host 138.100.110.86 fuera de línea (Ping).
+2025-06-12 16:59:49,562 - IntraScanAdmin - INFO - Host 138.100.110.87 fuera de línea (Ping).
+2025-06-12 16:59:50,062 - IntraScanAdmin - INFO - Host 138.100.110.88 fuera de línea (Ping).
+2025-06-12 16:59:50,557 - IntraScanAdmin - INFO - Host 138.100.110.89 fuera de línea (Ping).
+2025-06-12 16:59:51,054 - IntraScanAdmin - INFO - Host 138.100.110.90 fuera de línea (Ping).
+2025-06-12 16:59:51,551 - IntraScanAdmin - INFO - Host 138.100.110.91 fuera de línea (Ping).
+2025-06-12 16:59:52,050 - IntraScanAdmin - INFO - Host 138.100.110.92 fuera de línea (Ping).
+2025-06-12 16:59:52,548 - IntraScanAdmin - INFO - Host 138.100.110.93 fuera de línea (Ping).
+2025-06-12 16:59:53,062 - IntraScanAdmin - INFO - Host 138.100.110.94 fuera de línea (Ping).
+2025-06-12 16:59:53,561 - IntraScanAdmin - INFO - Host 138.100.110.95 fuera de línea (Ping).
+2025-06-12 16:59:53,578 - IntraScanAdmin - INFO - Host 138.100.110.96 en línea (Ping).
+2025-06-12 16:59:53,578 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.96...
+2025-06-12 16:59:54,055 - IntraScanAdmin - INFO - Host 138.100.110.97 fuera de línea (Ping).
+2025-06-12 16:59:54,557 - IntraScanAdmin - INFO - Host 138.100.110.98 fuera de línea (Ping).
+2025-06-12 16:59:54,569 - IntraScanAdmin - INFO - Host 138.100.110.99 en línea (Ping).
+2025-06-12 16:59:54,569 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.99...
+2025-06-12 16:59:54,793 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.99.
+2025-06-12 16:59:54,825 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.99.
+2025-06-12 16:59:55,047 - IntraScanAdmin - INFO - Host 138.100.110.100 fuera de línea (Ping).
+2025-06-12 16:59:55,562 - IntraScanAdmin - INFO - Host 138.100.110.101 fuera de línea (Ping).
+2025-06-12 16:59:56,060 - IntraScanAdmin - INFO - Host 138.100.110.102 fuera de línea (Ping).
+2025-06-12 16:59:56,555 - IntraScanAdmin - INFO - Host 138.100.110.103 fuera de línea (Ping).
+2025-06-12 16:59:57,052 - IntraScanAdmin - INFO - Host 138.100.110.104 fuera de línea (Ping).
+2025-06-12 16:59:57,550 - IntraScanAdmin - INFO - Host 138.100.110.105 fuera de línea (Ping).
+2025-06-12 16:59:58,048 - IntraScanAdmin - INFO - Host 138.100.110.106 fuera de línea (Ping).
+2025-06-12 16:59:58,550 - IntraScanAdmin - INFO - Host 138.100.110.107 fuera de línea (Ping).
+2025-06-12 16:59:59,059 - IntraScanAdmin - INFO - Host 138.100.110.108 fuera de línea (Ping).
+2025-06-12 16:59:59,554 - IntraScanAdmin - INFO - Host 138.100.110.109 fuera de línea (Ping).
+2025-06-12 16:59:59,571 - IntraScanAdmin - INFO - Host 138.100.110.110 en línea (Ping).
+2025-06-12 16:59:59,571 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.110...
+2025-06-12 16:59:59,698 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.110.
+2025-06-12 16:59:59,702 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.110.
+2025-06-12 17:00:00,047 - IntraScanAdmin - INFO - Host 138.100.110.111 fuera de línea (Ping).
+2025-06-12 17:00:00,559 - IntraScanAdmin - INFO - Host 138.100.110.112 fuera de línea (Ping).
+2025-06-12 17:00:01,054 - IntraScanAdmin - INFO - Host 138.100.110.113 fuera de línea (Ping).
+2025-06-12 17:00:01,550 - IntraScanAdmin - INFO - Host 138.100.110.114 fuera de línea (Ping).
+2025-06-12 17:00:02,062 - IntraScanAdmin - INFO - Host 138.100.110.115 fuera de línea (Ping).
+2025-06-12 17:00:02,561 - IntraScanAdmin - INFO - Host 138.100.110.116 fuera de línea (Ping).
+2025-06-12 17:00:02,576 - IntraScanAdmin - INFO - Host 138.100.110.117 en línea (Ping).
+2025-06-12 17:00:02,588 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.117...
+2025-06-12 17:00:03,555 - IntraScanAdmin - INFO - Host 138.100.110.118 fuera de línea (Ping).
+2025-06-12 17:00:04,053 - IntraScanAdmin - INFO - Host 138.100.110.119 fuera de línea (Ping).
+2025-06-12 17:00:04,549 - IntraScanAdmin - INFO - Host 138.100.110.120 fuera de línea (Ping).
+2025-06-12 17:00:05,061 - IntraScanAdmin - INFO - Host 138.100.110.121 fuera de línea (Ping).
+2025-06-12 17:00:05,077 - IntraScanAdmin - INFO - Host 138.100.110.122 en línea (Ping).
+2025-06-12 17:00:05,077 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.122...
+2025-06-12 17:00:05,560 - IntraScanAdmin - INFO - Host 138.100.110.123 fuera de línea (Ping).
+2025-06-12 17:00:06,056 - IntraScanAdmin - INFO - Host 138.100.110.124 fuera de línea (Ping).
+2025-06-12 17:00:06,553 - IntraScanAdmin - INFO - Host 138.100.110.125 fuera de línea (Ping).
+2025-06-12 17:00:07,050 - IntraScanAdmin - INFO - Host 138.100.110.126 fuera de línea (Ping).
+2025-06-12 17:00:07,563 - IntraScanAdmin - INFO - Host 138.100.110.127 fuera de línea (Ping).
+2025-06-12 17:00:08,064 - IntraScanAdmin - INFO - Host 138.100.110.128 fuera de línea (Ping).
+2025-06-12 17:00:08,557 - IntraScanAdmin - INFO - Host 138.100.110.129 fuera de línea (Ping).
+2025-06-12 17:00:09,053 - IntraScanAdmin - INFO - Host 138.100.110.130 fuera de línea (Ping).
+2025-06-12 17:00:09,550 - IntraScanAdmin - INFO - Host 138.100.110.131 fuera de línea (Ping).
+2025-06-12 17:00:09,570 - IntraScanAdmin - INFO - Host 138.100.110.132 en línea (Ping).
+2025-06-12 17:00:09,574 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.132...
+2025-06-12 17:00:09,805 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.132.
+2025-06-12 17:00:09,821 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.132.
+2025-06-12 17:00:09,827 - IntraScanAdmin - INFO - Host 138.100.110.133 en línea (Ping).
+2025-06-12 17:00:09,837 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.133...
+2025-06-12 17:00:10,077 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.133.
+2025-06-12 17:00:10,077 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.133.
+2025-06-12 17:00:10,558 - IntraScanAdmin - INFO - Host 138.100.110.134 fuera de línea (Ping).
+2025-06-12 17:00:11,056 - IntraScanAdmin - INFO - Host 138.100.110.135 fuera de línea (Ping).
+2025-06-12 17:00:11,555 - IntraScanAdmin - INFO - Host 138.100.110.136 fuera de línea (Ping).
+2025-06-12 17:00:11,571 - IntraScanAdmin - INFO - Host 138.100.110.137 en línea (Ping).
+2025-06-12 17:00:11,571 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.137...
+2025-06-12 17:00:12,028 - IntraScanAdmin - INFO - Host 138.100.110.138 en línea (Ping).
+2025-06-12 17:00:12,037 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.138...
+2025-06-12 17:00:12,549 - IntraScanAdmin - INFO - Host 138.100.110.139 fuera de línea (Ping).
+2025-06-12 17:00:13,067 - IntraScanAdmin - INFO - Host 138.100.110.140 fuera de línea (Ping).
+2025-06-12 17:00:13,561 - IntraScanAdmin - INFO - Host 138.100.110.141 fuera de línea (Ping).
+2025-06-12 17:00:13,580 - IntraScanAdmin - INFO - Host 138.100.110.142 en línea (Ping).
+2025-06-12 17:00:13,580 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.142...
+2025-06-12 17:00:14,062 - IntraScanAdmin - INFO - Host 138.100.110.143 fuera de línea (Ping).
+2025-06-12 17:00:14,075 - IntraScanAdmin - INFO - Host 138.100.110.144 en línea (Ping).
+2025-06-12 17:00:14,075 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.144...
+2025-06-12 17:00:14,091 - IntraScanAdmin - INFO -     Puerto 3389 (RDP) ABIERTO en 138.100.110.144.
+2025-06-12 17:00:14,557 - IntraScanAdmin - INFO - Host 138.100.110.145 fuera de línea (Ping).
+2025-06-12 17:00:15,060 - IntraScanAdmin - INFO - Host 138.100.110.146 fuera de línea (Ping).
+2025-06-12 17:00:15,549 - IntraScanAdmin - INFO - Host 138.100.110.147 fuera de línea (Ping).
+2025-06-12 17:00:16,062 - IntraScanAdmin - INFO - Host 138.100.110.148 fuera de línea (Ping).
+2025-06-12 17:00:16,563 - IntraScanAdmin - INFO - Host 138.100.110.149 fuera de línea (Ping).
+2025-06-12 17:00:17,058 - IntraScanAdmin - INFO - Host 138.100.110.150 fuera de línea (Ping).
+2025-06-12 17:00:17,553 - IntraScanAdmin - INFO - Host 138.100.110.151 fuera de línea (Ping).
+2025-06-12 17:00:17,569 - IntraScanAdmin - INFO - Host 138.100.110.152 en línea (Ping).
+2025-06-12 17:00:17,580 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.152...
+2025-06-12 17:00:17,809 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.152.
+2025-06-12 17:00:17,825 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.152.
+2025-06-12 17:00:18,051 - IntraScanAdmin - INFO - Host 138.100.110.153 fuera de línea (Ping).
+2025-06-12 17:00:18,067 - IntraScanAdmin - INFO - Host 138.100.110.154 en línea (Ping).
+2025-06-12 17:00:18,067 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.154...
+2025-06-12 17:00:18,306 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.154.
+2025-06-12 17:00:18,561 - IntraScanAdmin - INFO - Host 138.100.110.155 fuera de línea (Ping).
+2025-06-12 17:00:19,059 - IntraScanAdmin - INFO - Host 138.100.110.156 fuera de línea (Ping).
+2025-06-12 17:00:19,562 - IntraScanAdmin - INFO - Host 138.100.110.157 fuera de línea (Ping).
+2025-06-12 17:00:20,061 - IntraScanAdmin - INFO - Host 138.100.110.158 fuera de línea (Ping).
+2025-06-12 17:00:20,553 - IntraScanAdmin - INFO - Host 138.100.110.159 fuera de línea (Ping).
+2025-06-12 17:00:21,049 - IntraScanAdmin - INFO - Host 138.100.110.160 fuera de línea (Ping).
+2025-06-12 17:00:21,562 - IntraScanAdmin - INFO - Host 138.100.110.161 fuera de línea (Ping).
+2025-06-12 17:00:22,058 - IntraScanAdmin - INFO - Host 138.100.110.162 fuera de línea (Ping).
+2025-06-12 17:00:22,557 - IntraScanAdmin - INFO - Host 138.100.110.163 fuera de línea (Ping).
+2025-06-12 17:00:23,056 - IntraScanAdmin - INFO - Host 138.100.110.164 fuera de línea (Ping).
+2025-06-12 17:00:23,552 - IntraScanAdmin - INFO - Host 138.100.110.165 fuera de línea (Ping).
+2025-06-12 17:00:24,052 - IntraScanAdmin - INFO - Host 138.100.110.166 fuera de línea (Ping).
+2025-06-12 17:00:24,562 - IntraScanAdmin - INFO - Host 138.100.110.167 fuera de línea (Ping).
+2025-06-12 17:00:25,061 - IntraScanAdmin - INFO - Host 138.100.110.168 fuera de línea (Ping).
+2025-06-12 17:00:25,558 - IntraScanAdmin - INFO - Host 138.100.110.169 fuera de línea (Ping).
+2025-06-12 17:00:26,057 - IntraScanAdmin - INFO - Host 138.100.110.170 fuera de línea (Ping).
+2025-06-12 17:00:26,075 - IntraScanAdmin - INFO - Host 138.100.110.171 en línea (Ping).
+2025-06-12 17:00:26,075 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.171...
+2025-06-12 17:00:26,296 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.171.
+2025-06-12 17:00:26,312 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.171.
+2025-06-12 17:00:26,552 - IntraScanAdmin - INFO - Host 138.100.110.172 fuera de línea (Ping).
+2025-06-12 17:00:26,572 - IntraScanAdmin - INFO - Host 138.100.110.173 en línea (Ping).
+2025-06-12 17:00:26,572 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.173...
+2025-06-12 17:00:26,807 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.173.
+2025-06-12 17:00:26,807 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.173.
+2025-06-12 17:00:27,048 - IntraScanAdmin - INFO - Host 138.100.110.174 fuera de línea (Ping).
+2025-06-12 17:00:27,561 - IntraScanAdmin - INFO - Host 138.100.110.175 fuera de línea (Ping).
+2025-06-12 17:00:28,057 - IntraScanAdmin - INFO - Host 138.100.110.176 fuera de línea (Ping).
+2025-06-12 17:00:28,555 - IntraScanAdmin - INFO - Host 138.100.110.177 fuera de línea (Ping).
+2025-06-12 17:00:29,050 - IntraScanAdmin - INFO - Host 138.100.110.178 fuera de línea (Ping).
+2025-06-12 17:00:29,554 - IntraScanAdmin - INFO - Host 138.100.110.179 fuera de línea (Ping).
+2025-06-12 17:00:30,061 - IntraScanAdmin - INFO - Host 138.100.110.180 fuera de línea (Ping).
+2025-06-12 17:00:30,558 - IntraScanAdmin - INFO - Host 138.100.110.181 fuera de línea (Ping).
+2025-06-12 17:00:31,056 - IntraScanAdmin - INFO - Host 138.100.110.182 fuera de línea (Ping).
+2025-06-12 17:00:31,551 - IntraScanAdmin - INFO - Host 138.100.110.183 fuera de línea (Ping).
+2025-06-12 17:00:32,048 - IntraScanAdmin - INFO - Host 138.100.110.184 fuera de línea (Ping).
+2025-06-12 17:00:32,561 - IntraScanAdmin - INFO - Host 138.100.110.185 fuera de línea (Ping).
+2025-06-12 17:00:33,059 - IntraScanAdmin - INFO - Host 138.100.110.186 fuera de línea (Ping).
+2025-06-12 17:00:33,554 - IntraScanAdmin - INFO - Host 138.100.110.187 fuera de línea (Ping).
+2025-06-12 17:00:33,558 - IntraScanAdmin - INFO - Host 138.100.110.188 en línea (Ping).
+2025-06-12 17:00:33,570 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.188...
+2025-06-12 17:00:34,054 - IntraScanAdmin - INFO - Host 138.100.110.189 fuera de línea (Ping).
+2025-06-12 17:00:34,549 - IntraScanAdmin - INFO - Host 138.100.110.190 fuera de línea (Ping).
+2025-06-12 17:00:35,048 - IntraScanAdmin - INFO - Host 138.100.110.191 fuera de línea (Ping).
+2025-06-12 17:00:35,561 - IntraScanAdmin - INFO - Host 138.100.110.192 fuera de línea (Ping).
+2025-06-12 17:00:36,056 - IntraScanAdmin - INFO - Host 138.100.110.193 fuera de línea (Ping).
+2025-06-12 17:00:36,561 - IntraScanAdmin - INFO - Host 138.100.110.194 fuera de línea (Ping).
+2025-06-12 17:00:37,056 - IntraScanAdmin - INFO - Host 138.100.110.195 fuera de línea (Ping).
+2025-06-12 17:00:37,552 - IntraScanAdmin - INFO - Host 138.100.110.196 fuera de línea (Ping).
+2025-06-12 17:00:38,054 - IntraScanAdmin - INFO - Host 138.100.110.197 fuera de línea (Ping).
+2025-06-12 17:00:38,549 - IntraScanAdmin - INFO - Host 138.100.110.198 fuera de línea (Ping).
+2025-06-12 17:00:39,065 - IntraScanAdmin - INFO - Host 138.100.110.199 fuera de línea (Ping).
+2025-06-12 17:00:39,564 - IntraScanAdmin - INFO - Host 138.100.110.200 fuera de línea (Ping).
+2025-06-12 17:00:40,058 - IntraScanAdmin - INFO - Host 138.100.110.201 fuera de línea (Ping).
+2025-06-12 17:00:40,556 - IntraScanAdmin - INFO - Host 138.100.110.202 fuera de línea (Ping).
+2025-06-12 17:00:41,053 - IntraScanAdmin - INFO - Host 138.100.110.203 fuera de línea (Ping).
+2025-06-12 17:00:41,554 - IntraScanAdmin - INFO - Host 138.100.110.204 fuera de línea (Ping).
+2025-06-12 17:00:42,048 - IntraScanAdmin - INFO - Host 138.100.110.205 fuera de línea (Ping).
+2025-06-12 17:00:42,548 - IntraScanAdmin - INFO - Host 138.100.110.206 fuera de línea (Ping).
+2025-06-12 17:00:43,067 - IntraScanAdmin - INFO - Host 138.100.110.207 fuera de línea (Ping).
+2025-06-12 17:00:43,561 - IntraScanAdmin - INFO - Host 138.100.110.208 fuera de línea (Ping).
+2025-06-12 17:00:43,577 - IntraScanAdmin - INFO - Host 138.100.110.209 en línea (Ping).
+2025-06-12 17:00:43,577 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.209...
+2025-06-12 17:00:43,704 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.209.
+2025-06-12 17:00:43,704 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.209.
+2025-06-12 17:00:43,720 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.209.
+2025-06-12 17:00:43,725 - IntraScanAdmin - INFO - Host 138.100.110.210 en línea (Ping).
+2025-06-12 17:00:43,725 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.210...
+2025-06-12 17:00:44,556 - IntraScanAdmin - INFO - Host 138.100.110.211 fuera de línea (Ping).
+2025-06-12 17:00:45,054 - IntraScanAdmin - INFO - Host 138.100.110.212 fuera de línea (Ping).
+2025-06-12 17:00:45,549 - IntraScanAdmin - INFO - Host 138.100.110.213 fuera de línea (Ping).
+2025-06-12 17:00:46,063 - IntraScanAdmin - INFO - Host 138.100.110.214 fuera de línea (Ping).
+2025-06-12 17:00:46,561 - IntraScanAdmin - INFO - Host 138.100.110.215 fuera de línea (Ping).
+2025-06-12 17:00:47,060 - IntraScanAdmin - INFO - Host 138.100.110.216 fuera de línea (Ping).
+2025-06-12 17:00:47,562 - IntraScanAdmin - INFO - Host 138.100.110.217 fuera de línea (Ping).
+2025-06-12 17:00:47,573 - IntraScanAdmin - INFO - Host 138.100.110.218 en línea (Ping).
+2025-06-12 17:00:47,573 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.218...
+2025-06-12 17:00:47,701 - IntraScanAdmin - INFO -     Puerto 22 (SSH) ABIERTO en 138.100.110.218.
+2025-06-12 17:00:48,054 - IntraScanAdmin - INFO - Host 138.100.110.219 fuera de línea (Ping).
+2025-06-12 17:00:48,070 - IntraScanAdmin - INFO - Host 138.100.110.220 en línea (Ping).
+2025-06-12 17:00:48,070 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.220...
+2025-06-12 17:00:48,313 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.220.
+2025-06-12 17:00:48,343 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.220.
+2025-06-12 17:00:48,555 - IntraScanAdmin - INFO - Host 138.100.110.221 fuera de línea (Ping).
+2025-06-12 17:00:48,567 - IntraScanAdmin - INFO - Host 138.100.110.222 en línea (Ping).
+2025-06-12 17:00:48,567 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.222...
+2025-06-12 17:00:49,016 - IntraScanAdmin - INFO - Host 138.100.110.223 en línea (Ping).
+2025-06-12 17:00:49,016 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.223...
+2025-06-12 17:00:49,564 - IntraScanAdmin - INFO - Host 138.100.110.224 fuera de línea (Ping).
+2025-06-12 17:00:50,063 - IntraScanAdmin - INFO - Host 138.100.110.225 fuera de línea (Ping).
+2025-06-12 17:00:50,558 - IntraScanAdmin - INFO - Host 138.100.110.226 fuera de línea (Ping).
+2025-06-12 17:00:51,054 - IntraScanAdmin - INFO - Host 138.100.110.227 fuera de línea (Ping).
+2025-06-12 17:00:51,552 - IntraScanAdmin - INFO - Host 138.100.110.228 fuera de línea (Ping).
+2025-06-12 17:00:52,049 - IntraScanAdmin - INFO - Host 138.100.110.229 fuera de línea (Ping).
+2025-06-12 17:00:52,568 - IntraScanAdmin - INFO - Host 138.100.110.230 fuera de línea (Ping).
+2025-06-12 17:00:53,058 - IntraScanAdmin - INFO - Host 138.100.110.231 fuera de línea (Ping).
+2025-06-12 17:00:53,560 - IntraScanAdmin - INFO - Host 138.100.110.232 fuera de línea (Ping).
+2025-06-12 17:00:54,053 - IntraScanAdmin - INFO - Host 138.100.110.233 fuera de línea (Ping).
+2025-06-12 17:00:54,069 - IntraScanAdmin - INFO - Host 138.100.110.234 en línea (Ping).
+2025-06-12 17:00:54,069 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.234...
+2025-06-12 17:00:54,293 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.234.
+2025-06-12 17:00:54,308 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.234.
+2025-06-12 17:00:54,549 - IntraScanAdmin - INFO - Host 138.100.110.235 fuera de línea (Ping).
+2025-06-12 17:00:55,061 - IntraScanAdmin - INFO - Host 138.100.110.236 fuera de línea (Ping).
+2025-06-12 17:00:55,558 - IntraScanAdmin - INFO - Host 138.100.110.237 fuera de línea (Ping).
+2025-06-12 17:00:56,055 - IntraScanAdmin - INFO - Host 138.100.110.238 fuera de línea (Ping).
+2025-06-12 17:00:56,553 - IntraScanAdmin - INFO - Host 138.100.110.239 fuera de línea (Ping).
+2025-06-12 17:00:56,571 - IntraScanAdmin - INFO - Host 138.100.110.240 en línea (Ping).
+2025-06-12 17:00:56,571 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.240...
+2025-06-12 17:00:57,051 - IntraScanAdmin - INFO - Host 138.100.110.241 fuera de línea (Ping).
+2025-06-12 17:00:57,550 - IntraScanAdmin - INFO - Host 138.100.110.242 fuera de línea (Ping).
+2025-06-12 17:00:58,063 - IntraScanAdmin - INFO - Host 138.100.110.243 fuera de línea (Ping).
+2025-06-12 17:00:58,559 - IntraScanAdmin - INFO - Host 138.100.110.244 fuera de línea (Ping).
+2025-06-12 17:00:59,054 - IntraScanAdmin - INFO - Host 138.100.110.245 fuera de línea (Ping).
+2025-06-12 17:00:59,553 - IntraScanAdmin - INFO - Host 138.100.110.246 fuera de línea (Ping).
+2025-06-12 17:01:00,050 - IntraScanAdmin - INFO - Host 138.100.110.247 fuera de línea (Ping).
+2025-06-12 17:01:00,558 - IntraScanAdmin - INFO - Host 138.100.110.248 fuera de línea (Ping).
+2025-06-12 17:01:01,057 - IntraScanAdmin - INFO - Host 138.100.110.249 fuera de línea (Ping).
+2025-06-12 17:01:01,558 - IntraScanAdmin - INFO - Host 138.100.110.250 fuera de línea (Ping).
+2025-06-12 17:01:01,576 - IntraScanAdmin - INFO - Host 138.100.110.251 en línea (Ping).
+2025-06-12 17:01:01,581 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.251...
+2025-06-12 17:01:01,826 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.251.
+2025-06-12 17:01:01,841 - IntraScanAdmin - INFO -     Puerto 443 (HTTPS) ABIERTO en 138.100.110.251.
+2025-06-12 17:01:02,049 - IntraScanAdmin - INFO - Host 138.100.110.252 fuera de línea (Ping).
+2025-06-12 17:01:02,563 - IntraScanAdmin - INFO - Host 138.100.110.253 fuera de línea (Ping).
+2025-06-12 17:01:03,059 - IntraScanAdmin - INFO - Host 138.100.110.254 fuera de línea (Ping).
+2025-06-12 17:01:03,063 - IntraScanAdmin - INFO - Escaneo de subred 138.100.110.100/24 completado. Se procesaron 254 hosts.
+2025-06-12 17:01:03,123 - IntraScanAdmin - INFO - GUI: Escaneo de red finalizado.
+2025-06-12 17:02:09,873 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 17:02:09,924 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 17:02:09,924 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'. 0 hosts encontrados.
+2025-06-12 17:02:09,924 - IntraScanAdmin - INFO - Inventario cargado al inicio: 0 hosts.
+2025-06-12 17:07:04,259 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 17:28:08,356 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 17:28:08,423 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 17:28:08,438 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 17:28:08,440 - IntraScanAdmin - INFO - Inventario cargado al inicio: 0 hosts.
+2025-06-12 17:28:12,700 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:28:30,398 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:31:00,363 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 17:31:00,429 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 17:31:00,443 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 17:31:00,443 - IntraScanAdmin - INFO - Inventario cargado al inicio: 0 hosts.
+2025-06-12 17:31:23,237 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:32:45,569 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:32:45,569 - IntraScanAdmin - INFO - GUI: Host 138.100.110.67 añadido.
+2025-06-12 17:33:04,127 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 17:33:04,186 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 17:33:04,198 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 17:33:04,202 - IntraScanAdmin - INFO - Inventario cargado al inicio: 0 hosts.
+2025-06-12 17:33:07,034 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:33:15,805 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:34:54,155 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:34:54,155 - IntraScanAdmin - INFO - GUI: Host 138.100.110.67 añadido.
+2025-06-12 17:34:55,504 - IntraScanAdmin - INFO - Inventario guardado en 'hosts.json'.
+2025-06-12 17:34:55,504 - IntraScanAdmin - INFO - GUI: Inventario guardado en hosts.json.
+2025-06-12 17:35:09,827 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 17:35:09,882 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 17:35:09,898 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 17:35:09,898 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 17:35:11,685 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:47:31,989 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 17:47:32,039 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 17:47:32,039 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 17:47:32,039 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 17:47:32,055 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 17:47:33,896 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:47:34,838 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 17:47:49,725 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:47:53,857 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 17:48:05,330 - IntraScanAdmin - INFO - GUI: Solicitando WoL para MAC: D4-61-37-0A-15-9C, IP/Host: 138.100.110.67.
+2025-06-12 17:48:05,333 - IntraScanAdmin - INFO - Paquete mágico WoL enviado a MAC: D4-61-37-0A-15-9C en IP: 138.100.110.67
+2025-06-12 17:48:05,333 - IntraScanAdmin - INFO - GUI: Paquete mágico enviado a D4-61-37-0A-15-9C.
+2025-06-12 17:49:08,046 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:50:50,182 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 17:50:50,231 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 17:50:50,231 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 17:50:50,231 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 17:50:50,246 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 17:50:52,385 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:50:53,370 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 17:50:57,433 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:52:35,980 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 17:52:36,028 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 17:52:36,028 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 17:52:36,041 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 17:52:36,044 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 17:52:38,878 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 17:52:42,530 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:52:44,547 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:52:44,547 - IntraScanAdmin - INFO - GUI: Host 138.100.110.67 editado a 138.100.110.67.
+2025-06-12 17:52:49,463 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:52:49,463 - IntraScanAdmin - INFO - GUI: Host 138.100.110.67 editado a 138.100.110.67.
+2025-06-12 17:53:18,607 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:53:18,620 - IntraScanAdmin - INFO - GUI: Host 138.100.110.67 editado a 138.100.110.67.
+2025-06-12 17:59:00,381 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 17:59:00,427 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 17:59:00,427 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 17:59:00,427 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 17:59:00,440 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 17:59:02,861 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:59:13,026 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 17:59:13,026 - IntraScanAdmin - INFO - GUI: Host 138.100.110.67 editado a 138.100.110.67.
+2025-06-12 17:59:18,350 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 18:03:46,933 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 18:03:46,980 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 18:03:46,996 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 18:03:46,998 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 18:03:46,998 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 18:03:49,384 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 18:03:52,069 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-12 18:03:52,069 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-12 18:04:40,281 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 18:06:37,141 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 18:06:37,196 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 18:06:37,196 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 18:06:37,196 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 18:06:37,211 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 18:06:39,271 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 18:09:23,698 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 18:09:23,743 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 18:09:23,743 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 18:09:23,743 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 18:09:23,759 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 18:09:25,503 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 18:21:30,241 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 18:21:30,305 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 18:21:30,305 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 18:21:30,305 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 18:21:30,305 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 18:21:32,070 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.

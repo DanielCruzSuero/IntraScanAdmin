@@ -4,65 +4,44 @@ import json
 import os
 from logger_config import app_logger # Importa el logger
 
-HOSTS_FILE = "hosts.json"
+INVENTORY_FILE = "hosts.json"
 
 def load_hosts():
-    """
-    Carga la lista de hosts desde el archivo JSON.
-    Crea un archivo vacío si no existe.
-    :return: Una lista de diccionarios, cada uno representando un host.
-    """
-    if not os.path.exists(HOSTS_FILE):
-        app_logger.info(f"El archivo de inventario '{HOSTS_FILE}' no existe. Creando uno vacío.")
-        with open(HOSTS_FILE, 'w') as f:
-            json.dump([], f)
+    """Carga la lista de hosts desde el archivo JSON."""
+    if not os.path.exists(INVENTORY_FILE):
+        app_logger.warning(f"Archivo de inventario '{INVENTORY_FILE}' no encontrado. Creando uno vacío.")
+        with open(INVENTORY_FILE, 'w', encoding='utf-8') as f:
+            json.dump([], f, indent=4) # Crea un archivo JSON vacío con una lista vacía
         return []
     
-    with open(HOSTS_FILE, 'r') as f:
-        try:
+    try:
+        with open(INVENTORY_FILE, 'r', encoding='utf-8') as f:
             hosts = json.load(f)
-            app_logger.info(f"Inventario cargado desde '{HOSTS_FILE}'. {len(hosts)} hosts encontrados.")
+            # Asegurarse de que hosts es una lista
+            if not isinstance(hosts, list):
+                app_logger.error(f"El archivo '{INVENTORY_FILE}' no contiene una lista JSON. Recreando archivo.")
+                save_hosts([]) # Guardar un archivo vacío y devolver una lista vacía
+                return []
+            app_logger.info(f"Inventario cargado desde '{INVENTORY_FILE}'.")
             return hosts
-        except json.JSONDecodeError:
-            app_logger.warning(f"Advertencia: El archivo '{HOSTS_FILE}' está corrupto o vacío. Se iniciará un inventario vacío.")
-            return []
-        except Exception as e:
-            app_logger.exception(f"Error inesperado al cargar el inventario desde '{HOSTS_FILE}'.")
-            return []
+    except json.JSONDecodeError as e:
+        app_logger.error(f"Error al decodificar JSON de '{INVENTORY_FILE}': {e}. El archivo puede estar corrupto. Recreando archivo.")
+        save_hosts([]) # Guardar un archivo vacío y devolver una lista vacía
+        return []
+    except Exception as e:
+        app_logger.error(f"Error inesperado al cargar inventario: {e}. Recreando archivo.")
+        save_hosts([]) # Guardar un archivo vacío y devolver una lista vacía
+        return []
 
 def save_hosts(hosts):
-    """
-    Guarda la lista actual de hosts en el archivo JSON.
-    :param hosts: La lista de diccionarios de hosts a guardar.
-    """
+    """Guarda la lista de hosts en el archivo JSON."""
     try:
-        with open(HOSTS_FILE, 'w') as f:
-            json.dump(hosts, f, indent=4)
-        app_logger.info(f"Inventario guardado en '{HOSTS_FILE}'. {len(hosts)} hosts.")
-        return True
+        with open(INVENTORY_FILE, 'w', encoding='utf-8') as f:
+            json.dump(hosts, f, indent=4) # Guarda la lista de diccionarios
+        app_logger.info(f"Inventario guardado en '{INVENTORY_FILE}'.")
     except Exception as e:
-        app_logger.exception(f"Error inesperado al guardar el inventario en '{HOSTS_FILE}'.")
-        return False
+        app_logger.error(f"Error al guardar inventario en '{INVENTORY_FILE}': {e}")
 
-# Ejemplo de uso (esto no es necesario en el archivo final para el proyecto, es solo para probar el módulo)
-if __name__ == "__main__":
-    app_logger.info("--- Probando Inventory Manager (Directo) ---")
-
-    current_hosts = load_hosts()
-    app_logger.info(f"Hosts cargados para la prueba: {current_hosts}")
-
-    new_host = {
-        "name": "PC-Prueba",
-        "ip_address": "192.168.1.200",
-        "mac_address": "FF:EE:DD:CC:BB:AA",
-        "username": "usuario_prueba",
-        "password": "pass_prueba"
-    }
-    current_hosts.append(new_host)
-    app_logger.info(f"Host añadido para la prueba. Nueva lista: {current_hosts}")
-
-    save_hosts(current_hosts)
-
-    reloaded_hosts = load_hosts()
-    app_logger.info(f"Hosts recargados para la prueba: {reloaded_hosts}")
-    app_logger.info("Prueba de Inventory Manager completada.")
+# No necesitamos funciones de añadir/editar/eliminar aquí directamente,
+# ya que la GUI gestionará la lista self.hosts_inventory y luego la guardará.
+# Estas serían funciones si el inventory_manager fuera una clase o si se usara sin GUI.

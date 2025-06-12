@@ -1,94 +1,98 @@
 # remote_control.py
 
-from wakeonlan import send_magic_packet
-import subprocess
+from wakeonlan import send_magic_packet as wol_send_magic_packet
 import platform
-from logger_config import app_logger # Importa el logger
+import subprocess
+import os
+from logger_config import app_logger
 
-def send_wol_packet(mac_address):
+# Renombramos send_magic_packet de wakeonlan para evitar conflictos
+# y para que nuestro módulo remoto_control.py sea el que exponga la función.
+
+def send_magic_packet(mac_address, ip_address="255.255.255.255", port=9):
     """
     Envía un paquete mágico Wake-on-LAN a la dirección MAC especificada.
-    :param mac_address: La dirección MAC del equipo a encender (ej. "AA:BB:CC:DD:EE:FF").
+    Requiere que el módulo 'wakeonlan' esté instalado (`pip install wakeonlan`).
     """
     try:
-        send_magic_packet(mac_address)
-        app_logger.info(f"Paquete mágico WoL enviado a la MAC: {mac_address}. El equipo debería encenderse si WoL está configurado.")
+        wol_send_magic_packet(mac_address, ip_address=ip_address, port=port)
+        app_logger.info(f"Paquete mágico WoL enviado a MAC: {mac_address} en IP: {ip_address}")
         return True
     except Exception as e:
-        app_logger.error(f"Error al enviar el paquete WoL a {mac_address}: {e}")
+        app_logger.error(f"Error al enviar paquete mágico WoL a {mac_address}: {e}")
         return False
 
-def remote_shutdown(ip_address, username, password, restart=False):
+def remote_shutdown(target, username, password):
     """
-    Intenta apagar o reiniciar un equipo Windows remoto usando shutdown.exe.
-    Requiere credenciales de administrador en el equipo de destino.
-    :param ip_address: La dirección IP del equipo de destino.
-    :param username: Nombre de usuario con privilegios de administrador en el equipo remoto.
-    :param password: Contraseña del usuario.
-    :param restart: Si es True, reinicia el equipo; si es False, lo apaga.
-    :return: True si el comando se envió con éxito, False en caso contrario.
+    Intenta apagar un equipo remoto (Windows/Linux).
+    Para Windows, usa 'shutdown'. Para Linux, puede necesitar 'ssh' o 'sudo shutdown'.
+    Esto es un ejemplo básico. En entornos reales, se usarían herramientas más robustas como PsExec (Windows)
+    o SSH con claves (Linux) o APIs de gestión.
     """
-    if platform.system().lower() != "windows":
-        app_logger.warning("Esta función de apagado remoto es solo compatible con sistemas Windows.")
-        return False
-
-    action = "/r" if restart else "/s"
-
-    command = [
-        "shutdown",
-        action,
-        "/f",
-        "/t", "0",
-        "/m", f"\\\\{ip_address}",
-        "/u", username,
-        "/p", password
-    ]
-
-    app_logger.info(f"Intentando {'reiniciar' if restart else 'apagar'} el equipo {ip_address}...")
+    app_logger.info(f"Intentando apagar el host remoto: {target}")
     try:
-        result = subprocess.run(command, capture_output=True, text=True, check=False)
-
-        if result.returncode == 0:
-            app_logger.info(f"Comando de {'reinicio' if restart else 'apagado'} enviado exitosamente a {ip_address}.")
+        if platform.system() == "Windows":
+            # Para Windows, usar shutdown /s /f /t 0 /m \\<target>
+            # Puede necesitar credenciales configuradas en el sistema de origen o PsExec
+            # Para una conexión remota con credenciales, PsExec sería la forma más común.
+            # Este es un comando muy básico que solo funciona si tienes permisos de admin.
+            command = ['shutdown', '/s', '/f', '/t', '0', '/m', f'\\\\{target}']
+            # Considerar PsExec para Windows:
+            # cmd = f'psexec \\\\{target} -u {username} -p {password} shutdown /s /f /t 0'
+            # subprocess.run(cmd, shell=True, check=True)
+            
+            # Para simplificar y probar, usaremos subprocess.run directamente,
+            # pero ten en cuenta que las credenciales no se pasan aquí de forma nativa.
+            # Si target es un nombre, se resuelve por DNS/NetBIOS. Si es IP, va directo.
+            result = subprocess.run(command, capture_output=True, text=True, check=True)
+            app_logger.info(f"Comando de apagado en Windows a {target} ejecutado. Salida: {result.stdout}")
             return True
-        else:
-            app_logger.error(f"Error al enviar el comando de {'reinicio' if restart else 'apagado'} a {ip_address}.")
-            app_logger.error(f"Código de error: {result.returncode}. Stdout: {result.stdout.strip()}. Stderr: {result.stderr.strip()}")
-            return False
+        else: # Asumimos Linux/Unix
+            # Para Linux, se requiere SSH. Esto asume que SSH está configurado y las credenciales funcionan.
+            # En un entorno real, probablemente usarías 'paramiko' (librería SSH en Python)
+            # o tendrías claves SSH sin contraseña configuradas.
+            command = ['sshpass', '-p', password, 'ssh', f'{username}@{target}', 'sudo shutdown -h now']
+            # O simplemente 'ssh' si tienes claves/configuración sin pass.
+            # command = ['ssh', f'{username}@{target}', 'sudo shutdown -h now']
+            
+            # Advertencia: sshpass no es seguro para contraseñas en scripts.
+            # Es solo para demostración.
+            result = subprocess.run(command, capture_output=True, text=True, check=True)
+            app_logger.info(f"Comando de apagado en Linux a {target} ejecutado. Salida: {result.stdout}")
+            return True
+    except subprocess.CalledProcessError as e:
+        app_logger.error(f"Fallo al ejecutar el comando de apagado en {target}: {e.stderr}")
+        return False
     except FileNotFoundError:
-        app_logger.error("El comando 'shutdown' no se encontró en el sistema. Asegúrate de que estás en Windows.")
+        app_logger.error("Comando 'shutdown', 'ssh' o 'sshpass' no encontrado. Asegúrate de que estén en tu PATH.")
         return False
     except Exception as e:
-        app_logger.exception(f"Ocurrió un error inesperado al intentar {'reiniciar' if restart else 'apagar'} {ip_address}.")
+        app_logger.error(f"Error inesperado al apagar {target}: {e}")
         return False
 
-if __name__ == "__main__":
-    app_logger.info("--- Probando Remote Control (Directo) ---")
-    
-    # --- Prueba de Wake-on-LAN (Opcional) ---
-    # target_mac = "XX:XX:XX:XX:XX:XX" # <-- ¡CAMBIA ESTO POR UNA MAC REAL!
-    # if target_mac != "XX:XX:XX:XX:XX:XX":
-    #     app_logger.info(f"\nIntentando encender el equipo con MAC: {target_mac}")
-    #     send_wol_packet(target_mac)
-    # else:
-    #     app_logger.info("\nSkipping WoL test: MAC address not set for direct test.")
-
-
-    # --- Prueba de Apagado Remoto ---
-    app_logger.info("\n--- Probando Apagado/Reinicio Remoto (Directo) ---")
-    
-    # ¡IMPORTANTE! Rellena estos datos con una IP, usuario y contraseña REALES
-    # de un equipo Windows en tu red con el que puedas probar.
-    # ¡Ten mucho cuidado al probar esto para no apagar el equipo equivocado!
-    target_ip = "192.168.1.100" # <-- ¡CAMBIA ESTO!
-    admin_username = "TuUsuarioAdmin" # <-- ¡CAMBIA ESTO!
-    admin_password = "TuContraseñaAdmin" # <-- ¡CAMBIA ESTO!
-
-    should_restart = False
-
-    if target_ip == "192.168.1.100":
-        app_logger.warning("ADVERTENCIA: Por favor, configura 'target_ip', 'admin_username' y 'admin_password' para probar el apagado remoto.")
-        app_logger.info("Asegúrate de que el equipo de destino esté encendido y tengas permisos de administrador.")
-    else:
-        app_logger.info(f"Intentando {'reiniciar' if should_restart else 'apagar'} {target_ip}...")
-        remote_shutdown(target_ip, admin_username, admin_password, should_restart)
+def remote_reboot(target, username, password):
+    """
+    Intenta reiniciar un equipo remoto (Windows/Linux).
+    Similar a remote_shutdown, requiere configuraciones de permisos.
+    """
+    app_logger.info(f"Intentando reiniciar el host remoto: {target}")
+    try:
+        if platform.system() == "Windows":
+            command = ['shutdown', '/r', '/f', '/t', '0', '/m', f'\\\\{target}']
+            result = subprocess.run(command, capture_output=True, text=True, check=True)
+            app_logger.info(f"Comando de reinicio en Windows a {target} ejecutado. Salida: {result.stdout}")
+            return True
+        else: # Asumimos Linux/Unix
+            command = ['sshpass', '-p', password, 'ssh', f'{username}@{target}', 'sudo reboot']
+            result = subprocess.run(command, capture_output=True, text=True, check=True)
+            app_logger.info(f"Comando de reinicio en Linux a {target} ejecutado. Salida: {result.stdout}")
+            return True
+    except subprocess.CalledProcessError as e:
+        app_logger.error(f"Fallo al ejecutar el comando de reinicio en {target}: {e.stderr}")
+        return False
+    except FileNotFoundError:
+        app_logger.error("Comando 'shutdown', 'ssh' o 'sshpass' no encontrado. Asegúrate de que estén en tu PATH.")
+        return False
+    except Exception as e:
+        app_logger.error(f"Error inesperado al reiniciar {target}: {e}")
+        return False

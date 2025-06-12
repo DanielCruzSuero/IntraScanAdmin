@@ -1,12 +1,3 @@
-# Virtual environment directories
-venv/
-.venv/
-IntraScanAdmin/  # <-- ¡Importante! Asegúrate de que esta línea esté aquí si tu venv se llama igual que la carpeta del proyecto.
-
-# Byte-code files
-*.pyc
-__pycache__/
-
 # Operating System files
 .DS_Store
 Thumbs.db
@@ -19,3 +10,12 @@ Thumbs.db
 venv/
 .venv/
 IntraScanAdmin/ 
+venv/
+.venv/
+env/
+.env/
+*/Lib/site-packages/
+__pycache__/
+*.pyc
+*.log # Para ignorar tu archivo de log
+hosts.json # Si no quieres versionar el inventario localmente, aunque a veces es útil si es fijo. Si quieres versionarlo, quita esta línea.
