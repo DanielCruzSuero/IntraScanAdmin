@@ -5,7 +5,7 @@ import os
 import logging
 import threading
 import queue
-import re # Para validación de IP/MAC si es necesario
+import re
 
 # Asegúrate de que las rutas a tus módulos sean correctas
 import scanner
@@ -138,7 +138,7 @@ class IntraScanAdminGUI:
         self.remote_host_dropdown.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
         
         # Botón para obtener información remota (nuevo)
-        self.get_remote_info_button = ttk.Button(host_selection_frame, text="Obtener Info Remota", command=self.get_remote_host_info)
+        self.get_remote_info_button = ttk.Button(host_selection_frame, text="Obtener Info Remota", command=self.initiate_remote_info_gathering)
         self.get_remote_info_button.grid(row=1, column=2, padx=5, pady=5)
 
 
@@ -364,7 +364,7 @@ class IntraScanAdminGUI:
             ip = host.get('ip_address')
             hostname = host.get('hostname')
             if ip:
-                display_name = f"{ip} ({hostname})" if hostname else ip
+                display_name = f"{ip} ({hostname})" if hostname and hostname != "N/A" else ip
                 self.remote_host_options.append(display_name)
                 # Añadir cada opción al menú
                 menu.add_command(label=display_name, command=tk._setit(self.selected_remote_host, display_name))
@@ -405,10 +405,9 @@ class IntraScanAdminGUI:
         if not mac_found:
             app_logger.warning(f"GUI: No se encontró MAC para el host seleccionado {selected_ip}. Es posible que no esté en el inventario o no tenga MAC asignada.")
 
-    def get_remote_host_info(self):
+    def initiate_remote_info_gathering(self):
         """
-        Función placeholder para obtener información remota del host.
-        Esta será la base para la futura funcionalidad de auditoría.
+        Inicia el proceso de obtener información remota en un hilo separado.
         """
         target_ip_or_hostname = self.remote_target_entry.get().strip()
         username = self.remote_user_entry.get().strip()
@@ -429,84 +428,74 @@ class IntraScanAdminGUI:
         self.log_message(f"Intentando obtener información remota del host: {target_ip_or_hostname}...")
         app_logger.info(f"GUI: Solicitando información remota para {target_ip_or_hostname}.")
         
-        # Aquí es donde integraríamos la lógica real para obtener la información.
-        # Por ahora, es un placeholder.
-        messagebox.showinfo("Funcionalidad Pendiente", 
-                            f"La función para obtener información remota de '{target_ip_or_hostname}' está en desarrollo.\n"
-                            "Se utilizarán las credenciales proporcionadas.")
+        # Desactivar botón y cambiar cursor mientras se procesa
+        self.get_remote_info_button.config(state=tk.DISABLED)
+        self.master.config(cursor="wait")
+
+        # Iniciar la recolección de información en un hilo separado
+        threading.Thread(target=self._perform_remote_info_gathering, 
+                         args=(target_ip_or_hostname, username, password)).start()
+
+    def _perform_remote_info_gathering(self, target, username, password):
+        """
+        Función que ejecuta la recolección de información remota en un hilo separado.
+        """
+        try:
+            # Llamar a la nueva función en remote_control.py
+            retrieved_data = remote_control.get_remote_host_info(target, username, password)
+            self.master.after(0, lambda: self._update_inventory_from_remote_data(retrieved_data))
+            self.log_message(f"Información de {target} obtenida y precargada en el inventario.")
+            app_logger.info(f"GUI: Información remota de {target} obtenida y procesada.")
+        except ConnectionError as ce: # Errores específicos de conexión (WinRMError)
+            error_msg = f"Error de conexión al obtener información remota de {target}: {ce}"
+            self.log_message(f"ERROR: {error_msg}")
+            app_logger.error(f"GUI: {error_msg}", exc_info=True)
+            self.master.after(0, lambda: messagebox.showerror("Error de Conexión", error_msg))
+        except Exception as e:
+            error_msg = f"Error inesperado al obtener información remota de {target}: {e}"
+            self.log_message(f"ERROR: {error_msg}")
+            app_logger.exception(f"GUI: {error_msg}")
+            self.master.after(0, lambda: messagebox.showerror("Error de Recolección", error_msg))
+        finally:
+            self.master.after(0, lambda: self.get_remote_info_button.config(state=tk.NORMAL)) # Re-activar botón
+            self.master.after(0, lambda: self.master.config(cursor="")) # Restaurar cursor
+
+
+    def _update_inventory_from_remote_data(self, data):
+        """
+        Actualiza los campos de entrada del inventario con los datos obtenidos remotamente.
+        También cambia a la pestaña de inventario.
+        """
+        self.clear_inventory_entries()
         
-        # Puedes iniciar un hilo aquí que haga la consulta real y luego actualice la GUI.
-        # threading.Thread(target=self._perform_remote_info_gathering, args=(target_ip_or_hostname, username, password)).start()
+        # Mapeo de campos y sus entradas
+        field_map = {
+            "ip_address": self.inventory_ip_entry,
+            "hostname": self.inventory_hostname_entry,
+            "mac_address": self.inventory_mac_entry,
+            "os": self.inventory_os_entry,
+            "description": self.inventory_desc_entry,
+            "brand": self.inventory_brand_entry,
+            "model": self.inventory_model_entry,
+            "processor": self.inventory_processor_entry,
+            "memory": self.inventory_memory_entry,
+            "disks": self.inventory_disks_entry,
+            "graphics": self.inventory_graphics_entry,
+            "display": self.inventory_display_entry,
+            "network_point": self.inventory_network_point_entry,
+            "cable_length": self.inventory_cable_length_entry,
+            "office": self.inventory_office_entry,
+            "user": self.inventory_user_entry,
+            "department": self.inventory_department_entry,
+            "planta": self.inventory_floor_entry
+        }
 
-    # def _perform_remote_info_gathering(self, target, username, password):
-    #     """
-    #     Función que ejecutará la recolección de información remota en un hilo separado.
-    #     Esto es un ESQUELETO. La lógica real iría aquí.
-    #     """
-    #     try:
-    #         # Lógica para usar pypsrp o WMI para obtener los datos
-    #         # Ejemplo:
-    #         # from pypsrp.powershell import PowerShell
-    #         # from pypsrp.wsman import WSMan
-    #         # with WSMan(target, auth_method='negotiate', username=username, password=password) as wsman:
-    #         #     with PowerShell(wsman) as ps:
-    #         #         ps.add_cmd("Get-ComputerInfo")
-    #         #         ps.invoke()
-    #         #         result = ps.output_streams.stdout
-    #         #         # Parsear result y actualizar la GUI
-    #         #         self.master.after(0, lambda: self._update_inventory_from_remote_data(result))
-    #         
-    #         retrieved_data = {
-    #             "ip_address": target,
-    #             "hostname": "HOSTNAME_REMOTO", # Reemplazar con datos reales
-    #             "mac_address": "AA:BB:CC:DD:EE:FF",
-    #             "os": "Windows 10 Pro",
-    #             "description": "Obtenido remotamente",
-    #             "brand": "Dell",
-    #             "model": "OptiPlex 7010",
-    #             "processor": "Intel Core i7-3770",
-    #             "memory": "16GB DDR3",
-    #             "disks": "256GB SSD, 1TB HDD",
-    #             "graphics": "Intel HD Graphics 4000",
-    #             "display": "Dell 24\" (x2)",
-    #             "network_point": "A12",
-    #             "cable_length": "5m",
-    #             "office": "Despacho 101",
-    #             "user": "d.fernandez",
-    #             "department": "IT",
-    #             "planta": "1"
-    #         }
-    #         self.master.after(0, lambda: self._update_inventory_from_remote_data(retrieved_data))
-    #         self.log_message(f"Información de {target} obtenida y lista para precargar.")
-    #         app_logger.info(f"GUI: Información remota de {target} obtenida.")
-    #     except Exception as e:
-    #         error_msg = f"Error al obtener información remota de {target}: {e}"
-    #         self.log_message(f"ERROR: {error_msg}")
-    #         app_logger.exception(f"GUI: {error_msg}")
-    #         self.master.after(0, lambda: messagebox.showerror("Error de Recolección", error_msg))
+        for key, entry_widget in field_map.items():
+            value = data.get(key, "")
+            entry_widget.insert(0, value)
 
-    # def _update_inventory_from_remote_data(self, data):
-    #     """Actualiza los campos de entrada del inventario con los datos obtenidos remotamente."""
-    #     self.clear_inventory_entries()
-    #     self.inventory_ip_entry.insert(0, data.get("ip_address", ""))
-    #     self.inventory_hostname_entry.insert(0, data.get("hostname", ""))
-    #     self.inventory_mac_entry.insert(0, data.get("mac_address", ""))
-    #     self.inventory_os_entry.insert(0, data.get("os", ""))
-    #     self.inventory_desc_entry.insert(0, data.get("description", ""))
-    #     self.inventory_brand_entry.insert(0, data.get("brand", ""))
-    #     self.inventory_model_entry.insert(0, data.get("model", ""))
-    #     self.inventory_processor_entry.insert(0, data.get("processor", ""))
-    #     self.inventory_memory_entry.insert(0, data.get("memory", ""))
-    #     self.inventory_disks_entry.insert(0, data.get("disks", ""))
-    #     self.inventory_graphics_entry.insert(0, data.get("graphics", ""))
-    #     self.inventory_display_entry.insert(0, data.get("display", ""))
-    #     self.inventory_network_point_entry.insert(0, data.get("network_point", ""))
-    #     self.inventory_cable_length_entry.insert(0, data.get("cable_length", ""))
-    #     self.inventory_office_entry.insert(0, data.get("office", ""))
-    #     self.inventory_user_entry.insert(0, data.get("user", ""))
-    #     self.inventory_department_entry.insert(0, data.get("department", ""))
-    #     self.inventory_floor_entry.insert(0, data.get("planta", ""))
-    #     self.notebook.select(self.inventory_tab) # Cambiar a la pestaña de inventario
+        self.notebook.select(self.inventory_tab) # Cambiar a la pestaña de inventario
+        self.log_message("Datos remotos precargados. Revisa y 'Añade Host' o 'Aplica Cambios'.")
 
 
     def send_wol_packet(self):
@@ -922,7 +911,7 @@ class IntraScanAdminGUI:
 
         self.scan_button.config(state=tk.DISABLED) # Desactivar botón durante el escaneo
 
-        # Ejecutar el escaneo en un hilo para no congelar la GUI
+        # Ejecutar el escaneo en un hilo para no bloquear la GUI
         self.scan_thread = threading.Thread(target=self._run_scan_in_thread, args=(network_range,))
         self.scan_thread.daemon = True # Permite que el hilo termine cuando la aplicación principal lo haga
         self.scan_thread.start()
