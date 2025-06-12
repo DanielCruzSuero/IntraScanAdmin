@@ -1,24 +1,22 @@
 # main.py
 
-# Importa< módulos y funciones, sys para sys.exit
 import scanner
 import remote_control
-import sys 
 import inventory_manager
+import sys
+import ipaddress # Importar para validación de IP
 
 def display_menu():
-    # Menu principal
-    def display_menu():
-        print("\n--- IntraScan & Admin - Menú Principal ---")
-        print("1. Escanear red")
-        print("2. Encender equipo (Wake-on-LAN)")
-        print("3. Apagar/Reiniciar equipo remoto")
-        print("4. Gestionar Inventario de Hosts") 
-        print("5. Salir")
-        print("------------------------------------------")
+    """Muestra el menú principal de opciones al usuario."""
+    print("\n--- IntraScan & Admin - Menú Principal ---")
+    print("1. Escanear red")
+    print("2. Encender equipo (Wake-on-LAN)")
+    print("3. Apagar/Reiniciar equipo remoto")
+    print("4. Gestionar Inventario de Hosts")
+    print("5. Salir")
+    print("------------------------------------------")
 
-# ... (tus imports y display_menu aquí) ...
-
+# --- Funciones de Gestión de Inventario (ya las tienes, pero aquí las incluimos para contexto) ---
 def display_hosts(hosts):
     """Muestra la lista de hosts con un índice."""
     if not hosts:
@@ -31,7 +29,7 @@ def display_hosts(hosts):
     return True
 
 def add_host(hosts):
-    # Añadir nuevo host
+    """Permite al usuario añadir un nuevo host al inventario."""
     print("\n--- Añadir Nuevo Host ---")
     name = input("Nombre del host (ej. PC-Salon): ").strip()
     ip_address = input("Dirección IP (ej. 192.168.1.100): ").strip()
@@ -39,8 +37,15 @@ def add_host(hosts):
     username = input("Usuario administrador para acceso remoto (opcional): ").strip()
     password = input("Contraseña del usuario administrador (opcional): ").strip()
 
-    if not name or not ip_address:
-        print("Nombre y dirección IP son obligatorios.")
+    # Validación básica de IP
+    try:
+        ipaddress.ip_address(ip_address)
+    except ValueError:
+        print("Error: La dirección IP introducida no es válida.")
+        return
+
+    if not name: # El nombre es crucial para identificar en el inventario
+        print("Nombre del host es obligatorio.")
         return
 
     new_host = {
@@ -55,7 +60,7 @@ def add_host(hosts):
     print(f"Host '{name}' añadido al inventario.")
 
 def delete_host(hosts):
-    # Eliminar host
+    """Permite al usuario eliminar un host del inventario."""
     if not display_hosts(hosts):
         return
 
@@ -71,7 +76,7 @@ def delete_host(hosts):
         print("Entrada no válida. Por favor, introduce un número.")
 
 def manage_inventory_menu(hosts):
-    # Menu de inventario
+    """Sub-menú para gestionar el inventario."""
     while True:
         print("\n--- Gestión de Inventario ---")
         print("1. Mostrar todos los hosts")
@@ -88,23 +93,31 @@ def manage_inventory_menu(hosts):
         elif choice == '3':
             delete_host(hosts)
         elif choice == '4':
-            break # Sale del sub-menú
+            break
         else:
             print("Opción no válida. Por favor, elige un número del 1 al 4.")
 
 
-
 def main_app():
-    # Inicio de bucle principal
-    hosts_inventory = inventory_manager.load_hosts()
+    """Bucle principal de la aplicación CLI."""
+    hosts_inventory = inventory_manager.load_hosts() # Carga los hosts al inicio
+
     while True:
         display_menu()
         choice = input("Elige una opción: ").strip()
 
         if choice == '1':
-            # Opción 1: Escanear red
+            # Escanear red
             print("\n--- Escanear Red ---")
             network_range = input("Introduce el rango de red a escanear (ej. 192.168.1.0/24): ").strip()
+            
+            # Validación del rango de red
+            try:
+                ipaddress.ip_network(network_range, strict=False) # Valida el formato CIDR
+            except ValueError:
+                print("Error: El rango de red introducido no es un formato CIDR válido (ej. 192.168.1.0/24).")
+                continue # Vuelve al menú principal
+
             if network_range:
                 online_hosts = scanner.scan_network(network_range)
                 print("\n--- Resumen del Escaneo ---")
@@ -117,41 +130,50 @@ def main_app():
             else:
                 print("Rango de red no válido. Por favor, inténtalo de nuevo.")
 
-       
-        elif choice == '2': # Encender equipo (Wake-on-LAN)
+        elif choice == '2':
+            # Encender equipo (Wake-on-LAN)
             print("\n--- Encender Equipo (Wake-on-LAN) ---")
             if not display_hosts(hosts_inventory):
-                continue # Vuelve al menú si no hay hosts
-
+                continue
+            
             try:
-                host_choice = int(input("Introduce el número del host a encender: "))
+                host_choice = int(input("Introduce el NÚMERO del host a encender: "))
                 if 1 <= host_choice <= len(hosts_inventory):
                     selected_host = hosts_inventory[host_choice - 1]
                     mac_address = selected_host.get('mac_address')
                     if mac_address:
                         remote_control.send_wol_packet(mac_address)
                     else:
-                        print("El host seleccionado no tiene una dirección MAC guardada.")
+                        print(f"Error: El host '{selected_host.get('name', 'N/A')}' no tiene una dirección MAC guardada.")
                 else:
-                    print("Número de host no válido.")
+                    print("Número de host no válido. Por favor, introduce un número de la lista.")
             except ValueError:
-                print("Entrada no válida. Por favor, introduce un número.")
+                print("Entrada no válida. Por favor, introduce un NÚMERO.")
 
-        elif choice == '3': # Apagar/Reiniciar equipo remoto
+        elif choice == '3':
+            # Apagar/Reiniciar equipo remoto
             print("\n--- Apagar/Reiniciar Equipo Remoto ---")
             if not display_hosts(hosts_inventory):
-                continue # Vuelve al menú si no hay hosts
+                continue
 
             try:
-                host_choice = int(input("Introduce el número del host a administrar: "))
+                host_choice = int(input("Introduce el NÚMERO del host a administrar: "))
                 if 1 <= host_choice <= len(hosts_inventory):
                     selected_host = hosts_inventory[host_choice - 1]
                     ip_address = selected_host.get('ip_address')
                     username = selected_host.get('username')
                     password = selected_host.get('password')
 
+                    # Validar que todos los campos necesarios existan
                     if not (ip_address and username and password):
-                        print("El host seleccionado no tiene IP, usuario o contraseña completos para esta operación.")
+                        print(f"Error: El host '{selected_host.get('name', 'N/A')}' no tiene IP, usuario o contraseña completos para esta operación.")
+                        continue
+                    
+                    # Validación básica de IP antes de intentar apagar
+                    try:
+                        ipaddress.ip_address(ip_address)
+                    except ValueError:
+                        print(f"Error: La IP '{ip_address}' del host '{selected_host.get('name', 'N/A')}' en el inventario no es válida.")
                         continue
 
                     action_choice = input(f"¿Quieres apagar (s) o reiniciar (r) '{selected_host['name']}'? ").strip().lower()
@@ -159,22 +181,23 @@ def main_app():
                         restart = True if action_choice == 'r' else False
                         remote_control.remote_shutdown(ip_address, username, password, restart)
                     else:
-                        print("Opción de acción no válida.")
+                        print("Opción de acción no válida. Por favor, introduce 's' para apagar o 'r' para reiniciar.")
                 else:
-                    print("Número de host no válido.")
+                    print("Número de host no válido. Por favor, introduce un número de la lista.")
             except ValueError:
-                print("Entrada no válida. Por favor, introduce un número.")
+                print("Entrada no válida. Por favor, introduce un NÚMERO.")
 
-        elif choice == '4': # Opción de Gestionar Inventario
-            manage_inventory_menu(hosts_inventory) # Llama al nuevo sub-menú
-
-        elif choice == '5': # Opción de Salir (cambia de número)
+        elif choice == '4':
+            # Gestionar Inventario
+            manage_inventory_menu(hosts_inventory)
+            
+        elif choice == '5':
+            # Salir
             print("Saliendo de IntraScan & Admin. ¡Hasta pronto!")
             sys.exit()
 
         else:
-            print("Opción no válida. Por favor, elige un número del 1 al 4.")
+            print("Opción no válida. Por favor, elige un número del 1 al 5.")
 
-# Solo ejecucion
 if __name__ == "__main__":
     main_app()
