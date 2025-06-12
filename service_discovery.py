@@ -1,6 +1,7 @@
 # service_discovery.py
 
 import socket
+from logger_config import app_logger # Importa el logger
 
 def scan_port(ip_address, port, timeout=0.5):
     """
@@ -11,37 +12,33 @@ def scan_port(ip_address, port, timeout=0.5):
     :return: True si el puerto está abierto, False si está cerrado o hay un error.
     """
     try:
-        # Crea un nuevo socket TCP/IP
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(timeout) 
-
-        # Conexion al puerto
-        result = sock.connect_ex((ip_address, port)) 
-
-        # para debug
-        if result == 0: # Si connect_ex devuelve 0, la conexión fue exitosa (puerto abierto)           
-            # sock.send(b'HEAD / HTTP/1.0\r\n\r\n')
-            # response = sock.recv(1024)
-            # print(f"  [DEBUG] Recibido: {response.decode().strip()[:50]}...")
+        sock.settimeout(timeout)
+        
+        result = sock.connect_ex((ip_address, port))
+        
+        if result == 0:
+            # app_logger.debug(f"Puerto {port} abierto en {ip_address}.") # Mensaje de depuración
             return True
         else:
+            # app_logger.debug(f"Puerto {port} cerrado en {ip_address} (Código: {result}).") # Mensaje de depuración
             return False
     except socket.error as e:
-        # print(f"Error de socket al escanear {ip_address}:{port} - {e}") # Para depuración
+        # Estos errores suelen indicar puerto cerrado o filtrado, no es necesario loguearlos a nivel de INFO/ERROR
+        # app_logger.debug(f"Error de socket al escanear {ip_address}:{port}: {e}")
         return False
     except Exception as e:
-        # print(f"Error inesperado al escanear {ip_address}:{port} - {e}") # Para depuración
+        app_logger.error(f"Error inesperado al escanear {ip_address}:{port}: {e}")
         return False
     finally:
-        sock.close() # Asegura que el socket se cierre siempre
+        sock.close()
 
 
-# solo test local
+# --- Bloque de prueba para service_discovery.py ---
 if __name__ == "__main__":
-    print("--- Probando Descubrimiento de Servicios ---")
-
-   
-    test_ip = "138.100.110.67" 
+    app_logger.info("--- Probando Descubrimiento de Servicios ---")
+    
+    test_ip = "192.168.1.1" # <-- ¡CAMBIA ESTO A UNA IP REAL DE TU RED PARA PROBAR!
 
     common_ports = {
         21: "FTP",
@@ -50,14 +47,14 @@ if __name__ == "__main__":
         53: "DNS",
         80: "HTTP",
         443: "HTTPS",
-        3389: "RDP (Escritorio Remoto)", 
+        3389: "RDP (Escritorio Remoto)",
         8080: "HTTP Alternativo"
     }
 
-    print(f"\nEscaneando puertos comunes en {test_ip}...")
+    app_logger.info(f"Escaneando puertos comunes en {test_ip}...")
     for port, service_name in common_ports.items():
-        print(f"  Probando puerto {port} ({service_name})... ", end="")
-        if scan_port(test_ip, port, timeout=0.3): 
-            print("¡ABIERTO!")
+        if scan_port(test_ip, port, timeout=0.1):
+            app_logger.info(f"  Puerto {port} ({service_name}) ¡ABIERTO!")
         else:
-            print("CERRADO.")
+            app_logger.info(f"  Puerto {port} ({service_name}) CERRADO.") # Usar INFO para ver el estado de todos los puertos probados
+    app_logger.info("Prueba de descubrimiento de servicios completada.")

@@ -1,0 +1,46 @@
+2025-06-12 16:15:30,458 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:15:30,458 - IntraScanAdmin - INFO - --- Probando escaneo de red con servicios (Directo) ---
+2025-06-12 16:15:30,458 - IntraScanAdmin - INFO - Iniciando escaneo de la subred: 192.168.1.0/29...
+2025-06-12 16:15:30,458 - IntraScanAdmin - INFO - Comienzo de escaneo de subred 192.168.1.0/29
+2025-06-12 16:15:31,059 - IntraScanAdmin - INFO - Host 192.168.1.1 fuera de línea (Ping).
+2025-06-12 16:15:31,554 - IntraScanAdmin - INFO - Host 192.168.1.2 fuera de línea (Ping).
+2025-06-12 16:15:31,570 - IntraScanAdmin - INFO - Host 192.168.1.3 en línea (Ping).
+2025-06-12 16:15:31,571 - IntraScanAdmin - INFO -   Escaneando servicios en 192.168.1.3...
+2025-06-12 16:15:32,053 - IntraScanAdmin - INFO - Host 192.168.1.4 fuera de línea (Ping).
+2025-06-12 16:15:32,554 - IntraScanAdmin - INFO - Host 192.168.1.5 fuera de línea (Ping).
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO - Host 192.168.1.6 fuera de línea (Ping).
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO - Escaneo de subred 192.168.1.0/29 completado. Se procesaron 6 hosts.
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO - --- Resumen del Escaneo de Red y Servicios (Directo) ---
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO - Se encontraron los siguientes hosts:
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO - - IP: 192.168.1.1 (Estado: offline)
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO -   Ningún servicio común abierto detectado.
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO - - IP: 192.168.1.2 (Estado: offline)
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO -   Ningún servicio común abierto detectado.
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO - - IP: 192.168.1.3 (Estado: online)
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO -   Ningún servicio común abierto detectado.
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO - - IP: 192.168.1.4 (Estado: offline)
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO -   Ningún servicio común abierto detectado.
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO - - IP: 192.168.1.5 (Estado: offline)
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO -   Ningún servicio común abierto detectado.
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO - - IP: 192.168.1.6 (Estado: offline)
+2025-06-12 16:15:33,052 - IntraScanAdmin - INFO -   Ningún servicio común abierto detectado.
+2025-06-12 16:15:50,406 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 16:15:50,491 - IntraScanAdmin - INFO - Iniciando aplicación IntraScan & Admin.
+2025-06-12 16:15:50,491 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'. 0 hosts encontrados.
+2025-06-12 16:15:55,221 - IntraScanAdmin - INFO - Opción de menú seleccionada: 1
+2025-06-12 16:16:03,948 - IntraScanAdmin - INFO - Iniciando escaneo de red para el rango: 138.100.110.1/29
+2025-06-12 16:16:03,948 - IntraScanAdmin - INFO - Comienzo de escaneo de subred 138.100.110.1/29
+2025-06-12 16:16:03,992 - IntraScanAdmin - INFO - Host 138.100.110.1 en línea (Ping).
+2025-06-12 16:16:03,992 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.1...
+2025-06-12 16:16:04,559 - IntraScanAdmin - INFO - Host 138.100.110.2 fuera de línea (Ping).
+2025-06-12 16:16:04,575 - IntraScanAdmin - INFO - Host 138.100.110.3 en línea (Ping).
+2025-06-12 16:16:04,575 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.3...
+2025-06-12 16:16:05,044 - IntraScanAdmin - INFO - Host 138.100.110.4 en línea (Ping).
+2025-06-12 16:16:05,044 - IntraScanAdmin - INFO -   Escaneando servicios en 138.100.110.4...
+2025-06-12 16:16:05,258 - IntraScanAdmin - INFO -     Puerto 80 (HTTP) ABIERTO en 138.100.110.4.
+2025-06-12 16:16:05,551 - IntraScanAdmin - INFO - Host 138.100.110.5 fuera de línea (Ping).
+2025-06-12 16:16:06,066 - IntraScanAdmin - INFO - Host 138.100.110.6 fuera de línea (Ping).
+2025-06-12 16:16:06,066 - IntraScanAdmin - INFO - Escaneo de subred 138.100.110.1/29 completado. Se procesaron 6 hosts.
+2025-06-12 16:16:06,066 - IntraScanAdmin - INFO - Escaneo de red completado. Se mostraron 6 hosts.
+2025-06-12 16:16:19,621 - IntraScanAdmin - INFO - Opción de menú seleccionada: 4
+2025-06-12 16:16:19,621 - IntraScanAdmin - INFO - Accediendo al menú de gestión de inventario.
