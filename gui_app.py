@@ -5,6 +5,7 @@ import os
 import logging
 import threading
 import queue
+import re # Para validación de IP/MAC si es necesario
 
 # Asegúrate de que las rutas a tus módulos sean correctas
 import scanner
@@ -16,7 +17,7 @@ class IntraScanAdminGUI:
     def __init__(self, master):
         self.master = master
         master.title("IntraScan & Admin GUI")
-        master.geometry("1000x700")
+        master.geometry("1100x750") # Un poco más grande para los nuevos campos
         master.resizable(True, True)
 
         self.style = ttk.Style()
@@ -38,7 +39,7 @@ class IntraScanAdminGUI:
         self.notebook.add(self.remote_tab, text="Control Remoto")
         self.create_remote_tab_widgets(self.remote_tab)
 
-        # Cargar inventario al inicio, y lo almacenamos para usarlo en todas las pestañas
+        # Cargar inventario al inicio
         self.hosts_inventory = inventory_manager.load_hosts()
         app_logger.info(f"Inventario cargado al inicio: {len(self.hosts_inventory)} hosts.")
         
@@ -133,10 +134,14 @@ class IntraScanAdminGUI:
         ttk.Label(host_selection_frame, text="O seleccionar del inventario:").grid(row=1, column=0, padx=5, pady=5, sticky="w")
         self.selected_remote_host = tk.StringVar(self.master)
         self.remote_host_options = ["Selecciona un Host"] # Opción por defecto inicial
-        # El OptionMenu se inicializa con la primera opción por defecto. Las opciones se llenarán en populate_remote_host_dropdown.
         self.remote_host_dropdown = ttk.OptionMenu(host_selection_frame, self.selected_remote_host, self.remote_host_options[0], *self.remote_host_options)
         self.remote_host_dropdown.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
         
+        # Botón para obtener información remota (nuevo)
+        self.get_remote_info_button = ttk.Button(host_selection_frame, text="Obtener Info Remota", command=self.get_remote_host_info)
+        self.get_remote_info_button.grid(row=1, column=2, padx=5, pady=5)
+
+
         # Frame para Wake-on-LAN
         wol_frame = ttk.LabelFrame(tab, text="Wake-on-LAN")
         wol_frame.pack(padx=10, pady=10, fill="x")
@@ -170,6 +175,7 @@ class IntraScanAdminGUI:
 
         input_frame.columnconfigure(1, weight=1) # Columna de entradas expandible
 
+        # Bloque de campos existentes
         ttk.Label(input_frame, text="IP:").grid(row=0, column=0, padx=5, pady=2, sticky="w")
         self.inventory_ip_entry = ttk.Entry(input_frame)
         self.inventory_ip_entry.grid(row=0, column=1, padx=5, pady=2, sticky="ew")
@@ -190,51 +196,149 @@ class IntraScanAdminGUI:
         self.inventory_desc_entry = ttk.Entry(input_frame)
         self.inventory_desc_entry.grid(row=4, column=1, padx=5, pady=2, sticky="ew")
 
+        # --- NUEVOS CAMPOS DE INVENTARIO ---
+        current_row = 5 # Empezamos después de los 5 campos existentes
+
+        ttk.Label(input_frame, text="Marca:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_brand_entry = ttk.Entry(input_frame)
+        self.inventory_brand_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Modelo:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_model_entry = ttk.Entry(input_frame)
+        self.inventory_model_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Procesador:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_processor_entry = ttk.Entry(input_frame)
+        self.inventory_processor_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Memoria (RAM):").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_memory_entry = ttk.Entry(input_frame)
+        self.inventory_memory_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Discos:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_disks_entry = ttk.Entry(input_frame)
+        self.inventory_disks_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Gráfica:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_graphics_entry = ttk.Entry(input_frame)
+        self.inventory_graphics_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Pantalla(s):").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_display_entry = ttk.Entry(input_frame)
+        self.inventory_display_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Punto de Red:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_network_point_entry = ttk.Entry(input_frame)
+        self.inventory_network_point_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Longitud Cable UTP:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_cable_length_entry = ttk.Entry(input_frame)
+        self.inventory_cable_length_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Despacho:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_office_entry = ttk.Entry(input_frame)
+        self.inventory_office_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Usuario del Equipo:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_user_entry = ttk.Entry(input_frame)
+        self.inventory_user_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Departamento:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_department_entry = ttk.Entry(input_frame)
+        self.inventory_department_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+
+        ttk.Label(input_frame, text="Planta:").grid(row=current_row, column=0, padx=5, pady=2, sticky="w")
+        self.inventory_floor_entry = ttk.Entry(input_frame)
+        self.inventory_floor_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
+        current_row += 1
+        # --- FIN NUEVOS CAMPOS ---
+
+
         # Frame para los botones de acción del inventario
         button_frame = ttk.Frame(tab)
         button_frame.pack(padx=10, pady=5, fill="x")
 
         ttk.Button(button_frame, text="Añadir Host", command=self.add_host_to_inventory).pack(side="left", padx=5)
-        ttk.Button(button_frame, text="Aplicar Cambios host actual", command=self.edit_selected_host).pack(side="left", padx=5) # TEXTO MODIFICADO
-        ttk.Button(button_frame, text="Eliminar Host actual", command=self.delete_selected_host).pack(side="left", padx=5)
-        ttk.Button(button_frame, text="Guardar Inventario al terminar", command=self.save_inventory_to_file).pack(side="right", padx=5)
+        ttk.Button(button_frame, text="Aplicar Cambios", command=self.edit_selected_host).pack(side="left", padx=5)
+        ttk.Button(button_frame, text="Eliminar Host", command=self.delete_selected_host).pack(side="left", padx=5)
+        ttk.Button(button_frame, text="Guardar Inventario", command=self.save_inventory_to_file).pack(side="right", padx=5)
         ttk.Button(button_frame, text="Limpiar Campos", command=self.clear_inventory_entries).pack(side="right", padx=5)
 
         # Frame para el Treeview del inventario
         inventory_tree_frame = ttk.LabelFrame(tab, text="Inventario de Hosts")
         inventory_tree_frame.pack(padx=10, pady=10, fill="both", expand=True)
 
-        # Scrollbars para el Treeview del inventario
-        inventory_tree_scrollbar_y = ttk.Scrollbar(inventory_tree_frame, orient="vertical")
-        inventory_tree_scrollbar_x = ttk.Scrollbar(inventory_tree_frame, orient="horizontal")
-
+        # Definir las columnas del Treeview, incluyendo las nuevas
+        treeview_columns = (
+            "IP", "Hostname", "MAC", "OS", "Description",
+            "Marca", "Modelo", "Procesador", "Memoria", "Discos", "Gráfica", "Pantalla(s)",
+            "Punto de Red", "Longitud Cable UTP", "Despacho", "Usuario", "Departamento", "Planta"
+        )
         self.inventory_tree = ttk.Treeview(inventory_tree_frame,
-                                          columns=("IP", "Hostname", "MAC", "OS", "Description"),
-                                          show="headings",
-                                          yscrollcommand=inventory_tree_scrollbar_y.set,
-                                          xscrollcommand=inventory_tree_scrollbar_x.set)
+                                          columns=treeview_columns,
+                                          show="headings")
 
-        inventory_tree_scrollbar_y.config(command=self.inventory_tree.yview)
-        inventory_tree_scrollbar_x.config(command=self.inventory_tree.xview)
+        # Scrollbars para el Treeview del inventario
+        inventory_tree_scrollbar_y = ttk.Scrollbar(inventory_tree_frame, orient="vertical", command=self.inventory_tree.yview)
+        inventory_tree_scrollbar_x = ttk.Scrollbar(inventory_tree_frame, orient="horizontal", command=self.inventory_tree.xview)
+        self.inventory_tree.config(yscrollcommand=inventory_tree_scrollbar_y.set, xscrollcommand=inventory_tree_scrollbar_x.set)
 
-        # Definir encabezados de columnas
+        inventory_tree_scrollbar_y.pack(side="right", fill="y")
+        inventory_tree_scrollbar_x.pack(side="bottom", fill="x")
+        self.inventory_tree.pack(fill="both", expand=True)
+
+        # Definir encabezados y anchos de columnas
         self.inventory_tree.heading("IP", text="IP")
         self.inventory_tree.heading("Hostname", text="Hostname")
         self.inventory_tree.heading("MAC", text="MAC Address")
         self.inventory_tree.heading("OS", text="Sistema Operativo")
         self.inventory_tree.heading("Description", text="Descripción")
+        
+        self.inventory_tree.heading("Marca", text="Marca")
+        self.inventory_tree.heading("Modelo", text="Modelo")
+        self.inventory_tree.heading("Procesador", text="Procesador")
+        self.inventory_tree.heading("Memoria", text="Memoria")
+        self.inventory_tree.heading("Discos", text="Discos")
+        self.inventory_tree.heading("Gráfica", text="Gráfica")
+        self.inventory_tree.heading("Pantalla(s)", text="Pantalla(s)")
+        self.inventory_tree.heading("Punto de Red", text="Punto de Red")
+        self.inventory_tree.heading("Longitud Cable UTP", text="Long. Cable UTP")
+        self.inventory_tree.heading("Despacho", text="Despacho")
+        self.inventory_tree.heading("Usuario", text="Usuario")
+        self.inventory_tree.heading("Departamento", text="Departamento")
+        self.inventory_tree.heading("Planta", text="Planta")
 
-        # Configurar ancho de columnas
         self.inventory_tree.column("IP", width=120, anchor="center")
         self.inventory_tree.column("Hostname", width=150, anchor="w")
         self.inventory_tree.column("MAC", width=130, anchor="center")
         self.inventory_tree.column("OS", width=100, anchor="w")
-        self.inventory_tree.column("Description", width=250, anchor="w")
-
-        # Empaquetar scrollbars y Treeview
-        inventory_tree_scrollbar_y.pack(side="right", fill="y")
-        inventory_tree_scrollbar_x.pack(side="bottom", fill="x")
-        self.inventory_tree.pack(fill="both", expand=True)
+        self.inventory_tree.column("Description", width=200, anchor="w")
+        
+        self.inventory_tree.column("Marca", width=100, anchor="w")
+        self.inventory_tree.column("Modelo", width=100, anchor="w")
+        self.inventory_tree.column("Procesador", width=150, anchor="w")
+        self.inventory_tree.column("Memoria", width=100, anchor="w")
+        self.inventory_tree.column("Discos", width=120, anchor="w")
+        self.inventory_tree.column("Gráfica", width=100, anchor="w")
+        self.inventory_tree.column("Pantalla(s)", width=100, anchor="w")
+        self.inventory_tree.column("Punto de Red", width=100, anchor="w")
+        self.inventory_tree.column("Longitud Cable UTP", width=100, anchor="center")
+        self.inventory_tree.column("Despacho", width=100, anchor="w")
+        self.inventory_tree.column("Usuario", width=100, anchor="w")
+        self.inventory_tree.column("Departamento", width=120, anchor="w")
+        self.inventory_tree.column("Planta", width=80, anchor="center")
 
         # Vincular el evento de selección de fila para precargar datos en los campos de entrada
         self.inventory_tree.bind("<<TreeviewSelect>>", self.on_inventory_select)
@@ -301,6 +405,110 @@ class IntraScanAdminGUI:
         if not mac_found:
             app_logger.warning(f"GUI: No se encontró MAC para el host seleccionado {selected_ip}. Es posible que no esté en el inventario o no tenga MAC asignada.")
 
+    def get_remote_host_info(self):
+        """
+        Función placeholder para obtener información remota del host.
+        Esta será la base para la futura funcionalidad de auditoría.
+        """
+        target_ip_or_hostname = self.remote_target_entry.get().strip()
+        username = self.remote_user_entry.get().strip()
+        password = self.remote_password_entry.get().strip()
+
+        # Si no se proporcionó IP/Hostname manualmente, usar la selección del desplegable
+        if not target_ip_or_hostname and self.selected_remote_host.get() not in ["Selecciona un Host", "No hay hosts"]:
+            target_ip_or_hostname = self.selected_remote_host.get().split(' ')[0] # Extraer solo la IP
+
+        if not target_ip_or_hostname:
+            messagebox.showwarning("Host Requerido", "Por favor, introduce una IP/Hostname o selecciona un host del inventario para obtener información remota.")
+            return
+
+        if not username or not password:
+            messagebox.showwarning("Credenciales Requeridas", "Por favor, introduce un nombre de usuario y contraseña para la conexión remota.")
+            return
+
+        self.log_message(f"Intentando obtener información remota del host: {target_ip_or_hostname}...")
+        app_logger.info(f"GUI: Solicitando información remota para {target_ip_or_hostname}.")
+        
+        # Aquí es donde integraríamos la lógica real para obtener la información.
+        # Por ahora, es un placeholder.
+        messagebox.showinfo("Funcionalidad Pendiente", 
+                            f"La función para obtener información remota de '{target_ip_or_hostname}' está en desarrollo.\n"
+                            "Se utilizarán las credenciales proporcionadas.")
+        
+        # Puedes iniciar un hilo aquí que haga la consulta real y luego actualice la GUI.
+        # threading.Thread(target=self._perform_remote_info_gathering, args=(target_ip_or_hostname, username, password)).start()
+
+    # def _perform_remote_info_gathering(self, target, username, password):
+    #     """
+    #     Función que ejecutará la recolección de información remota en un hilo separado.
+    #     Esto es un ESQUELETO. La lógica real iría aquí.
+    #     """
+    #     try:
+    #         # Lógica para usar pypsrp o WMI para obtener los datos
+    #         # Ejemplo:
+    #         # from pypsrp.powershell import PowerShell
+    #         # from pypsrp.wsman import WSMan
+    #         # with WSMan(target, auth_method='negotiate', username=username, password=password) as wsman:
+    #         #     with PowerShell(wsman) as ps:
+    #         #         ps.add_cmd("Get-ComputerInfo")
+    #         #         ps.invoke()
+    #         #         result = ps.output_streams.stdout
+    #         #         # Parsear result y actualizar la GUI
+    #         #         self.master.after(0, lambda: self._update_inventory_from_remote_data(result))
+    #         
+    #         retrieved_data = {
+    #             "ip_address": target,
+    #             "hostname": "HOSTNAME_REMOTO", # Reemplazar con datos reales
+    #             "mac_address": "AA:BB:CC:DD:EE:FF",
+    #             "os": "Windows 10 Pro",
+    #             "description": "Obtenido remotamente",
+    #             "brand": "Dell",
+    #             "model": "OptiPlex 7010",
+    #             "processor": "Intel Core i7-3770",
+    #             "memory": "16GB DDR3",
+    #             "disks": "256GB SSD, 1TB HDD",
+    #             "graphics": "Intel HD Graphics 4000",
+    #             "display": "Dell 24\" (x2)",
+    #             "network_point": "A12",
+    #             "cable_length": "5m",
+    #             "office": "Despacho 101",
+    #             "user": "d.fernandez",
+    #             "department": "IT",
+    #             "planta": "1"
+    #         }
+    #         self.master.after(0, lambda: self._update_inventory_from_remote_data(retrieved_data))
+    #         self.log_message(f"Información de {target} obtenida y lista para precargar.")
+    #         app_logger.info(f"GUI: Información remota de {target} obtenida.")
+    #     except Exception as e:
+    #         error_msg = f"Error al obtener información remota de {target}: {e}"
+    #         self.log_message(f"ERROR: {error_msg}")
+    #         app_logger.exception(f"GUI: {error_msg}")
+    #         self.master.after(0, lambda: messagebox.showerror("Error de Recolección", error_msg))
+
+    # def _update_inventory_from_remote_data(self, data):
+    #     """Actualiza los campos de entrada del inventario con los datos obtenidos remotamente."""
+    #     self.clear_inventory_entries()
+    #     self.inventory_ip_entry.insert(0, data.get("ip_address", ""))
+    #     self.inventory_hostname_entry.insert(0, data.get("hostname", ""))
+    #     self.inventory_mac_entry.insert(0, data.get("mac_address", ""))
+    #     self.inventory_os_entry.insert(0, data.get("os", ""))
+    #     self.inventory_desc_entry.insert(0, data.get("description", ""))
+    #     self.inventory_brand_entry.insert(0, data.get("brand", ""))
+    #     self.inventory_model_entry.insert(0, data.get("model", ""))
+    #     self.inventory_processor_entry.insert(0, data.get("processor", ""))
+    #     self.inventory_memory_entry.insert(0, data.get("memory", ""))
+    #     self.inventory_disks_entry.insert(0, data.get("disks", ""))
+    #     self.inventory_graphics_entry.insert(0, data.get("graphics", ""))
+    #     self.inventory_display_entry.insert(0, data.get("display", ""))
+    #     self.inventory_network_point_entry.insert(0, data.get("network_point", ""))
+    #     self.inventory_cable_length_entry.insert(0, data.get("cable_length", ""))
+    #     self.inventory_office_entry.insert(0, data.get("office", ""))
+    #     self.inventory_user_entry.insert(0, data.get("user", ""))
+    #     self.inventory_department_entry.insert(0, data.get("department", ""))
+    #     self.inventory_floor_entry.insert(0, data.get("planta", ""))
+    #     self.notebook.select(self.inventory_tab) # Cambiar a la pestaña de inventario
+
+
     def send_wol_packet(self):
         """Envía un paquete mágico Wake-on-LAN."""
         mac_address = self.wol_mac_entry.get().strip()
@@ -319,6 +527,12 @@ class IntraScanAdminGUI:
             messagebox.showwarning("MAC Requerida", "Por favor, introduce una dirección MAC o selecciona un host con MAC en el inventario para WoL.")
             app_logger.warning("GUI: Intento de WoL sin dirección MAC.")
             return
+        
+        # Validación de formato MAC (opcional pero recomendable)
+        if not re.match(r'^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$', mac_address):
+            messagebox.showerror("Formato de MAC Inválido", "La dirección MAC debe tener el formato XX:XX:XX:XX:XX:XX (o guiones).")
+            return
+
 
         if not target_ip_or_hostname:
             self.log_message("No se especificó IP/Hostname objetivo para WoL, se intentará broadcast.")
@@ -328,7 +542,6 @@ class IntraScanAdminGUI:
         app_logger.info(f"GUI: Solicitando WoL para MAC: {mac_address}, IP/Host: {target_ip_or_hostname}.")
 
         try:
-            # Asegúrate de que remote_control.send_magic_packet pueda manejar la IP opcional
             remote_control.send_magic_packet(mac_address, ip_address=target_ip_or_hostname)
             self.log_message(f"Paquete mágico enviado a {mac_address}.")
             app_logger.info(f"GUI: Paquete mágico enviado a {mac_address}.")
@@ -400,12 +613,26 @@ class IntraScanAdminGUI:
         for item in self.inventory_tree.get_children():
             self.inventory_tree.delete(item)
         for host in self.hosts_inventory:
+            # Los valores deben coincidir con el orden de las columnas definidas en create_inventory_tab_widgets
             self.inventory_tree.insert("", tk.END, values=(
                 host.get("ip_address", "N/A"),
                 host.get("hostname", "N/A"),
                 host.get("mac_address", "N/A"),
                 host.get("os", "N/A"),
-                host.get("description", "N/A")
+                host.get("description", "N/A"),
+                host.get("brand", "N/A"),         # Nuevo
+                host.get("model", "N/A"),         # Nuevo
+                host.get("processor", "N/A"),     # Nuevo
+                host.get("memory", "N/A"),        # Nuevo
+                host.get("disks", "N/A"),         # Nuevo
+                host.get("graphics", "N/A"),      # Nuevo
+                host.get("display", "N/A"),       # Nuevo
+                host.get("network_point", "N/A"), # Nuevo
+                host.get("cable_length", "N/A"),  # Nuevo
+                host.get("office", "N/A"),        # Nuevo
+                host.get("user", "N/A"),          # Nuevo
+                host.get("department", "N/A"),    # Nuevo
+                host.get("planta", "N/A")         # Nuevo
             ), iid=host.get("ip_address")) # Usamos la IP como IID (identificador único de la fila)
         self.log_message(f"Inventario mostrado. Total: {len(self.hosts_inventory)} hosts.")
         app_logger.info(f"GUI: Inventario actualizado en la visualización.")
@@ -417,16 +644,59 @@ class IntraScanAdminGUI:
         mac = self.inventory_mac_entry.get().strip()
         os_name = self.inventory_os_entry.get().strip()
         description = self.inventory_desc_entry.get().strip()
+        
+        # --- NUEVOS CAMPOS ---
+        brand = self.inventory_brand_entry.get().strip()
+        model = self.inventory_model_entry.get().strip()
+        processor = self.inventory_processor_entry.get().strip()
+        memory = self.inventory_memory_entry.get().strip()
+        disks = self.inventory_disks_entry.get().strip()
+        graphics = self.inventory_graphics_entry.get().strip()
+        display = self.inventory_display_entry.get().strip()
+        network_point = self.inventory_network_point_entry.get().strip()
+        cable_length = self.inventory_cable_length_entry.get().strip()
+        office = self.inventory_office_entry.get().strip()
+        user = self.inventory_user_entry.get().strip()
+        department = self.inventory_department_entry.get().strip()
+        planta = self.inventory_floor_entry.get().strip()
+        # --- FIN NUEVOS CAMPOS ---
 
         if not ip or not hostname:
             messagebox.showwarning("Entrada Requerida", "IP y Hostname son campos obligatorios.")
             app_logger.warning("GUI: Intento de añadir host sin IP o Hostname.")
             return
+        
         if any(h['ip_address'] == ip for h in self.hosts_inventory):
             messagebox.showwarning("Host Existente", f"El host con IP {ip} ya existe en el inventario. Usa 'Aplicar Cambios' si quieres modificarlo.")
             app_logger.warning(f"GUI: Intento de añadir host duplicado: {ip}.")
             return
-        new_host = {"ip_address": ip, "hostname": hostname, "mac_address": mac, "os": os_name, "description": description}
+        
+        # Validar formato MAC (opcional)
+        if mac and not re.match(r'^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$', mac):
+            messagebox.showerror("Formato de MAC Inválido", "La dirección MAC debe tener el formato XX:XX:XX:XX:XX:XX (o guiones).")
+            return
+
+
+        new_host = {
+            "ip_address": ip,
+            "hostname": hostname,
+            "mac_address": mac,
+            "os": os_name,
+            "description": description,
+            "brand": brand,             # Nuevo
+            "model": model,             # Nuevo
+            "processor": processor,     # Nuevo
+            "memory": memory,           # Nuevo
+            "disks": disks,             # Nuevo
+            "graphics": graphics,       # Nuevo
+            "display": display,         # Nuevo
+            "network_point": network_point, # Nuevo
+            "cable_length": cable_length,   # Nuevo
+            "office": office,           # Nuevo
+            "user": user,               # Nuevo
+            "department": department,   # Nuevo
+            "planta": planta            # Nuevo
+        }
         self.hosts_inventory.append(new_host)
         self.load_inventory_display() # Refrescar la tabla
         self.clear_inventory_entries() # Limpiar campos
@@ -448,8 +718,29 @@ class IntraScanAdminGUI:
         new_os_name = self.inventory_os_entry.get().strip()
         new_description = self.inventory_desc_entry.get().strip()
 
+        # --- NUEVOS CAMPOS ---
+        new_brand = self.inventory_brand_entry.get().strip()
+        new_model = self.inventory_model_entry.get().strip()
+        new_processor = self.inventory_processor_entry.get().strip()
+        new_memory = self.inventory_memory_entry.get().strip()
+        new_disks = self.inventory_disks_entry.get().strip()
+        new_graphics = self.inventory_graphics_entry.get().strip()
+        new_display = self.inventory_display_entry.get().strip()
+        new_network_point = self.inventory_network_point_entry.get().strip()
+        new_cable_length = self.inventory_cable_length_entry.get().strip()
+        new_office = self.inventory_office_entry.get().strip()
+        new_user = self.inventory_user_entry.get().strip()
+        new_department = self.inventory_department_entry.get().strip()
+        new_planta = self.inventory_floor_entry.get().strip()
+        # --- FIN NUEVOS CAMPOS ---
+
         if not new_ip or not new_hostname:
             messagebox.showwarning("Entrada Requerida", "IP y Hostname son campos obligatorios para editar.")
+            return
+        
+        # Validar formato MAC (opcional)
+        if new_mac and not re.match(r'^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$', new_mac):
+            messagebox.showerror("Formato de MAC Inválido", "La dirección MAC debe tener el formato XX:XX:XX:XX:XX:XX (o guiones).")
             return
 
         found = False
@@ -461,8 +752,24 @@ class IntraScanAdminGUI:
                     return
                 
                 self.hosts_inventory[i] = {
-                    "ip_address": new_ip, "hostname": new_hostname, "mac_address": new_mac,
-                    "os": new_os_name, "description": new_description
+                    "ip_address": new_ip,
+                    "hostname": new_hostname,
+                    "mac_address": new_mac,
+                    "os": new_os_name,
+                    "description": new_description,
+                    "brand": new_brand,             # Nuevo
+                    "model": new_model,             # Nuevo
+                    "processor": new_processor,     # Nuevo
+                    "memory": new_memory,           # Nuevo
+                    "disks": new_disks,             # Nuevo
+                    "graphics": new_graphics,       # Nuevo
+                    "display": new_display,         # Nuevo
+                    "network_point": new_network_point, # Nuevo
+                    "cable_length": new_cable_length,   # Nuevo
+                    "office": new_office,           # Nuevo
+                    "user": new_user,               # Nuevo
+                    "department": new_department,   # Nuevo
+                    "planta": new_planta            # Nuevo
                 }
                 found = True
                 break
@@ -508,6 +815,23 @@ class IntraScanAdminGUI:
         self.inventory_mac_entry.delete(0, tk.END)
         self.inventory_os_entry.delete(0, tk.END)
         self.inventory_desc_entry.delete(0, tk.END)
+        
+        # --- LIMPIAR NUEVOS CAMPOS ---
+        self.inventory_brand_entry.delete(0, tk.END)
+        self.inventory_model_entry.delete(0, tk.END)
+        self.inventory_processor_entry.delete(0, tk.END)
+        self.inventory_memory_entry.delete(0, tk.END)
+        self.inventory_disks_entry.delete(0, tk.END)
+        self.inventory_graphics_entry.delete(0, tk.END)
+        self.inventory_display_entry.delete(0, tk.END)
+        self.inventory_network_point_entry.delete(0, tk.END)
+        self.inventory_cable_length_entry.delete(0, tk.END)
+        self.inventory_office_entry.delete(0, tk.END)
+        self.inventory_user_entry.delete(0, tk.END)
+        self.inventory_department_entry.delete(0, tk.END)
+        self.inventory_floor_entry.delete(0, tk.END)
+        # --- FIN LIMPIEZA NUEVOS CAMPOS ---
+
         self.inventory_tree.selection_remove(self.inventory_tree.selection()) # Deseleccionar elemento en la tabla
 
     def on_inventory_select(self, event):
@@ -519,11 +843,31 @@ class IntraScanAdminGUI:
         if selected_item:
             values = self.inventory_tree.item(selected_item, "values")
             self.clear_inventory_entries() # Limpiar antes de insertar para evitar duplicados
-            self.inventory_ip_entry.insert(0, values[0])
-            self.inventory_hostname_entry.insert(0, values[1])
-            self.inventory_mac_entry.insert(0, values[2])
-            self.inventory_os_entry.insert(0, values[3])
-            self.inventory_desc_entry.insert(0, values[4])
+            
+            # Asegurarse de que 'values' tiene suficientes elementos antes de acceder a ellos
+            # Los índices deben coincidir con el orden de las columnas en el Treeview
+            self.inventory_ip_entry.insert(0, values[0] if len(values) > 0 else "")
+            self.inventory_hostname_entry.insert(0, values[1] if len(values) > 1 else "")
+            self.inventory_mac_entry.insert(0, values[2] if len(values) > 2 else "")
+            self.inventory_os_entry.insert(0, values[3] if len(values) > 3 else "")
+            self.inventory_desc_entry.insert(0, values[4] if len(values) > 4 else "")
+            
+            # --- PRECARGAR NUEVOS CAMPOS ---
+            self.inventory_brand_entry.insert(0, values[5] if len(values) > 5 else "")
+            self.inventory_model_entry.insert(0, values[6] if len(values) > 6 else "")
+            self.inventory_processor_entry.insert(0, values[7] if len(values) > 7 else "")
+            self.inventory_memory_entry.insert(0, values[8] if len(values) > 8 else "")
+            self.inventory_disks_entry.insert(0, values[9] if len(values) > 9 else "")
+            self.inventory_graphics_entry.insert(0, values[10] if len(values) > 10 else "")
+            self.inventory_display_entry.insert(0, values[11] if len(values) > 11 else "")
+            self.inventory_network_point_entry.insert(0, values[12] if len(values) > 12 else "")
+            self.inventory_cable_length_entry.insert(0, values[13] if len(values) > 13 else "")
+            self.inventory_office_entry.insert(0, values[14] if len(values) > 14 else "")
+            self.inventory_user_entry.insert(0, values[15] if len(values) > 15 else "")
+            self.inventory_department_entry.insert(0, values[16] if len(values) > 16 else "")
+            self.inventory_floor_entry.insert(0, values[17] if len(values) > 17 else "")
+            # --- FIN PRECARGA NUEVOS CAMPOS ---
+
 
     def log_message(self, message):
         """Añade un mensaje al cuadro de texto de registro de la GUI."""
