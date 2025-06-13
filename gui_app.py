@@ -1,11 +1,13 @@
 import tkinter as tk
-from tkinter import ttk, scrolledtext, messagebox
+from tkinter import ttk, scrolledtext, messagebox, filedialog
 import sys
 import os
 import logging
 import threading
 import queue
 import re
+import csv
+
 
 # Asegúrate de que las rutas a tus módulos sean correctas
 import scanner
@@ -92,6 +94,8 @@ class IntraScanAdminGUI:
         self.scan_button = ttk.Button(scan_frame, text="Iniciar Escaneo", command=self.start_scan)
         self.scan_button.grid(row=0, column=2, padx=5, pady=5)
 
+        self.help_scan_button = ttk.Button(scan_frame, text="Ayuda Escaneo de Red", command=self.show_scan_help)
+        self.help_scan_button.grid(row=0, column=3, padx=5, pady=5) # Añadido en una nueva columna
         results_frame = ttk.LabelFrame(tab, text="Resultado del Escaneo")
         results_frame.pack(padx=10, pady=10, fill="both", expand=True)
 
@@ -137,10 +141,9 @@ class IntraScanAdminGUI:
         self.remote_host_dropdown = ttk.OptionMenu(host_selection_frame, self.selected_remote_host, self.remote_host_options[0], *self.remote_host_options)
         self.remote_host_dropdown.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
         
-        # Botón para obtener información remota (nuevo)
-        self.get_remote_info_button = ttk.Button(host_selection_frame, text="Obtener Info Remota", command=self.initiate_remote_info_gathering)
-        self.get_remote_info_button.grid(row=1, column=2, padx=5, pady=5)
-
+       # Botón de Ayuda para Conexión Remota ---
+        self.help_remote_button = ttk.Button(host_selection_frame, text="Ayuda Conexión Remota", command=self.show_remote_connection_help)
+        self.help_remote_button.grid(row=0, column=2, padx=5, pady=5)
 
         # Frame para Wake-on-LAN
         wol_frame = ttk.LabelFrame(tab, text="Wake-on-LAN")
@@ -166,6 +169,88 @@ class IntraScanAdminGUI:
 
         ttk.Button(power_frame, text="Apagar", command=lambda: self.initiate_remote_action("shutdown")).grid(row=2, column=0, padx=5, pady=5)
         ttk.Button(power_frame, text="Reiniciar", command=lambda: self.initiate_remote_action("reboot")).grid(row=2, column=1, padx=5, pady=5)
+        # Botón para obtener información remota (nuevo)
+        self.get_remote_info_button = ttk.Button(power_frame, text="Obtener Info Remota", command=self.initiate_remote_info_gathering)
+        self.get_remote_info_button.grid(row=2, column=2, padx=5, pady=5)
+
+    def show_remote_connection_help(self):
+        """Muestra una ventana de ayuda para la conexión remota."""
+        help_text = (
+            "Para que la conexión remota funcione correctamente (Obtener Info, Apagar, Reiniciar), "
+            "asegúrate de lo siguiente en el **equipo Windows remoto**:\n\n"
+            "1.  **Versión de Windows:** Debe ser **Windows 10 Pro, Windows 11 Pro** o una versión de servidor (no Home).\n\n"
+            "2.  **Habilitar PowerShell Remoting (WinRM):**\n"
+            "    Abre PowerShell como Administrador y ejecuta:\n"
+            "    `Enable-PSRemoting -Force`\n"
+            "    Esto configura el servicio WinRM para aceptar conexiones.\n\n"
+            "3.  **Configurar Firewall de Windows:**\n"
+            "    Asegúrate de que el Firewall permite las conexiones para WinRM y WMI. "
+            "    `Enable-PSRemoting` suele configurar WinRM, pero puedes verificar/añadir:\n"
+            "    `Set-NetFirewallRule -DisplayName \"Windows Management Instrumentation (WMI-In)\" -Enabled True`\n"
+            "    `Set-NetFirewallRule -DisplayName \"Windows Remote Management (HTTP-In)\" -Enabled True`\n"
+            "    O para todas las reglas de WinRM:\n"
+            "    `Get-NetFirewallRule -DisplayName *WinRM* | Enable-NetFirewallRule`\n\n"
+            "4.  **Credenciales de Administrador:**\n"
+            "    Debes usar un **nombre de usuario y contraseña** de una cuenta que tenga permisos de administrador local en el equipo remoto. "
+            "    Si la cuenta no tiene contraseña, WinRM puede dar problemas (política de seguridad). "
+            "    Para cuentas locales, el usuario debe tener una contraseña.\n\n"
+            "5.  **Conectividad de Red:**\n"
+            "    Asegúrate de que no hay firewalls intermedios de red o configuraciones de router "
+            "    que impidan la comunicación al puerto 5985 (HTTP) o 5986 (HTTPS) del host remoto."
+        )
+        messagebox.showinfo("Ayuda de Conexión Remota", help_text)
+        app_logger.info("GUI: Se mostró la ayuda de conexión remota.")
+
+    def show_scan_help(self):
+                """Muestra una ventana de ayuda para el escaneo de red."""
+                help_text = (
+                    "Esta función realiza un escaneo de red para detectar hosts activos y servicios abiertos.\n\n"
+                    "**1. Rango de Red:**\n"
+                    "   Introduce el rango de red que deseas escanear en formato CIDR (ej. `192.168.1.0/24`). "
+                    "   Esto es fundamental para que la herramienta sepa dónde buscar.\n\n"
+                    "**2. Permisos y Firewall:**\n"
+                    "   Para que el escaneo funcione correctamente, tu sistema (donde ejecutas la aplicación) "
+                    "   necesita permisos para realizar solicitudes de red a otros hosts.\n"
+                    "   * **Firewall de Windows:** Asegúrate de que tu firewall local no esté bloqueando las "
+                    "       conexiones salientes necesarias para el escaneo (por ejemplo, Ping ICMP, o puertos TCP).\n"
+                    "       En algunos casos, puede que necesites una excepción para la aplicación Python.\n"
+                    "   * **Privilegios:** Aunque Python puede escanear puertos básicos, para escaneos más "
+                    "       profundos o acceso a nivel de red (como algunos pings), a veces ejecutar la aplicación "
+                    "       con privilegios de administrador puede ayudar, aunque no siempre es estrictamente necesario "
+                    "       para la funcionalidad básica de esta herramienta.\n\n"
+                    "**3. Configuración de Red Local:**\n"
+                    "   Tu equipo debe estar en la misma red o tener acceso de enrutamiento a la red que intentas escanear.\n"
+                    "   Los resultados mostrarán hosts activos y los servicios (puertos TCP) que estén abiertos y "
+                    "   respondiendo al escaneo."
+                )
+                messagebox.showinfo("Ayuda de Escaneo de Red", help_text)
+                app_logger.info("GUI: Se mostró la ayuda de escaneo de red.")
+
+    # --- NUEVA FUNCIÓN DE AYUDA PARA INVENTARIO (ASEGÚRATE DE LA INDENTACIÓN) ---
+    def show_inventory_help(self):
+        """Muestra una ventana de ayuda para la gestión de inventario."""
+        help_text = (
+            "La pestaña de Gestión de Inventario te permite mantener un registro de tus equipos.\n\n"
+            "**1. Campos de Detalles del Host:**\n"
+            "   Rellena manualmente los campos con la información del equipo, o utiliza la función "
+            "   'Obtener Info Remota' (desde la pestaña Control Remoto) para auto-rellenar los datos "
+            "   de un equipo detectado.\n\n"
+            "**2. Botones de Acción:**\n"
+            "   * **Añadir Host:** Guarda la información de los campos actuales como un nuevo host en el inventario.\n"
+            "   * **Editar Host Seleccionado:** Si has seleccionado un host de la tabla, los campos se precargan. "
+            "     Modifica la información y haz clic en este botón para actualizar los detalles del host.\n"
+            "     **Importante:** La IP es el identificador único. Si cambias la IP, se creará un nuevo registro.\n"
+            "   * **Eliminar Host Seleccionado:** Elimina el host seleccionado de la tabla.\n"
+            "   * **Guardar Inventario:** Guarda todos los cambios (añadidos, editados, eliminados) en el archivo "
+            "     `hosts.json`. **Es crucial guardar para que los cambios persistan.**\n"
+            "   * **Limpiar Campos:** Borra el contenido de todos los campos de entrada para un nuevo registro.\n\n"
+            "**3. Tabla de Inventario:**\n"
+            "   Muestra todos los hosts registrados. Puedes hacer clic en una fila para precargar sus "
+            "   detalles en los campos de entrada, facilitando la edición o eliminación.\n\n"
+            "Los datos se guardan en el archivo `hosts.json` en el directorio de la aplicación."
+        )
+        messagebox.showinfo("Ayuda de Gestión de Inventario", help_text)
+        app_logger.info("GUI: Se mostró la ayuda de gestión de inventario.")
 
     def create_inventory_tab_widgets(self, tab):
         """Crea los widgets para la pestaña de Gestión de Inventario."""
@@ -263,6 +348,13 @@ class IntraScanAdminGUI:
         self.inventory_floor_entry = ttk.Entry(input_frame)
         self.inventory_floor_entry.grid(row=current_row, column=1, padx=5, pady=2, sticky="ew")
         current_row += 1
+
+        # Botón de Ayuda para Inventario ---
+        self.help_inventory_button = ttk.Button(input_frame, text="Ayuda de Inventario", command=self.show_inventory_help)
+        # Asegúrate de ajustar el 'row' si los tuyos no van del 0 al 10.
+        # Si tienes 11 campos (0 a 10), la siguiente fila disponible es 11.
+        self.help_inventory_button.grid(row=10, column=2, padx=5, pady=2, sticky="e")
+        
         # --- FIN NUEVOS CAMPOS ---
 
 
@@ -273,6 +365,8 @@ class IntraScanAdminGUI:
         ttk.Button(button_frame, text="Añadir Host", command=self.add_host_to_inventory).pack(side="left", padx=5)
         ttk.Button(button_frame, text="Aplicar Cambios", command=self.edit_selected_host).pack(side="left", padx=5)
         ttk.Button(button_frame, text="Eliminar Host", command=self.delete_selected_host).pack(side="left", padx=5)
+        self.export_inventory_button = ttk.Button(button_frame, text="Exportar Inventario", command=self.export_inventory_to_csv)
+        self.export_inventory_button.pack(side="right", padx=5)
         ttk.Button(button_frame, text="Guardar Inventario", command=self.save_inventory_to_file).pack(side="right", padx=5)
         ttk.Button(button_frame, text="Limpiar Campos", command=self.clear_inventory_entries).pack(side="right", padx=5)
 
@@ -796,7 +890,78 @@ class IntraScanAdminGUI:
             messagebox.showerror("Error al Guardar", f"No se pudo guardar el inventario: {e}")
             self.log_message(f"ERROR: No se pudo guardar el inventario: {e}")
             app_logger.exception("GUI: Error al guardar inventario.", exc_info=True)
+            # ... (otras funciones existentes) ...
 
+    def save_inventory_to_file(self):
+        """Guarda el inventario actual en el archivo hosts.json."""
+        inventory_manager.save_hosts(self.hosts_inventory)
+        self.log_message("Inventario guardado correctamente en hosts.json.")
+        app_logger.info("Inventario guardado.")
+
+    def clear_inventory_entries(self):
+        """Limpia todos los campos de entrada de la pestaña de inventario."""
+        for entry_name in self.inventory_entries:
+            self.inventory_entries[entry_name].delete(0, tk.END)
+        # Limpiar también los campos nuevos si no están en self.inventory_entries (si los definiste por separado)
+        # Aquí asumo que todos tus campos de inventario tienen un nombre como self.inventory_IP_entry, etc.
+        # Y que la función `clear_inventory_entries` necesita ser actualizada para limpiar TODOS ellos.
+        # Por ahora, me centraré en la nueva función de exportación.
+
+    #  ---Exportar Inventario a CSV ---
+    def export_inventory_to_csv(self):
+        """
+        Exporta los datos del inventario a un archivo CSV.
+        Permite al usuario elegir la ubicación y el nombre del archivo.
+        """
+        if not self.hosts_inventory:
+            messagebox.showinfo("Exportar Inventario", "El inventario está vacío. No hay datos para exportar.")
+            app_logger.warning("GUI: Intento de exportar inventario vacío.")
+            return
+
+        # Abrir un diálogo para guardar el archivo
+        file_path = filedialog.asksaveasfilename(
+            defaultextension=".csv",
+            filetypes=[("Archivos CSV", "*.csv"), ("Todos los archivos", "*.*")],
+            title="Guardar Inventario como CSV"
+        )
+
+        if not file_path:  # El usuario canceló el diálogo
+            self.log_message("Exportación de inventario CSV cancelada.")
+            app_logger.info("GUI: Exportación de inventario CSV cancelada.")
+            return
+
+        try:
+            # Obtener todos los nombres de las columnas que manejamos en el Treeview
+            # Esto asegura que el CSV tenga los encabezados correctos y el orden.
+            headers = [
+                "ip_address", "hostname", "mac_address", "os", "description",
+                "marca", "modelo", "procesador", "memoria", "discos", "grafica", "pantalla",
+                "punto_de_red", "longitud_cable_utp", "despacho", "usuario_equipo", "departamento", "planta"
+            ]
+            
+            # Abrir el archivo CSV en modo escritura
+            with open(file_path, mode='w', newline='', encoding='utf-8') as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=headers)
+                
+                writer.writeheader()  # Escribir la fila de encabezados
+
+                # Escribir cada host del inventario
+                for host_data in self.hosts_inventory:
+                    # Crear un diccionario para la fila CSV, asegurando que todos los campos estén presentes
+                    row_data = {header: host_data.get(header, "N/A") for header in headers}
+                    writer.writerow(row_data)
+
+            self.log_message(f"Inventario exportado a: {file_path}")
+            messagebox.showinfo("Exportar Inventario", f"Inventario exportado exitosamente a:\n{file_path}")
+            app_logger.info(f"GUI: Inventario exportado exitosamente a {file_path}.")
+
+        except Exception as e:
+            error_msg = f"Error al exportar inventario a CSV: {e}"
+            self.log_message(f"ERROR: {error_msg}")
+            messagebox.showerror("Error de Exportación", error_msg)
+            app_logger.error(f"GUI: {error_msg}", exc_info=True)
+    
+    
     def clear_inventory_entries(self):
         """Limpia todos los campos de entrada de la pestaña de inventario."""
         self.inventory_ip_entry.delete(0, tk.END)
