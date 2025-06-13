@@ -1458,3 +1458,72 @@
 2025-06-12 18:21:30,305 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
 2025-06-12 18:21:30,305 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
 2025-06-12 18:21:32,070 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 18:49:31,118 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 18:49:31,171 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 18:49:31,171 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 18:49:31,171 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 18:49:31,171 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 18:49:33,927 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 19:08:46,085 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 19:08:46,142 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 19:08:46,143 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 19:08:46,143 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:08:46,153 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 19:08:48,712 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:08:52,460 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-12 19:08:52,460 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-12 19:08:54,968 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 19:12:25,487 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 19:12:25,538 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 19:12:25,538 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 19:12:25,538 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:12:25,538 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 19:12:28,282 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 19:40:12,087 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 19:40:18,514 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 19:41:29,475 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 19:41:31,045 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 19:41:31,045 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 19:41:31,045 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:41:31,058 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 19:41:34,220 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:41:38,751 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 19:41:40,111 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:49:34,812 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 19:49:35,191 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 19:49:35,191 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 19:49:35,191 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:49:35,207 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 19:49:37,526 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:49:55,255 - IntraScanAdmin - INFO - GUI: Se mostró la ayuda de conexión remota.
+2025-06-12 19:54:30,848 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 19:55:43,398 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 19:55:43,780 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 19:55:43,780 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 19:55:43,780 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:55:43,795 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 19:55:47,583 - IntraScanAdmin - INFO - GUI: Se mostró la ayuda de escaneo de red.
+2025-06-12 19:55:48,474 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:55:51,405 - IntraScanAdmin - INFO - GUI: Se mostró la ayuda de conexión remota.
+2025-06-12 19:55:52,324 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 19:56:46,469 - IntraScanAdmin - INFO - GUI: Se mostró la ayuda de escaneo de red.
+2025-06-12 19:56:47,799 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 19:56:51,601 - IntraScanAdmin - INFO - GUI: Se mostró la ayuda de conexión remota.
+2025-06-12 19:56:52,459 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 20:05:43,631 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 20:05:44,004 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 20:05:44,004 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 20:05:44,004 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 20:07:52,357 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 20:07:52,730 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 20:07:52,730 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 20:07:52,730 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 20:07:52,741 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 20:07:55,283 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-12 20:07:59,991 - IntraScanAdmin - INFO - GUI: Se mostró la ayuda de gestión de inventario.
+2025-06-12 20:13:03,681 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-12 20:13:04,046 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-12 20:13:04,046 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-12 20:13:04,046 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-12 20:13:04,059 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-12 20:13:05,965 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.

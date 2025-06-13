@@ -303,27 +303,26 @@ def execute_remote_powershell_command(hostname, username, password, command):
         wsman = WSMan(hostname,
                       username=username,
                       password=password,
-                      connection_timeout=15, # Tiempo de espera para la conexión
-                      read_timeout=30)     # Tiempo de espera para la lectura de la salida
+                      connection_timeout=15,
+                      read_timeout=30)
 
-        powershell = PowerShell(wsman)
-        
-        # Ejecutar el comando
-        output = powershell.invoke(command)
+        with PowerShell(wsman) as ps:
+            ps.add_cmd(command)
+            ps.invoke()
 
-        # Devolver la salida estándar, el error y los objetos de la shell
+            stdout_output = "\n".join(str(o) for o in ps.streams.stdout)
+            stderr_output = "\n".join(str(e) for e in ps.streams.stderr)
+
         return {
-            "stdout": "\n".join(output.streams.stdout),
-            "stderr": "\n".join(output.streams.stderr),
-            "shell_output": "\n".join([str(o) for o in output.streams.objects])
+            "stdout": stdout_output,
+            "stderr": stderr_output,
+            "shell_output": "" # Puedes quitar esto si no lo necesitas, o llenarlo con ps.streams.objects
         }
 
     except WinRMError as e:
-        # Errores específicos de WinRM (autenticación, conexión, etc.)
         raise ConnectionError(f"Error de conexión o autenticación con WinRM: {e}")
     except Exception as e:
-        # Otros errores inesperados
         raise RuntimeError(f"Error inesperado al ejecutar comando remoto: {e}")
     finally:
         if wsman:
-            wsman.close() # Asegurarse de cerrar la sesión WSMAN
+            wsman.close()

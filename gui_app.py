@@ -271,6 +271,24 @@ class IntraScanAdminGUI:
         messagebox.showinfo("Ayuda de Gestión de Inventario", help_text)
         app_logger.info("GUI: Se mostró la ayuda de gestión de inventario.")
 
+    def _is_valid_ip_or_hostname(self, target):
+        """Valida si una cadena es una dirección IP válida o un hostname básico."""
+        # Patrón para IPv4 (ej. 192.168.1.1)
+        ipv4_pattern = r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$"
+        # Patrón para hostname básico (letras, números, guiones, puntos, no empieza/termina con guion/punto)
+        hostname_pattern = r"^(?!-)[A-Za-z0-9-]{1,63}(?<!-)(\.[A-Za-z0-9-]{1,63}(?<!-))*$"
+
+        if re.match(ipv4_pattern, target):
+            # Comprobar que cada octeto está entre 0 y 255
+            parts = target.split('.')
+            if all(0 <= int(part) <= 255 for part in parts):
+                return True
+        elif re.match(hostname_pattern, target):
+            # Para hostname, la validación se basa en el patrón básico.
+            # No se puede validar si existe sin una resolución DNS.
+            return True
+        return False
+
     def create_inventory_tab_widgets(self, tab):
         """Crea los widgets para la pestaña de Gestión de Inventario."""
         # Frame para la entrada de datos del host
