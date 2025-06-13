@@ -291,3 +291,39 @@ def get_remote_host_info(target, username, password):
     except Exception as e:
         app_logger.error(f"Error inesperado al obtener información remota de {target}: {e}", exc_info=True)
         raise
+
+
+
+def execute_remote_powershell_command(hostname, username, password, command):
+    """
+    Ejecuta un comando de PowerShell en un host remoto y devuelve su salida.
+    """
+    wsman = None
+    try:
+        wsman = WSMan(hostname,
+                      username=username,
+                      password=password,
+                      connection_timeout=15, # Tiempo de espera para la conexión
+                      read_timeout=30)     # Tiempo de espera para la lectura de la salida
+
+        powershell = PowerShell(wsman)
+        
+        # Ejecutar el comando
+        output = powershell.invoke(command)
+
+        # Devolver la salida estándar, el error y los objetos de la shell
+        return {
+            "stdout": "\n".join(output.streams.stdout),
+            "stderr": "\n".join(output.streams.stderr),
+            "shell_output": "\n".join([str(o) for o in output.streams.objects])
+        }
+
+    except WinRMError as e:
+        # Errores específicos de WinRM (autenticación, conexión, etc.)
+        raise ConnectionError(f"Error de conexión o autenticación con WinRM: {e}")
+    except Exception as e:
+        # Otros errores inesperados
+        raise RuntimeError(f"Error inesperado al ejecutar comando remoto: {e}")
+    finally:
+        if wsman:
+            wsman.close() # Asegurarse de cerrar la sesión WSMAN

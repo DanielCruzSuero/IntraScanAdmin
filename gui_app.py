@@ -173,6 +173,25 @@ class IntraScanAdminGUI:
         self.get_remote_info_button = ttk.Button(power_frame, text="Obtener Info Remota", command=self.initiate_remote_info_gathering)
         self.get_remote_info_button.grid(row=2, column=2, padx=5, pady=5)
 
+        #  Frame para Ejecución de Comandos Remotos
+        command_frame = ttk.LabelFrame(tab, text="Ejecución de Comandos Remotos")
+        command_frame.pack(padx=10, pady=10, fill="x", expand=True)
+        command_frame.columnconfigure(1, weight=1) # Permite que la entrada de comando se expanda
+
+        ttk.Label(command_frame, text="Comando (PowerShell/CMD):").grid(row=0, column=0, padx=5, pady=5, sticky="w")
+        self.remote_command_entry = ttk.Entry(command_frame, width=70)
+        self.remote_command_entry.grid(row=0, column=1, padx=5, pady=5, sticky="ew")
+
+        self.execute_command_button = ttk.Button(command_frame, text="Ejecutar Comando", command=self.execute_remote_command)
+        self.execute_command_button.grid(row=0, column=2, padx=5, pady=5)
+
+        ttk.Label(command_frame, text="Salida del Comando:").grid(row=1, column=0, padx=5, pady=5, sticky="w")
+        self.command_output_text = scrolledtext.ScrolledText(command_frame, height=10, state='disabled', wrap='word')
+        self.command_output_text.grid(row=2, column=0, columnspan=3, padx=5, pady=5, sticky="nsew")
+
+        command_frame.grid_rowconfigure(2, weight=1) # Permite que la caja de texto se expanda verticalmente
+        
+
     def show_remote_connection_help(self):
         """Muestra una ventana de ayuda para la conexión remota."""
         help_text = (
@@ -529,6 +548,100 @@ class IntraScanAdminGUI:
         # Iniciar la recolección de información en un hilo separado
         threading.Thread(target=self._perform_remote_info_gathering, 
                          args=(target_ip_or_hostname, username, password)).start()
+        
+    # ... (después de initiate_remote_info_gathering, o donde prefieras añadir funciones de control remoto) ...
+
+    def execute_remote_command(self):
+        """
+        Inicia la ejecución de un comando remoto en un hilo separado.
+        """
+        target_ip_or_hostname = self.remote_target_entry.get().strip()
+        username = self.remote_user_entry.get().strip()
+        password = self.remote_password_entry.get().strip()
+        command = self.remote_command_entry.get().strip()
+
+        # Validaciones
+        if not target_ip_or_hostname:
+            messagebox.showwarning("Host Requerido", "Por favor, introduce una IP/Hostname o selecciona un host del inventario para ejecutar el comando.")
+            return
+        
+        if not self._is_valid_ip_or_hostname(target_ip_or_hostname):
+            messagebox.showerror("Error de Entrada", "La IP/Hostname introducido no es válido.")
+            app_logger.warning(f"GUI: Intento de ejecución de comando con target inválido: {target_ip_or_hostname}")
+            return
+
+        if not username or not password:
+            messagebox.showwarning("Credenciales Requeridas", "Por favor, introduce un nombre de usuario y contraseña para la conexión remota.")
+            return
+        
+        if not command:
+            messagebox.showwarning("Comando Requerido", "Por favor, introduce el comando a ejecutar en el host remoto.")
+            return
+
+        self.log_message(f"Intentando ejecutar comando en {target_ip_or_hostname}: '{command}'...")
+        app_logger.info(f"GUI: Solicitando ejecución de comando para {target_ip_or_hostname}.")
+        
+        # Desactivar botón y cambiar cursor mientras se procesa
+        self.execute_command_button.config(state=tk.DISABLED)
+        self.master.config(cursor="wait")
+        self.command_output_text.config(state='normal')
+        self.command_output_text.delete(1.0, tk.END) # Limpiar salida anterior
+        self.command_output_text.config(state='disabled')
+
+        # Iniciar la ejecución del comando en un hilo separado
+        threading.Thread(target=self._perform_remote_command_execution, 
+                            args=(target_ip_or_hostname, username, password, command)).start()
+
+    def _perform_remote_command_execution(self, target, username, password, command):
+        """
+        Función que ejecuta el comando remoto en un hilo separado y actualiza la GUI.
+        """
+        try:
+            results = remote_control.execute_remote_powershell_command(target, username, password, command)
+            
+            output_msg = ""
+            if results["stdout"]:
+                output_msg += "--- STDOUT ---\n" + results["stdout"] + "\n"
+            if results["stderr"]:
+                output_msg += "\n--- STDERR (ERRORES) ---\n" + results["stderr"] + "\n"
+            if results["shell_output"]:
+                output_msg += "\n--- OBJETOS DE POWERSHELL ---\n" + results["shell_output"] + "\n"
+            
+            if not output_msg:
+                output_msg = "El comando se ejecutó, pero no devolvió ninguna salida."
+
+            self.master.after(0, lambda: self._update_command_output_gui(output_msg))
+            self.log_message(f"Comando '{command}' ejecutado en {target}. Salida actualizada.")
+            app_logger.info(f"GUI: Comando '{command}' ejecutado en {target}.")
+
+        except ConnectionError as ce:
+            error_msg = f"Error de conexión/autenticación al ejecutar comando en {target}: {ce}"
+            self.master.after(0, lambda: self._update_command_output_gui(error_msg, is_error=True))
+            self.log_message(f"ERROR: {error_msg}")
+            app_logger.error(f"GUI: {error_msg}", exc_info=True)
+        except RuntimeError as re:
+            error_msg = f"Error en la ejecución del comando remoto en {target}: {re}"
+            self.master.after(0, lambda: self._update_command_output_gui(error_msg, is_error=True))
+            self.log_message(f"ERROR: {error_msg}")
+            app_logger.error(f"GUI: {error_msg}", exc_info=True)
+        except Exception as e:
+            error_msg = f"Error inesperado al ejecutar comando en {target}: {e}"
+            self.master.after(0, lambda: self._update_command_output_gui(error_msg, is_error=True))
+            self.log_message(f"ERROR: {error_msg}")
+            app_logger.error(f"GUI: {error_msg}", exc_info=True)
+        finally:
+            self.master.after(0, lambda: self.execute_command_button.config(state=tk.NORMAL))
+            self.master.after(0, lambda: self.master.config(cursor=""))
+
+    def _update_command_output_gui(self, message, is_error=False):
+        """Actualiza la caja de texto de salida del comando en el hilo principal."""
+        self.command_output_text.config(state='normal')
+        self.command_output_text.insert(tk.END, message + "\n")
+        self.command_output_text.see(tk.END) # Scroll automático al final
+        self.command_output_text.config(state='disabled')
+        if is_error:
+            self.command_output_text.tag_configure("error", foreground="red")
+            self.command_output_text.tag_add("error", "1.0", tk.END)
 
     def _perform_remote_info_gathering(self, target, username, password):
         """
