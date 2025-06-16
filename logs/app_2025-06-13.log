@@ -294,3 +294,1161 @@ Traceback (most recent call last):
   File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 325, in execute_remote_powershell_command
     raise RuntimeError(f"Error inesperado al ejecutar comando remoto: {e}")
 RuntimeError: Error inesperado al ejecutar comando remoto: 'WSMan' object has no attribute 'pipelines'
+2025-06-13 15:47:03,095 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 15:47:04,525 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 15:47:04,525 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 15:47:04,525 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 15:47:04,541 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 15:47:06,583 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 15:47:08,648 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 15:47:08,648 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 15:47:25,505 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 138.100.110.67.
+2025-06-13 15:47:25,505 - pypsrp.powershell - INFO - Initialising PowerShell in remote Runspace Pool
+2025-06-13 15:47:25,517 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 138.100.110.67: Error inesperado al ejecutar comando remoto: 'WSMan' object has no attribute 'pipelines'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 309, in execute_remote_powershell_command
+    with PowerShell(wsman) as ps:
+         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\venv\Lib\site-packages\pypsrp\powershell.py", line 910, in __init__
+    runspace_pool.pipelines[self.id] = self
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WSMan' object has no attribute 'pipelines'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 325, in execute_remote_powershell_command
+    raise RuntimeError(f"Error inesperado al ejecutar comando remoto: {e}")
+RuntimeError: Error inesperado al ejecutar comando remoto: 'WSMan' object has no attribute 'pipelines'
+2025-06-13 15:53:14,323 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 15:53:14,764 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 15:53:14,764 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 15:53:14,764 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 15:53:14,764 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 15:53:16,953 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 15:53:19,934 - IntraScanAdmin - WARNING - GUI: Intento de WoL sin dirección MAC.
+2025-06-13 15:53:21,567 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 15:53:21,567 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 15:53:39,216 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 138.100.110.67.
+2025-06-13 15:53:39,216 - remote_control - ERROR - Error inesperado al ejecutar comando remoto en 138.100.110.67: 'WSMan' object has no attribute 'execute_powershell'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 315, in execute_remote_powershell_command
+    stdout, stderr, r_code = wsman.execute_powershell(command)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WSMan' object has no attribute 'execute_powershell'
+2025-06-13 15:53:39,232 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 138.100.110.67: Error inesperado al ejecutar comando remoto: 'WSMan' object has no attribute 'execute_powershell'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 315, in execute_remote_powershell_command
+    stdout, stderr, r_code = wsman.execute_powershell(command)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WSMan' object has no attribute 'execute_powershell'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 337, in execute_remote_powershell_command
+    raise RuntimeError(f"Error inesperado al ejecutar comando remoto: {e}")
+RuntimeError: Error inesperado al ejecutar comando remoto: 'WSMan' object has no attribute 'execute_powershell'
+2025-06-13 15:56:31,261 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 15:56:31,655 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 15:56:31,655 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 15:56:31,655 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 15:56:31,655 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 15:56:33,948 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 15:56:36,264 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 15:56:36,264 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 15:56:50,394 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 138.100.110.67.
+2025-06-13 15:56:51,521 - remote_control - ERROR - GUI: Error en PowerShell remoto (código 1): None
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 323, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n        $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n        $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            dir\n        } -ErrorAction Stop | Out-String\n        "]' returned non-zero exit status 1.
+2025-06-13 15:56:51,537 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 138.100.110.67: Error en el comando remoto: Error en PowerShell remoto (código 1): None
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 323, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n        $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n        $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            dir\n        } -ErrorAction Stop | Out-String\n        "]' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 349, in execute_remote_powershell_command
+    raise RuntimeError(f"Error en el comando remoto: {error_message}")
+RuntimeError: Error en el comando remoto: Error en PowerShell remoto (código 1): None
+2025-06-13 16:06:20,905 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 16:06:20,984 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 16:06:20,984 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 16:06:20,984 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:06:20,984 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 16:06:23,010 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:06:27,449 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 16:06:27,452 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 16:06:41,582 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 138.100.110.67.
+2025-06-13 16:06:42,477 - remote_control - ERROR - GUI: Error en PowerShell remoto (código 1).
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 62, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n        $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n        $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            dir\n        } -ErrorAction Stop | Out-String -Encoding UTF8\n        "]' returned non-zero exit status 1.
+2025-06-13 16:06:42,477 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 138.100.110.67: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 62, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n        $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n        $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            dir\n        } -ErrorAction Stop | Out-String -Encoding UTF8\n        "]' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 90, in execute_remote_powershell_command
+    raise RuntimeError(f"Error en el comando remoto: {error_message}")
+RuntimeError: Error en el comando remoto: Error en PowerShell remoto (código 1).
+2025-06-13 16:16:05,975 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 16:16:06,027 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 16:16:06,027 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 16:16:06,027 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:16:06,038 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 16:16:08,183 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:16:10,321 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 16:16:10,321 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 16:16:24,559 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 138.100.110.67.
+2025-06-13 16:16:25,362 - remote_control - ERROR - GUI: Error en PowerShell remoto (código 1).
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 62, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n        $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n        $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            dir\n        } -ErrorAction Stop | Out-String -Encoding UTF8\n        "]' returned non-zero exit status 1.
+2025-06-13 16:16:25,362 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 138.100.110.67: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 62, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n        $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n        $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            dir\n        } -ErrorAction Stop | Out-String -Encoding UTF8\n        "]' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 90, in execute_remote_powershell_command
+    raise RuntimeError(f"Error en el comando remoto: {error_message}")
+RuntimeError: Error en el comando remoto: Error en PowerShell remoto (código 1).
+2025-06-13 16:26:56,194 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 16:26:56,253 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 16:26:56,253 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 16:26:56,253 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:26:56,269 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 16:26:58,245 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:27:01,154 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 16:27:01,154 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 16:27:14,049 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 138.100.110.67.
+2025-06-13 16:27:14,049 - IntraScanAdmin - INFO - Ejecución remota: Solicitando comando en 138.100.110.67 como daniel...
+2025-06-13 16:27:14,894 - remote_control - ERROR - GUI: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : No se encuentra ning�n par�metro que coincida con el nombre del par�metro 'Encoding'.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+2025-06-13 16:27:14,948 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 138.100.110.67: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : No se encuentra ning�n par�metro que coincida con el nombre del par�metro 'Encoding'.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 117, in execute_remote_powershell_command
+    raise RuntimeError(f"Error en el comando remoto: {error_message}")
+RuntimeError: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : No se encuentra ning�n par�metro que coincida con el nombre del par�metro 'Encoding'.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+2025-06-13 16:29:23,039 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 16:29:23,118 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 16:29:23,118 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 16:29:23,118 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:29:23,118 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 16:29:25,277 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:29:27,917 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 16:29:27,917 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 138.100.110.67.
+2025-06-13 16:29:42,206 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 138.100.110.67.
+2025-06-13 16:29:42,206 - IntraScanAdmin - INFO - Ejecución remota: Solicitando comando en 138.100.110.67 como daniel...
+2025-06-13 16:29:43,159 - remote_control - ERROR - GUI: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 138.100.110.67. Mensaje de error: Acceso denegado. Para obtener 
+m�s informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+2025-06-13 16:29:43,171 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 138.100.110.67: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 138.100.110.67. Mensaje de error: Acceso denegado. Para obtener 
+m�s informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 117, in execute_remote_powershell_command
+    raise RuntimeError(f"Error en el comando remoto: {error_message}")
+RuntimeError: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 138.100.110.67. Mensaje de error: Acceso denegado. Para obtener 
+m�s informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+2025-06-13 16:30:58,975 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 138.100.110.67.
+2025-06-13 16:30:58,975 - IntraScanAdmin - INFO - Ejecución remota: Solicitando comando en 138.100.110.67 como daniel...
+2025-06-13 16:30:59,910 - remote_control - ERROR - GUI: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 138.100.110.67. Mensaje de error: Acceso denegado. Para obtener 
+m�s informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+2025-06-13 16:30:59,913 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 138.100.110.67: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 138.100.110.67. Mensaje de error: Acceso denegado. Para obtener 
+m�s informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 117, in execute_remote_powershell_command
+    raise RuntimeError(f"Error en el comando remoto: {error_message}")
+RuntimeError: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '138.100.110.67' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 138.100.110.67. Mensaje de error: Acceso denegado. Para obtener 
+m�s informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+2025-06-13 16:45:44,840 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 16:45:44,900 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 16:45:44,900 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 16:45:44,900 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:45:44,900 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 16:45:47,637 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-13 16:45:59,258 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-13 16:45:59,274 - IntraScanAdmin - INFO - GUI: Host 138.100.110.67 editado a 127.0.0.1.
+2025-06-13 16:46:02,095 - IntraScanAdmin - INFO - Inventario guardado en 'hosts.json'.
+2025-06-13 16:46:02,095 - IntraScanAdmin - INFO - Inventario guardado.
+2025-06-13 16:46:07,672 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:46:09,528 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 16:46:09,528 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 16:46:23,526 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 127.0.0.1.
+2025-06-13 16:46:23,526 - IntraScanAdmin - INFO - Ejecución remota: Solicitando comando en 127.0.0.1 como daniel...
+2025-06-13 16:46:24,475 - remote_control - ERROR - GUI: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 127.0.0.1. Mensaje de error: Acceso denegado. Para obtener m�s 
+informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+2025-06-13 16:46:24,475 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 127.0.0.1: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 127.0.0.1. Mensaje de error: Acceso denegado. Para obtener m�s 
+informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 117, in execute_remote_powershell_command
+    raise RuntimeError(f"Error en el comando remoto: {error_message}")
+RuntimeError: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String '@lvaro11Sistemas1' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 127.0.0.1. Mensaje de error: Acceso denegado. Para obtener m�s 
+informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+2025-06-13 16:56:50,014 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 16:56:50,081 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 16:56:50,081 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 16:56:50,081 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:56:50,081 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 16:56:54,147 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:56:56,044 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 16:56:56,044 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 16:57:07,320 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 127.0.0.1.
+2025-06-13 16:57:07,322 - IntraScanAdmin - INFO - Ejecución remota: Solicitando comando en 127.0.0.1 como daniel...
+2025-06-13 16:57:08,249 - remote_control - ERROR - GUI: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String 'Cambiada' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 127.0.0.1. Mensaje de error: Acceso denegado. Para obtener m�s 
+informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String 'Cambiada' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+2025-06-13 16:57:08,264 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 127.0.0.1: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String 'Cambiada' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 127.0.0.1. Mensaje de error: Acceso denegado. Para obtener m�s 
+informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String 'Cambiada' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 117, in execute_remote_powershell_command
+    raise RuntimeError(f"Error en el comando remoto: {error_message}")
+RuntimeError: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String 'Cambiada' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 127.0.0.1. Mensaje de error: Acceso denegado. Para obtener m�s 
+informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+2025-06-13 16:57:31,754 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 16:57:31,793 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 16:57:31,793 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 16:57:31,793 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:57:31,810 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 16:57:34,052 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 16:57:35,747 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 16:57:35,747 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 16:57:48,166 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 127.0.0.1.
+2025-06-13 16:57:48,166 - IntraScanAdmin - INFO - Ejecución remota: Solicitando comando en 127.0.0.1 como daniel...
+2025-06-13 16:57:49,104 - remote_control - ERROR - GUI: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String 'Cambiada' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 127.0.0.1. Mensaje de error: Acceso denegado. Para obtener m�s 
+informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String 'Cambiada' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+2025-06-13 16:57:49,112 - IntraScanAdmin - ERROR - GUI: Error en la ejecución del comando remoto en 127.0.0.1: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String 'Cambiada' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 127.0.0.1. Mensaje de error: Acceso denegado. Para obtener m�s 
+informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 76, in execute_remote_powershell_command
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell.exe', '-Command', "\n    $SecurePassword = ConvertTo-SecureString -String 'Cambiada' -AsPlainText -Force\n    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)\n\n    try {\n        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {\n            try {\n                dir\n            } catch {\n                Write-Error $_.Exception.Message -ErrorAction Stop\n                Exit 1\n            }\n        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8\n    } catch [System.Exception] {\n        Write-Error $_.Exception.Message -ErrorAction Stop\n        Exit 1\n    }\n    "]' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 618, in _perform_remote_command_execution
+    results = remote_control.execute_remote_powershell_command(target, username, password, command)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 117, in execute_remote_powershell_command
+    raise RuntimeError(f"Error en el comando remoto: {error_message}")
+RuntimeError: Error en el comando remoto: Error en PowerShell remoto (código 1).
+Salida de error: $SecurePassword = ConvertTo-SecureString -String 'Cambiada' -AsPlainText -Force
+    $Credential = New-Object System.Management.Automation.PSCredential ('daniel', $SecurePassword)
+    try {
+        Invoke-Command -ComputerName '127.0.0.1' -Credential $Credential -ScriptBlock {
+            try {
+                dir
+            } catch {
+                Write-Error $_.Exception.Message -ErrorAction Stop
+                Exit 1
+            }
+        } -ErrorAction Stop | Out-String # <--- ELIMINADO: -Encoding UTF8
+    } catch [System.Exception] {
+        Write-Error $_.Exception.Message -ErrorAction Stop
+        Exit 1
+    }
+     : Error de conexi�n al servidor remoto 127.0.0.1. Mensaje de error: Acceso denegado. Para obtener m�s 
+informaci�n, consulte el tema de la Ayuda about_Remote_Troubleshooting.
+En l�nea: 15 Car�cter: 9
++         Write-Error $_.Exception.Message -ErrorAction Stop
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
+Salida estándar: No stdout available.
+2025-06-13 17:21:10,102 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:21:10,500 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:21:10,500 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:21:10,500 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:21:10,517 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:21:16,661 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:21:22,870 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:21:22,870 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:21:39,465 - IntraScanAdmin - INFO - GUI: Solicitando ejecución de comando para 127.0.0.1.
+2025-06-13 17:21:39,465 - IntraScanAdmin - INFO - Ejecución remota: Solicitando comando en 127.0.0.1 como daniel...
+2025-06-13 17:21:48,179 - IntraScanAdmin - INFO - Ejecución remota en 127.0.0.1 exitosa. Stdout: Directory: C:\Users\Daniel\OneDrive - Universidad Polit�cnica de Madrid\Documentos
+
+Mode                 LastWriteTime         Length Name                                PSComputerName
+----                 -------------         ------ ----                                --------------
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+                                                                                      127.0.0.1
+2025-06-13 17:21:48,210 - IntraScanAdmin - INFO - GUI: Comando 'dir' ejecutado en 127.0.0.1.
+2025-06-13 17:23:15,721 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:23:15,773 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:23:15,773 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:23:15,773 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:23:15,784 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:23:17,687 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:23:20,995 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:23:20,995 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:23:32,189 - IntraScanAdmin - INFO - GUI: Solicitando información remota para 127.0.0.1.
+2025-06-13 17:23:32,195 - IntraScanAdmin - INFO - Recopilación remota: Conectando a 127.0.0.1 como daniel para obtener información...
+2025-06-13 17:23:38,010 - IntraScanAdmin - ERROR - Error inesperado al obtener información remota de 127.0.0.1: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 375, in get_remote_host_info
+    desc = gpu.get('Description', 'N/A')
+           ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-06-13 17:23:38,027 - IntraScanAdmin - ERROR - GUI: Error inesperado al obtener información remota de 127.0.0.1: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 670, in _perform_remote_info_gathering
+    retrieved_data = remote_control.get_remote_host_info(target, username, password)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 375, in get_remote_host_info
+    desc = gpu.get('Description', 'N/A')
+           ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-06-13 17:36:38,237 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:36:38,301 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:36:38,301 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:36:38,301 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:36:38,313 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:36:40,380 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:36:43,497 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:36:43,497 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:36:55,590 - IntraScanAdmin - INFO - GUI: Solicitando información remota para 127.0.0.1.
+2025-06-13 17:36:55,590 - IntraScanAdmin - INFO - Recopilación remota: Conectando a 127.0.0.1 como daniel para obtener información...
+2025-06-13 17:36:55,602 - IntraScanAdmin - ERROR - GUI: Error inesperado al obtener información remota de 127.0.0.1: '$_'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 670, in _perform_remote_info_gathering
+    retrieved_data = remote_control.get_remote_host_info(target, username, password)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 321, in get_remote_host_info
+    powershell_script = powershell_script_template.format(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '$_'
+2025-06-13 17:39:43,780 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:39:43,857 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:39:43,857 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:39:43,857 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:39:43,871 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:39:48,914 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:39:51,078 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:39:51,078 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:40:04,771 - IntraScanAdmin - INFO - GUI: Solicitando información remota para 127.0.0.1.
+2025-06-13 17:40:04,773 - IntraScanAdmin - INFO - Recopilación remota: Conectando a 127.0.0.1 como daniel para obtener información...
+2025-06-13 17:40:04,785 - IntraScanAdmin - ERROR - GUI: Error inesperado al obtener información remota de 127.0.0.1: ' $graphics = @() '
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 670, in _perform_remote_info_gathering
+    retrieved_data = remote_control.get_remote_host_info(target, username, password)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 321, in get_remote_host_info
+    powershell_script = powershell_script_template.format(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: ' $graphics = @() '
+2025-06-13 17:42:53,505 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:42:53,568 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:42:53,568 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:42:53,568 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:42:53,584 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:42:55,267 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:42:57,207 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:42:57,207 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:43:08,127 - IntraScanAdmin - INFO - GUI: Solicitando información remota para 127.0.0.1.
+2025-06-13 17:43:08,127 - IntraScanAdmin - INFO - Recopilación remota: Conectando a 127.0.0.1 como daniel para obtener información...
+2025-06-13 17:43:13,829 - IntraScanAdmin - ERROR - Error inesperado al obtener información remota de 127.0.0.1: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 375, in get_remote_host_info
+    desc = gpu.get('Description', 'N/A')
+           ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-06-13 17:43:13,834 - IntraScanAdmin - ERROR - GUI: Error inesperado al obtener información remota de 127.0.0.1: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 670, in _perform_remote_info_gathering
+    retrieved_data = remote_control.get_remote_host_info(target, username, password)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 375, in get_remote_host_info
+    desc = gpu.get('Description', 'N/A')
+           ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-06-13 17:45:04,822 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:45:04,895 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:45:04,895 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:45:04,902 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:45:04,902 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:45:06,857 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:45:08,976 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:45:08,976 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:45:19,140 - IntraScanAdmin - INFO - GUI: Solicitando información remota para 127.0.0.1.
+2025-06-13 17:45:19,140 - IntraScanAdmin - INFO - Recopilación remota: Conectando a 127.0.0.1 como daniel para obtener información...
+2025-06-13 17:45:24,803 - IntraScanAdmin - INFO - Salida CRUDA de PowerShell para 127.0.0.1: '{"Displays":{"Caption":"Monitor PnP gen�rico","ScreenWidth":null,"ScreenHeight":null},"Processor":{"Name":"13th Gen Intel(R) Core(TM) i5-13400"},"ComputerInfo":{"CsName":"PCDCRUZ","OsName":"Microsoft Windows 11 Pro","OsHardwareAbstractionLayer":"10.0.26100.1","Manufacturer":null,"Model":null},"Disks":[{"DeviceID":"C:","Size":1023205699584,"FreeSpace":813253398528},{"DeviceID":"D:","Size":1000203087872,"FreeSpace":260372680704}],"Memory":17179869184,"Graphics":{"Description":"Intel(R) UHD Graphics 730","AdapterRAM":2147479552},"NetworkAdapter":{}}'
+2025-06-13 17:45:24,803 - IntraScanAdmin - ERROR - Error inesperado al obtener información remota de 127.0.0.1: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 376, in get_remote_host_info
+    desc = gpu.get('Description', 'N/A')
+           ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-06-13 17:45:24,833 - IntraScanAdmin - ERROR - GUI: Error inesperado al obtener información remota de 127.0.0.1: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 670, in _perform_remote_info_gathering
+    retrieved_data = remote_control.get_remote_host_info(target, username, password)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 376, in get_remote_host_info
+    desc = gpu.get('Description', 'N/A')
+           ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-06-13 17:47:22,279 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:47:22,358 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:47:22,358 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:47:22,358 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:47:22,358 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:47:24,059 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:47:25,690 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:47:25,690 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:47:39,242 - IntraScanAdmin - INFO - GUI: Solicitando información remota para 127.0.0.1.
+2025-06-13 17:47:39,242 - IntraScanAdmin - INFO - Recopilación remota: Conectando a 127.0.0.1 como daniel para obtener información...
+2025-06-13 17:47:45,062 - IntraScanAdmin - INFO - Salida CRUDA de PowerShell para 127.0.0.1: '{"Displays":{"Caption":"Monitor PnP gen�rico","ScreenWidth":null,"ScreenHeight":null},"Processor":{"Name":"13th Gen Intel(R) Core(TM) i5-13400"},"ComputerInfo":{"CsName":"PCDCRUZ","OsName":"Microsoft Windows 11 Pro","OsHardwareAbstractionLayer":"10.0.26100.1","Manufacturer":null,"Model":null},"Disks":[{"DeviceID":"C:","Size":1023205699584,"FreeSpace":813252792320},{"DeviceID":"D:","Size":1000203087872,"FreeSpace":260372680704}],"Memory":17179869184,"Graphics":{"Description":"Intel(R) UHD Graphics 730","AdapterRAM":2147479552},"NetworkAdapter":{}}'
+2025-06-13 17:47:45,062 - IntraScanAdmin - ERROR - Error inesperado al obtener información remota de 127.0.0.1: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 391, in get_remote_host_info
+    caption = monitor.get('Caption', 'N/A')
+              ^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-06-13 17:47:45,094 - IntraScanAdmin - ERROR - GUI: Error inesperado al obtener información remota de 127.0.0.1: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\Daniel\IntraScanAdmin\gui_app.py", line 670, in _perform_remote_info_gathering
+    retrieved_data = remote_control.get_remote_host_info(target, username, password)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Daniel\IntraScanAdmin\remote_control.py", line 391, in get_remote_host_info
+    caption = monitor.get('Caption', 'N/A')
+              ^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-06-13 17:50:51,550 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:50:51,629 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:50:51,629 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:50:51,629 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:50:51,629 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:50:53,479 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:50:55,242 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:50:55,242 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:51:06,927 - IntraScanAdmin - INFO - GUI: Solicitando información remota para 127.0.0.1.
+2025-06-13 17:51:06,927 - IntraScanAdmin - INFO - Recopilación remota: Conectando a 127.0.0.1 como daniel para obtener información...
+2025-06-13 17:51:12,685 - IntraScanAdmin - INFO - Salida CRUDA de PowerShell para 127.0.0.1: '{"Displays":{"Caption":"Monitor PnP gen�rico","ScreenWidth":null,"ScreenHeight":null},"Processor":{"Name":"13th Gen Intel(R) Core(TM) i5-13400"},"ComputerInfo":{"CsName":"PCDCRUZ","OsName":"Microsoft Windows 11 Pro","OsHardwareAbstractionLayer":"10.0.26100.1","Manufacturer":null,"Model":null},"Disks":[{"DeviceID":"C:","Size":1023205699584,"FreeSpace":813251960832},{"DeviceID":"D:","Size":1000203087872,"FreeSpace":260372680704}],"Memory":17179869184,"Graphics":{"Description":"Intel(R) UHD Graphics 730","AdapterRAM":2147479552},"NetworkAdapter":{}}'
+2025-06-13 17:51:12,685 - IntraScanAdmin - INFO - Recopilación remota de 127.0.0.1 completada con éxito.
+2025-06-13 17:51:12,732 - IntraScanAdmin - INFO - GUI: Información remota de 127.0.0.1 obtenida y procesada.
+2025-06-13 17:55:28,114 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:55:28,162 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:55:28,162 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:55:28,162 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:55:28,177 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:55:30,442 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:55:32,597 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:55:32,597 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:55:43,256 - IntraScanAdmin - INFO - GUI: Solicitando información remota para 127.0.0.1.
+2025-06-13 17:55:43,256 - IntraScanAdmin - INFO - Recopilación remota: Conectando a 127.0.0.1 como daniel para obtener información...
+2025-06-13 17:55:49,102 - IntraScanAdmin - INFO - Salida CRUDA de PowerShell para 127.0.0.1: '{"Displays":{"Caption":"Monitor PnP gen�rico","ScreenWidth":null,"ScreenHeight":null},"Processor":{"Name":"13th Gen Intel(R) Core(TM) i5-13400"},"ComputerInfo":{"CsName":"PCDCRUZ","OsName":"Microsoft Windows 11 Pro","OsHardwareAbstractionLayer":"10.0.26100.1","Manufacturer":null,"Model":null},"Disks":[{"DeviceID":"C:","Size":1023205699584,"FreeSpace":813250682880},{"DeviceID":"D:","Size":1000203087872,"FreeSpace":260372680704}],"Memory":17179869184,"Graphics":{"Description":"Intel(R) UHD Graphics 730","AdapterRAM":2147479552},"NetworkAdapter":{}}'
+2025-06-13 17:55:49,102 - IntraScanAdmin - INFO - Recopilación remota de 127.0.0.1 completada con éxito.
+2025-06-13 17:55:49,141 - IntraScanAdmin - INFO - GUI: Información remota de 127.0.0.1 obtenida y procesada.
+2025-06-13 17:57:07,080 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:57:07,127 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:57:07,127 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:57:07,127 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:57:07,127 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:57:09,040 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:57:10,984 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:57:10,984 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:57:30,970 - IntraScanAdmin - INFO - GUI: Solicitando información remota para 127.0.0.1.
+2025-06-13 17:57:30,970 - IntraScanAdmin - INFO - Recopilación remota: Conectando a 127.0.0.1 como daniel para obtener información...
+2025-06-13 17:57:37,487 - IntraScanAdmin - INFO - Salida CRUDA de PowerShell para 127.0.0.1: '{"Displays":{"Caption":"Monitor PnP gen�rico","ScreenWidth":null,"ScreenHeight":null},"Processor":{"Name":"13th Gen Intel(R) Core(TM) i5-13400"},"ComputerInfo":{"CsName":"PCDCRUZ","OsName":"Microsoft Windows 11 Pro","OsHardwareAbstractionLayer":"10.0.26100.1","Manufacturer":null,"Model":null},"Disks":[{"DeviceID":"C:","Size":1023205699584,"FreeSpace":813248450560},{"DeviceID":"D:","Size":1000203087872,"FreeSpace":260372680704}],"Memory":17179869184,"Graphics":{"Description":"Intel(R) UHD Graphics 730","AdapterRAM":2147479552},"NetworkAdapter":{}}'
+2025-06-13 17:57:37,487 - IntraScanAdmin - INFO - Recopilación remota de 127.0.0.1 completada con éxito.
+2025-06-13 17:57:37,534 - IntraScanAdmin - INFO - GUI: Información remota de 127.0.0.1 obtenida y procesada.
+2025-06-13 17:59:50,831 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 17:59:50,867 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 17:59:50,867 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 17:59:50,867 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:59:50,883 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 17:59:52,986 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 17:59:54,937 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 17:59:54,937 - IntraScanAdmin - INFO - GUI: MAC D4-61-37-0A-15-9C precargada para host 127.0.0.1.
+2025-06-13 18:00:05,670 - IntraScanAdmin - INFO - GUI: Solicitando información remota para 127.0.0.1.
+2025-06-13 18:00:05,670 - IntraScanAdmin - INFO - Recopilación remota: Conectando a 127.0.0.1 como daniel para obtener información...
+2025-06-13 18:00:11,296 - IntraScanAdmin - INFO - Salida CRUDA de PowerShell para 127.0.0.1: '{"Displays":{"Caption":"Monitor PnP gen�rico","ScreenWidth":null,"ScreenHeight":null},"Processor":{"Name":"13th Gen Intel(R) Core(TM) i5-13400"},"ComputerInfo":{"CsName":"PCDCRUZ","OsName":"Microsoft Windows 11 Pro","OsHardwareAbstractionLayer":"10.0.26100.1","Manufacturer":null,"Model":null},"Disks":[{"DeviceID":"C:","Size":1023205699584,"FreeSpace":813247471616},{"DeviceID":"D:","Size":1000203087872,"FreeSpace":260372680704}],"Memory":17179869184,"Graphics":{"Description":"Intel(R) UHD Graphics 730","AdapterRAM":2147479552},"NetworkAdapter":{}}'
+2025-06-13 18:00:11,296 - IntraScanAdmin - INFO - Recopilación remota de 127.0.0.1 completada con éxito.
+2025-06-13 18:00:11,342 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-13 18:00:11,342 - IntraScanAdmin - INFO - GUI: Información remota de 127.0.0.1 obtenida y procesada.
+2025-06-13 18:05:32,968 - IntraScanAdmin - WARNING - GUI: Intento de añadir host duplicado: 127.0.0.1.
+2025-06-13 18:05:55,260 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:05:55,323 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 18:05:55,323 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 18:05:55,323 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 18:05:55,323 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 18:05:57,705 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-13 18:06:27,787 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:06:27,844 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 18:06:27,844 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 18:06:27,844 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 18:06:27,852 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 18:06:30,190 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-13 18:15:05,339 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:15:16,383 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:18:08,883 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:21:02,454 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:24:56,406 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:26:22,637 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:26:22,684 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 18:26:22,684 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 18:26:22,684 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 18:28:16,969 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:28:17,032 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 18:28:17,034 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 18:28:17,034 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 18:29:48,876 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:29:48,941 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 18:29:48,941 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 18:29:48,941 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 18:31:17,669 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:31:17,733 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 18:31:17,733 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 18:31:17,733 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 18:32:11,005 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:32:11,069 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 18:32:11,069 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 18:32:11,069 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 18:33:26,637 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 18:33:26,690 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 18:33:26,690 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 18:33:26,690 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 19:28:22,930 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:28:22,944 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:28:22,993 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 19:28:22,993 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 19:28:22,993 - IntraScanAdmin - INFO - Advertencia: Componentes del desplegable de host remoto no inicializados.
+2025-06-13 19:28:22,993 - IntraScanAdmin - INFO - Salida del logger redirigida a la GUI.
+2025-06-13 19:28:22,993 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 19:28:22,993 - IntraScanAdmin - INFO - ¡Bienvenido a IntraScan & Admin GUI!
+2025-06-13 19:28:22,993 - IntraScanAdmin - INFO - Utiliza las pestañas para navegar por las funciones.
+2025-06-13 19:28:28,298 - IntraScanAdmin - INFO - Inventario mostrado. Total: 1 hosts.
+2025-06-13 19:28:28,298 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-13 19:34:46,068 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:34:46,083 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:34:46,125 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 19:34:46,141 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 19:34:46,141 - IntraScanAdmin - INFO - Advertencia: Host sin ID único detectado: 127.0.0.1. No se agregará al Treeview.
+2025-06-13 19:34:46,141 - IntraScanAdmin - INFO - Inventario cargado en la tabla GUI: 1 hosts.
+2025-06-13 19:34:46,141 - IntraScanAdmin - INFO - Advertencia: Componentes del desplegable de host remoto no inicializados.
+2025-06-13 19:34:46,141 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 19:34:46,141 - IntraScanAdmin - INFO - Salida del logger redirigida a la GUI.
+2025-06-13 19:34:46,141 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 19:34:46,141 - IntraScanAdmin - INFO - ¡Bienvenido a IntraScan & Admin GUI!
+2025-06-13 19:34:46,141 - IntraScanAdmin - INFO - Utiliza las pestañas para navegar por las funciones.
+2025-06-13 19:34:48,470 - IntraScanAdmin - INFO - Inventario mostrado. Total: 1 hosts.
+2025-06-13 19:34:48,470 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-13 19:43:33,679 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:43:33,695 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:43:33,742 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 19:43:33,742 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 19:43:33,742 - IntraScanAdmin - INFO - Advertencia: Host sin ID único detectado: 127.0.0.1. No se agregará al Treeview.
+2025-06-13 19:43:33,742 - IntraScanAdmin - INFO - Inventario cargado en la tabla GUI: 1 hosts.
+2025-06-13 19:43:33,742 - IntraScanAdmin - INFO - Advertencia: Componentes del desplegable de host remoto no inicializados.
+2025-06-13 19:43:33,742 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 19:43:33,742 - IntraScanAdmin - INFO - Salida del logger redirigida a la GUI.
+2025-06-13 19:43:33,742 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 19:43:33,742 - IntraScanAdmin - INFO - ¡Bienvenido a IntraScan & Admin GUI!
+2025-06-13 19:43:33,758 - IntraScanAdmin - INFO - Utiliza las pestañas para navegar por las funciones.
+2025-06-13 19:46:37,251 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:46:37,267 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:48:47,689 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:48:47,689 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:51:00,278 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:51:00,298 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:51:00,325 - IntraScanAdmin - INFO - Widgets de la pestaña 'Escaneo de Red' creados.
+2025-06-13 19:51:00,341 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 19:51:00,341 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 19:51:00,341 - IntraScanAdmin - INFO - Advertencia: Host sin ID único detectado: 127.0.0.1. No se agregará al Treeview.
+2025-06-13 19:51:00,341 - IntraScanAdmin - INFO - Inventario cargado en la tabla GUI: 1 hosts.
+2025-06-13 19:51:00,341 - IntraScanAdmin - INFO - Advertencia: Componentes del desplegable de host remoto no inicializados.
+2025-06-13 19:51:00,341 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 19:51:00,341 - IntraScanAdmin - INFO - Salida del logger redirigida a la GUI.
+2025-06-13 19:51:00,341 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 19:51:00,341 - IntraScanAdmin - INFO - ¡Bienvenido a IntraScan & Admin GUI!
+2025-06-13 19:51:00,341 - IntraScanAdmin - INFO - Utiliza las pestañas para navegar por las funciones.
+2025-06-13 19:51:36,160 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:51:36,160 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:51:36,207 - IntraScanAdmin - INFO - Widgets de la pestaña 'Escaneo de Red' creados.
+2025-06-13 19:51:36,223 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 19:51:36,223 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 19:51:36,223 - IntraScanAdmin - INFO - Advertencia: Host sin ID único detectado: 127.0.0.1. No se agregará al Treeview.
+2025-06-13 19:51:36,223 - IntraScanAdmin - INFO - Inventario cargado en la tabla GUI: 1 hosts.
+2025-06-13 19:51:36,223 - IntraScanAdmin - INFO - Advertencia: Componentes del desplegable de host remoto no inicializados.
+2025-06-13 19:51:36,223 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 19:51:36,223 - IntraScanAdmin - INFO - Salida del logger redirigida a la GUI.
+2025-06-13 19:51:36,223 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 19:51:36,223 - IntraScanAdmin - INFO - ¡Bienvenido a IntraScan & Admin GUI!
+2025-06-13 19:51:36,223 - IntraScanAdmin - INFO - Utiliza las pestañas para navegar por las funciones.
+2025-06-13 19:51:38,815 - IntraScanAdmin - INFO - Advertencia: Componentes del desplegable de host remoto no inicializados.
+2025-06-13 19:51:40,199 - IntraScanAdmin - INFO - Inventario mostrado. Total: 1 hosts.
+2025-06-13 19:51:40,199 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
+2025-06-13 19:56:57,704 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:56:57,704 - IntraScanAdmin - INFO - Sistema de logging configurado.
+2025-06-13 19:56:57,751 - IntraScanAdmin - INFO - Widgets de la pestaña 'Escaneo de Red' creados.
+2025-06-13 19:56:57,767 - IntraScanAdmin - INFO - Inventario cargado desde 'hosts.json'.
+2025-06-13 19:56:57,767 - IntraScanAdmin - INFO - Inventario cargado al inicio: 1 hosts.
+2025-06-13 19:56:57,767 - IntraScanAdmin - INFO - Advertencia: Host sin ID único detectado: 127.0.0.1. No se agregará al Treeview.
+2025-06-13 19:56:57,767 - IntraScanAdmin - INFO - Inventario cargado en la tabla GUI: 1 hosts.
+2025-06-13 19:56:57,767 - IntraScanAdmin - INFO - Advertencia: Componentes del desplegable de host remoto no inicializados.
+2025-06-13 19:56:57,767 - IntraScanAdmin - INFO - GUI: Desplegable de hosts remotos actualizado.
+2025-06-13 19:56:57,767 - IntraScanAdmin - INFO - Salida del logger redirigida a la GUI.
+2025-06-13 19:56:57,767 - IntraScanAdmin - INFO - Interfaz Gráfica de IntraScan & Admin iniciada.
+2025-06-13 19:56:57,767 - IntraScanAdmin - INFO - ¡Bienvenido a IntraScan & Admin GUI!
+2025-06-13 19:56:57,767 - IntraScanAdmin - INFO - Utiliza las pestañas para navegar por las funciones.
+2025-06-13 19:57:00,140 - IntraScanAdmin - INFO - Inventario mostrado. Total: 1 hosts.
+2025-06-13 19:57:00,144 - IntraScanAdmin - INFO - GUI: Inventario actualizado en la visualización.
